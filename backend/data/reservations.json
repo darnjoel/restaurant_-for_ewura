@@ -1,0 +1,15 @@
+[
+  {
+    "id": "AK-RES-4351",
+    "name": "Lady Sarah Jenkins",
+    "email": "sarah.jenkins@luxuryfine.com",
+    "phone": "+1 555 432 9988",
+    "guests": 4,
+    "date": "2026-10-18",
+    "time": "19:30",
+    "seating": "Chef's Tasting Counter",
+    "specialRequests": "Celebrating 10th anniversary, loves truffled steaks",
+    "status": "Confirmed",
+    "createdAt": "2026-10-11T21:20:18.582Z"
+  }
+]

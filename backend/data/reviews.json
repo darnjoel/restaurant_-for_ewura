@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Marcus Vance",
+    "role": "Food & Wine Critic",
+    "rating": 5,
+    "date": "October 2026",
+    "comment": "Annah's Kitchen is a masterclass in modern soul cuisine. The Slow-Braised Oxtail over Jollof Risotto has depths of flavor you won't find anywhere else in the country. Absolutely sublime.",
+    "avatar": "MV"
+  },
+  {
+    "id": 2,
+    "name": "Elena Rostova",
+    "role": "Verified Diner",
+    "rating": 5,
+    "date": "September 2026",
+    "comment": "The ambiance feels like an intimate speakeasy with Michelin-level culinary standards. The Chocolate Gold Dome dessert is pure theater and unforgettable taste!",
+    "avatar": "ER"
+  },
+  {
+    "id": 3,
+    "name": "Dr. David & Sarah Chen",
+    "role": "Anniversary Guests",
+    "rating": 5,
+    "date": "October 2026",
+    "comment": "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah personally presented three courses. Exceptional warmth, attentive service, and transcendent food.",
+    "avatar": "DC"
+  }
+]

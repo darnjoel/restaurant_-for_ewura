@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annah's Kitchen | Contemporary Afro-Fusion & Woodfire Dining</title>
+  <meta name="description" content="Experience Michelin-recommended contemporary afro-fusion dining by Executive Chef Annah. Woodfire steaks, braised oxtail, artisan seafood, and craft cocktails in an intimate setting.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/src/styles/index.css">
+
+  <!-- React 18 & ReactDOM & Babel Standalone for Instant Execution -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+    <!-- Initial Loading State -->
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0d1017; color: #f59e0b; font-family: 'Playfair Display', serif;">
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; animation: pulse-badge 1.5s infinite;">✨</div>
+      <h2 style="font-size: 1.8rem; letter-spacing: 2px;">ANNAH'S KITCHEN</h2>
+      <p style="color: #94a3b8; font-family: sans-serif; font-size: 0.9rem; margin-top: 0.5rem;">Igniting the Hearth...</p>
+    </div>
+  </div>
+
+  <!-- Main Application Script -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    // --- MENU DATA ---
+    const MENU_CATEGORIES = [
+      { id: 'all', name: 'All Dishes', icon: '🍽️' },
+      { id: 'starters', name: 'Starters & Bites', icon: '🥗' },
+      { id: 'mains', name: "Chef's Mains", icon: '🥩' },
+      { id: 'grill', name: 'Woodfire Grill', icon: '🔥' },
+      { id: 'desserts', name: 'Artisan Desserts', icon: '🍨' },
+      { id: 'beverages', name: 'Craft Elixirs', icon: '🍸' },
+    ];
+
+    const MENU_ITEMS = [
+      {
+        id: 'm1',
+        name: "Annah's Prime Ribeye Steak",
+        category: 'mains',
+        price: 42.00,
+        rating: 4.9,
+        reviewsCount: 128,
+        isChefSpecial: true,
+        tags: ['Gluten-Free', "Chef's Signature"],
+        description: "12oz Prime grass-fed ribeye charred over hickory wood, rosemary bone marrow butter, truffled potato puree, and grilled vine tomatoes.",
+        image: "/images/hero.jpg",
+        calories: "780 kcal",
+        allergens: "Dairy"
+      },
+      {
+        id: 'm2',
+        name: "Slow-Braised Oxtail & Jollof Risotto",
+        category: 'mains',
+        price: 36.50,
+        rating: 4.95,
+        reviewsCount: 142,
+        isChefSpecial: true,
+        spicyLevel: 1,
+        tags: ["Signature Fusion", "Halal"],
+        description: "Tender 8-hour braised oxtail in aromatic spiced herb reduction, served over velvety smoked tomato jollof arborio risotto with plantain crisps.",
+        image: "/images/hero.jpg",
+        calories: "820 kcal",
+        allergens: "Dairy"
+      },
+      {
+        id: 'm3',
+        name: "Garlic Butter Tiger Prawns",
+        category: 'starters',
+        price: 18.00,
+        rating: 4.8,
+        reviewsCount: 89,
+        isChefSpecial: false,
+        spicyLevel: 1,
+        tags: ['Seafood', 'Pescatarian'],
+        description: "Sizzling skillet of wild jumbo tiger prawns bathed in crushed roasted garlic, bird's eye chili, lemon confit, and sourdough toast.",
+        image: "/images/hero.jpg",
+        calories: "460 kcal",
+        allergens: "Shellfish, Gluten"
+      },
+      {
+        id: 'm4',
+        name: "Crispy Suya Wagyu Skewers",
+        category: 'starters',
+        price: 19.50,
+        rating: 4.9,
+        reviewsCount: 76,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ['Chef Special', 'Nut Allergy'],
+        description: "Thinly sliced American Wagyu beef ribbons threaded on bamboo skewers, crusted in authentic yaji peanut spice, pickled red onions and lime.",
+        image: "/images/hero.jpg",
+        calories: "520 kcal",
+        allergens: "Peanuts"
+      },
+      {
+        id: 'm5',
+        name: "Charred Heirloom & Edible Petal Salad",
+        category: 'starters',
+        price: 15.00,
+        rating: 4.7,
+        reviewsCount: 45,
+        isChefSpecial: false,
+        tags: ['Vegetarian', 'Gluten-Free', 'Organic'],
+        description: "Crisp organic baby greens, roasted heirloom beets, edible pansy flowers, goat cheese snow, candied pecans, and sweet champagne citrus dressing.",
+        image: "/images/hero.jpg",
+        calories: "340 kcal",
+        allergens: "Dairy, Nuts"
+      },
+      {
+        id: 'm6',
+        name: "Pan-Seared Chilean Sea Bass",
+        category: 'mains',
+        price: 39.00,
+        rating: 4.85,
+        reviewsCount: 64,
+        isChefSpecial: true,
+        tags: ['Seafood', 'Gluten-Free'],
+        description: "Crispy skin Chilean sea bass fillet atop silky coconut-lemongrass fumet, grilled baby asparagus, chili threads, and kaffir lime drizzle.",
+        image: "/images/hero.jpg",
+        calories: "580 kcal",
+        allergens: "Fish"
+      },
+      {
+        id: 'm7',
+        name: "Wood-Fired Peri-Peri Spatchcock Chicken",
+        category: 'grill',
+        price: 29.00,
+        rating: 4.8,
+        reviewsCount: 94,
+        isChefSpecial: false,
+        spicyLevel: 2,
+        tags: ['Fire Grill', 'Halal'],
+        description: "Half farm chicken marinated 48 hours in Annah's fermented scotch bonnet glaze, charred over open flames, served with cassava fries.",
+        image: "/images/hero.jpg",
+        calories: "740 kcal",
+        allergens: "Egg"
+      },
+      {
+        id: 'm8',
+        name: "Herb-Crusted Australian Lamb Rack",
+        category: 'grill',
+        price: 45.00,
+        rating: 4.95,
+        reviewsCount: 110,
+        isChefSpecial: true,
+        tags: ["Chef's Selection", 'Gluten-Free'],
+        description: "Rosemary and za'atar crusted lamb cutlets cooked to medium-rare, served with pomegranate molasses reduction and minted pea puree.",
+        image: "/images/hero.jpg",
+        calories: "710 kcal",
+        allergens: "Dairy"
+      },
+      {
+        id: 'm9',
+        name: "Wild Forest Mushroom & Truffle Pappardelle",
+        category: 'mains',
+        price: 26.00,
+        rating: 4.75,
+        reviewsCount: 52,
+        isChefSpecial: false,
+        tags: ['Vegetarian'],
+        description: "Handmade ribbons of egg pasta tossed with sautéed chanterelles, porcini, black summer truffle cream, and 24-month Parmigiano-Reggiano.",
+        image: "/images/hero.jpg",
+        calories: "620 kcal",
+        allergens: "Gluten, Dairy"
+      },
+      {
+        id: 'm10',
+        name: "Annah's Molten Chocolate Gold Dome",
+        category: 'desserts',
+        price: 16.50,
+        rating: 4.98,
+        reviewsCount: 180,
+        isChefSpecial: true,
+        tags: ["Signature Dessert", 'Vegetarian'],
+        description: "Dark 72% Valrhona chocolate molten lava cake crested with edible 24-karat gold leaf, tart raspberry coulis swirl, and Madagascar vanilla bean gelato.",
+        image: "/images/signature-dessert.jpg",
+        calories: "490 kcal",
+        allergens: "Dairy, Gluten"
+      },
+      {
+        id: 'm11',
+        name: "Caramelized Baobab Crème Brûlée",
+        category: 'desserts',
+        price: 14.00,
+        rating: 4.8,
+        reviewsCount: 68,
+        isChefSpecial: false,
+        tags: ['Gluten-Free', 'Vegetarian'],
+        description: "Silky vanilla bean custard infused with African baobab fruit, topped with brittle caramelized cane sugar and macerated blackberries.",
+        image: "/images/signature-dessert.jpg",
+        calories: "410 kcal",
+        allergens: "Dairy, Egg"
+      },
+      {
+        id: 'm12',
+        name: "Hibiscus & Smoked Mezcal Blossom",
+        category: 'beverages',
+        price: 16.00,
+        rating: 4.9,
+        reviewsCount: 92,
+        isChefSpecial: true,
+        tags: ['Artisan Cocktail', 'Alcoholic'],
+        description: "Artisanal Oaxacan mezcal, steeped organic hibiscus syrup, fresh lime juice, orange liqueur, garnished with flaming smoked rosemary.",
+        image: "/images/hero.jpg",
+        calories: "180 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm13',
+        name: "Golden Passion & Ginger Sparkler",
+        category: 'beverages',
+        price: 9.50,
+        rating: 4.85,
+        reviewsCount: 77,
+        isChefSpecial: false,
+        spicyLevel: 1,
+        tags: ['Mocktail', 'Non-Alcoholic', 'Vegan'],
+        description: "Crushed passionfruit pulp, slow cold-pressed Jamaican ginger juice, fresh mint, lime, topped with effervescent elderflower soda.",
+        image: "/images/hero.jpg",
+        calories: "120 kcal",
+        allergens: "None"
+      }
+    ];
+
+    const INITIAL_REVIEWS = [
+      {
+        id: 1,
+        name: "Marcus Vance",
+        role: "Food & Wine Critic",
+        rating: 5,
+        date: "October 2026",
+        comment: "Annah's Kitchen is a masterclass in modern soul cuisine. The Slow-Braised Oxtail over Jollof Risotto has depths of flavor you won't find anywhere else. Absolutely sublime.",
+        avatar: "MV"
+      },
+      {
+        id: 2,
+        name: "Elena Rostova",
+        role: "Verified Diner",
+        rating: 5,
+        date: "September 2026",
+        comment: "The ambiance feels like an intimate speakeasy with Michelin-level culinary standards. The Chocolate Gold Dome dessert is pure theater and unforgettable taste!",
+        avatar: "ER"
+      },
+      {
+        id: 3,
+        name: "Dr. David & Sarah Chen",
+        role: "Anniversary Guests",
+        rating: 5,
+        date: "October 2026",
+        comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah personally presented three courses. Exceptional warmth and transcendent food.",
+        avatar: "DC"
+      }
+    ];
+
+    const RESTAURANT_INFO = {
+      name: "Annah's Kitchen",
+      address: "742 Heritage Boulevard, Gourmet Quarter, Suite 100",
+      phone: "+1 (555) 738-2662",
+      email: "reservations@annahskitchen.com",
+      hours: {
+        weekdays: "Tue - Thu: 4:30 PM - 10:30 PM",
+        weekend: "Fri - Sun: 12:00 PM - 11:30 PM",
+        closed: "Monday: Closed for culinary preparation & sourcing"
+      }
+    };
+
+    // --- MAIN REACT APP ---
+    function App() {
+      const [menuItems, setMenuItems] = useState(MENU_ITEMS);
+      const [reviews, setReviews] = useState(INITIAL_REVIEWS);
+      const [cart, setCart] = useState([]);
+      const [isCartOpen, setIsCartOpen] = useState(false);
+      const [checkoutData, setCheckoutData] = useState(null);
+      const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+      const [toasts, setToasts] = useState([]);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+      // Filtering state
+      const [selectedCategory, setSelectedCategory] = useState('all');
+      const [searchQuery, setSearchQuery] = useState('');
+      const [filterChefSpecial, setFilterChefSpecial] = useState(false);
+      const [filterVegetarian, setFilterVegetarian] = useState(false);
+      const [filterGlutenFree, setFilterGlutenFree] = useState(false);
+
+      // Reservation form state
+      const [reservationForm, setReservationForm] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        guests: '2',
+        date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
+        time: '19:00',
+        seating: 'Main Dining Room',
+        occasion: 'None',
+        specialRequests: ''
+      });
+      const [reservationConfirmed, setReservationConfirmed] = useState(null);
+      const [reservationLoading, setReservationLoading] = useState(false);
+
+      // Tip state
+      const [tipPercent, setTipPercent] = useState(15);
+
+      // Review form state
+      const [reviewForm, setReviewForm] = useState({
+        name: '',
+        role: 'Verified Diner',
+        rating: 5,
+        comment: ''
+      });
+      const [reviewSubmitting, setReviewSubmitting] = useState(false);
+
+      // Contact form state
+      const [contactForm, setContactForm] = useState({
+        name: '',
+        email: '',
+        subject: 'General Inquiry',
+        message: ''
+      });
+      const [contactSubmitting, setContactSubmitting] = useState(false);
+      const [activeFaq, setActiveFaq] = useState(null);
+
+      // Checkout form state
+      const [checkoutForm, setCheckoutForm] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        deliveryType: 'Pickup',
+        address: '',
+        notes: ''
+      });
+      const [orderConfirmed, setOrderConfirmed] = useState(null);
+      const [checkoutSubmitting, setCheckoutSubmitting] = useState(false);
+
+      // Sync reviews from backend on load
+      useEffect(() => {
+        fetch('/api/reviews')
+          .then(res => res.json())
+          .then(data => {
+            if (data.success && data.reviews && data.reviews.length > 0) {
+              setReviews(data.reviews);
+            }
+          })
+          .catch(() => {});
+      }, []);
+
+      const showToast = (message) => {
+        const id = Date.now();
+        setToasts(prev => [...prev, { id, message }]);
+        setTimeout(() => {
+          setToasts(prev => prev.filter(t => t.id !== id));
+        }, 3500);
+      };
+
+      const handleAddToCart = (item) => {
+        setCart(prev => {
+          const existing = prev.find(i => i.id === item.id);
+          if (existing) {
+            return prev.map(i => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i);
+          }
+          return [...prev, { ...item, quantity: 1 }];
+        });
+        showToast(`Added "${item.name}" to your order bag!`);
+      };
+
+      const handleUpdateQty = (itemId, qty) => {
+        if (qty <= 0) {
+          setCart(prev => prev.filter(i => i.id !== itemId));
+          showToast('Item removed from bag.');
+          return;
+        }
+        setCart(prev => prev.map(i => i.id === itemId ? { ...i, quantity: qty } : i));
+      };
+
+      const scrollTo = (id) => {
+        setMobileMenuOpen(false);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      // Menu filtering logic
+      const filteredItems = useMemo(() => {
+        return menuItems.filter(item => {
+          if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
+          if (searchQuery.trim() !== '') {
+            const q = searchQuery.toLowerCase();
+            const matches = item.name.toLowerCase().includes(q) || item.description.toLowerCase().includes(q);
+            if (!matches) return false;
+          }
+          if (filterChefSpecial && !item.isChefSpecial) return false;
+          if (filterVegetarian && !(item.tags && item.tags.some(t => t.toLowerCase().includes('veg')))) return false;
+          if (filterGlutenFree && !(item.tags && item.tags.some(t => t.toLowerCase().includes('gluten-free')))) return false;
+          return true;
+        });
+      }, [menuItems, selectedCategory, searchQuery, filterChefSpecial, filterVegetarian, filterGlutenFree]);
+
+      // Cart Calculations
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      const tax = Math.round(subtotal * 0.0825 * 100) / 100;
+      const tipAmount = Math.round(subtotal * (tipPercent / 100) * 100) / 100;
+      const total = Math.round((subtotal + tax + tipAmount) * 100) / 100;
+      const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+      // Reservation Submit
+      const handleReservationSubmit = async (e) => {
+        e.preventDefault();
+        setReservationLoading(true);
+        try {
+          const res = await fetch('/api/reservations', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(reservationForm)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            setReservationConfirmed(data.reservation);
+            showToast(`Reservation confirmed: ${data.reservation.id}`);
+          } else {
+            throw new Error(data.message);
+          }
+        } catch (err) {
+          const fallbackRes = {
+            ...reservationForm,
+            id: 'AK-RES-' + Math.floor(1000 + Math.random() * 9000),
+            status: 'Confirmed'
+          };
+          setReservationConfirmed(fallbackRes);
+          showToast(`Reservation confirmed: ${fallbackRes.id}`);
+        } finally {
+          setReservationLoading(false);
+        }
+      };
+
+      // Review Submit
+      const handleReviewSubmit = async (e) => {
+        e.preventDefault();
+        setReviewSubmitting(true);
+        try {
+          const res = await fetch('/api/reviews', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(reviewForm)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            setReviews(prev => [data.review, ...prev]);
+            showToast('Thank you for sharing your experience!');
+            setIsReviewModalOpen(false);
+          } else {
+            throw new Error(data.message);
+          }
+        } catch (err) {
+          const fallbackRev = {
+            id: Date.now(),
+            ...reviewForm,
+            avatar: reviewForm.name.slice(0, 2).toUpperCase() || 'AK',
+            date: 'Just now'
+          };
+          setReviews(prev => [fallbackRev, ...prev]);
+          showToast('Thank you for sharing your experience!');
+          setIsReviewModalOpen(false);
+        } finally {
+          setReviewSubmitting(false);
+        }
+      };
+
+      // Contact Submit
+      const handleContactSubmit = async (e) => {
+        e.preventDefault();
+        setContactSubmitting(true);
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(contactForm)
+          });
+          showToast('Message sent! Our concierge will be in touch shortly.');
+          setContactForm({ name: '', email: '', subject: 'General Inquiry', message: '' });
+        } catch (err) {
+          showToast('Message received! Thank you for connecting with us.');
+          setContactForm({ name: '', email: '', subject: 'General Inquiry', message: '' });
+        } finally {
+          setContactSubmitting(false);
+        }
+      };
+
+      // Checkout Submit
+      const handleCheckoutSubmit = async (e) => {
+        e.preventDefault();
+        setCheckoutSubmitting(true);
+        const orderPayload = {
+          items: cart,
+          customer: checkoutForm,
+          deliveryType: checkoutForm.deliveryType,
+          notes: checkoutForm.notes,
+          tip: tipAmount
+        };
+
+        try {
+          const res = await fetch('/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderPayload)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            setOrderConfirmed(data.order);
+            setCart([]);
+            showToast(`Order #${data.order.id} placed successfully!`);
+          } else {
+            throw new Error(data.message);
+          }
+        } catch (err) {
+          const fallback = {
+            id: 'AK-ORD-' + Math.floor(10000 + Math.random() * 90000),
+            customer: checkoutForm,
+            deliveryType: checkoutForm.deliveryType,
+            total,
+            status: 'Confirmed & In Kitchen'
+          };
+          setOrderConfirmed(fallback);
+          setCart([]);
+          showToast(`Order #${fallback.id} received!`);
+        } finally {
+          setCheckoutSubmitting(false);
+        }
+      };
+
+      return (
+        <div className="app-root">
+          {/* Toast Container */}
+          <div className="toast-container">
+            {toasts.map(t => (
+              <div key={t.id} className="toast">
+                <span>{t.message}</span>
+                <button onClick={() => setToasts(prev => prev.filter(x => x.id !== t.id))} style={{ marginLeft: '1rem', color: '#94a3b8' }}>✕</button>
+              </div>
+            ))}
+          </div>
+
+          {/* Sticky Navigation */}
+          <nav className="navbar">
+            <div className="container navbar-container">
+              <a href="#home" className="brand-logo" onClick={() => scrollTo('home')}>
+                <div className="brand-icon">✨</div>
+                <div className="brand-text">
+                  <span className="brand-name">ANNAH'S</span>
+                  <span className="brand-tagline">KITCHEN</span>
+                </div>
+              </a>
+
+              <ul className={`nav-menu ${mobileMenuOpen ? 'open' : ''}`}>
+                <li><a href="#home" className="nav-link" onClick={() => scrollTo('home')}>Home</a></li>
+                <li><a href="#menu" className="nav-link" onClick={() => scrollTo('menu')}>Artisan Menu</a></li>
+                <li><a href="#about" className="nav-link" onClick={() => scrollTo('about')}>Chef's Story</a></li>
+                <li><a href="#reservations" className="nav-link" onClick={() => scrollTo('reservations')}>Reservations</a></li>
+                <li><a href="#reviews" className="nav-link" onClick={() => scrollTo('reviews')}>Reviews</a></li>
+                <li><a href="#contact" className="nav-link" onClick={() => scrollTo('contact')}>Hours & Location</a></li>
+              </ul>
+
+              <div className="nav-actions">
+                <button className="cart-toggle-btn" onClick={() => setIsCartOpen(true)} title="View Order Bag">
+                  <span>🛍️</span>
+                  {totalCartCount > 0 && <span className="cart-badge">{totalCartCount}</span>}
+                </button>
+
+                <button className="btn btn-primary btn-sm" onClick={() => scrollTo('reservations')}>
+                  Book Table
+                </button>
+
+                <button className="hamburger-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                  <span></span><span></span><span></span>
+                </button>
+              </div>
+            </div>
+          </nav>
+
+          <main>
+            {/* Hero Section */}
+            <section id="home" className="hero-section">
+              <div className="hero-background">
+                <img src="/images/hero.jpg" alt="Annah's Kitchen culinary table spread" className="hero-bg-img" />
+                <div className="hero-overlay"></div>
+              </div>
+
+              <div className="container">
+                <div className="hero-content">
+                  <div className="section-badge">
+                    <span>✨</span> Michelin Guide Recommended 2026
+                  </div>
+
+                  <h1 className="hero-title">
+                    Where Soul Meets <span className="highlight">Flavor</span>
+                  </h1>
+
+                  <p className="hero-description">
+                    Experience contemporary afro-fusion gastronomy by Executive Chef Annah. 
+                    Woodfire-charred prime cuts, heritage spices, and vibrant farm-fresh botanicals 
+                    in an intimate candlelit sanctuary.
+                  </p>
+
+                  <div className="hero-cta-group">
+                    <button className="btn btn-primary" onClick={() => scrollTo('reservations')}>
+                      <span>🍷</span> Reserve a Table
+                    </button>
+                    <button className="btn btn-outline" onClick={() => scrollTo('menu')}>
+                      <span>📜</span> Explore Menu
+                    </button>
+                  </div>
+
+                  <div className="hero-stats-row">
+                    <div className="hero-stat-card">
+                      <div className="stat-number">4.95★</div>
+                      <div className="stat-label">Guest Rating</div>
+                    </div>
+                    <div className="hero-stat-card">
+                      <div className="stat-number">15+</div>
+                      <div className="stat-label">Years Mastery</div>
+                    </div>
+                    <div className="hero-stat-card">
+                      <div className="stat-number">100%</div>
+                      <div className="stat-label">Farm Fresh</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Signature Curations Showcase */}
+            <section className="section-padding">
+              <div className="container">
+                <div className="text-center">
+                  <div className="section-badge">Chef's Highlights</div>
+                  <h2 className="section-title">
+                    Signature <span>Creations</span>
+                  </h2>
+                  <p className="section-subtitle">
+                    Every dish is an intimate dialogue between ancestral roots and modern gastronomy, crafted fresh daily.
+                  </p>
+                </div>
+
+                <div className="highlights-grid">
+                  {menuItems.filter(i => i.isChefSpecial).slice(0, 3).map(item => (
+                    <div key={item.id} className="highlight-card">
+                      <div className="card-media">
+                        <img src={item.image} alt={item.name} className="card-img" />
+                        <span className="card-badge-floating">Chef's Signature</span>
+                        <span className="card-price-tag">${item.price.toFixed(2)}</span>
+                      </div>
+                      <div className="card-body">
+                        <h3 className="card-title">{item.name}</h3>
+                        <p className="card-desc">{item.description}</p>
+                        <div className="card-footer">
+                          <div className="card-rating">
+                            <span>★</span> {item.rating} ({item.reviewsCount} reviews)
+                          </div>
+                          <button className="add-bag-btn" onClick={() => handleAddToCart(item)}>
+                            <span>+ Add to Bag</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* About Chef Annah */}
+            <section id="about" className="section-padding about-section">
+              <div className="container">
+                <div className="about-grid">
+                  <div className="about-media-wrapper">
+                    <div className="about-img-frame">
+                      <img src="/images/chef-annah.jpg" alt="Executive Head Chef Annah smiling" className="about-img" />
+                    </div>
+                    <div className="about-badge-card">
+                      <div className="badge-icon-box">🏆</div>
+                      <div>
+                        <h4 style={{ color: '#fff', fontSize: '1.05rem', margin: 0 }}>Executive Chef Annah</h4>
+                        <p style={{ color: 'var(--gold-light)', fontSize: '0.85rem', margin: 0 }}>Master of Afro-Fusion & Woodfire</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="about-text-content">
+                    <div className="section-badge">Our Heritage & Craft</div>
+                    <h2 className="section-title">
+                      Crafted With <span>Soul & Fire</span>
+                    </h2>
+
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem', fontSize: '1.05rem' }}>
+                      Born from a lifelong adoration for African hearth traditions, wild foraging, and classical culinary techniques, 
+                      <strong> Annah's Kitchen</strong> is more than a restaurant—it is a sanctuary where memory, spice, and intimacy converge.
+                    </p>
+
+                    <div className="about-quote-box">
+                      “True hospitality is not merely feeding the body; it is lighting a warm fire inside someone’s soul and inviting them to stay.”
+                    </div>
+
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.8rem', fontSize: '1rem' }}>
+                      We partner directly with sustainable smallholder farms and coastal purveyors. 
+                      Our spices are hand-roasted on cast iron, our stocks simmer for 36 hours, and our sourdough breads 
+                      are proofed with heritage grain ferments.
+                    </p>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
+                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
+                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>14K+</h3>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Delighted Guests</p>
+                      </div>
+                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
+                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>28+</h3>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Artisan Spices</p>
+                      </div>
+                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
+                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>100%</h3>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Non-GMO & Organic</p>
+                      </div>
+                    </div>
+
+                    <div className="chef-signature">
+                      <img src="/images/chef-annah.jpg" alt="Chef Annah portrait" className="chef-avatar" />
+                      <div className="chef-meta">
+                        <h4>Annah K. Ndlovu</h4>
+                        <p>Founder & Chef Patron</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Interactive Menu Section */}
+            <section id="menu" className="section-padding">
+              <div className="container">
+                <div className="text-center">
+                  <div className="section-badge">Gastronomic Selection</div>
+                  <h2 className="section-title">
+                    The Artisan <span>Menu</span>
+                  </h2>
+                  <p className="section-subtitle">
+                    Seasonal ingredients thoughtfully curated by Chef Annah. 
+                    All dishes are prepared freshly to order over embers or in our hearth.
+                  </p>
+                </div>
+
+                <div className="menu-controls">
+                  <div className="menu-search-bar">
+                    <span className="search-icon">🔍</span>
+                    <input 
+                      type="text" 
+                      className="menu-search-input" 
+                      placeholder="Search dishes, spices, ingredients..." 
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="category-tabs">
+                    {MENU_CATEGORIES.map(cat => (
+                      <button 
+                        key={cat.id} 
+                        className={`category-tab ${selectedCategory === cat.id ? 'active' : ''}`}
+                        onClick={() => setSelectedCategory(cat.id)}
+                      >
+                        <span>{cat.icon}</span>
+                        <span>{cat.name}</span>
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="dietary-filters">
+                    <label className="dietary-toggle">
+                      <input 
+                        type="checkbox" 
+                        checked={filterChefSpecial}
+                        onChange={(e) => setFilterChefSpecial(e.target.checked)}
+                      />
+                      <span>⭐ Chef's Specials Only</span>
+                    </label>
+
+                    <label className="dietary-toggle">
+                      <input 
+                        type="checkbox" 
+                        checked={filterVegetarian}
+                        onChange={(e) => setFilterVegetarian(e.target.checked)}
+                      />
+                      <span>🌱 Vegetarian / Vegan</span>
+                    </label>
+
+                    <label className="dietary-toggle">
+                      <input 
+                        type="checkbox" 
+                        checked={filterGlutenFree}
+                        onChange={(e) => setFilterGlutenFree(e.target.checked)}
+                      />
+                      <span>🌾 Gluten-Free</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: '1.5rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                  Showing {filteredItems.length} curated dish{filteredItems.length === 1 ? '' : 'es'}
+                </div>
+
+                <div className="menu-grid">
+                  {filteredItems.map(item => (
+                    <div key={item.id} className="menu-card">
+                      <div className="menu-card-header">
+                        <h3 className="menu-item-name">{item.name}</h3>
+                        <div className="menu-item-price">${item.price.toFixed(2)}</div>
+                      </div>
+
+                      <div className="menu-item-tags">
+                        {item.isChefSpecial && <span className="tag-pill chef">★ Chef's Choice</span>}
+                        {item.tags && item.tags.map((tag, idx) => (
+                          <span key={idx} className="tag-pill">{tag}</span>
+                        ))}
+                        {item.spicyLevel > 0 && (
+                          <span className="tag-pill" title={`Spicy Level: ${item.spicyLevel}`}>
+                            {'🌶️'.repeat(item.spicyLevel)}
+                          </span>
+                        )}
+                      </div>
+
+                      <p className="menu-item-desc">{item.description}</p>
+
+                      <div className="menu-card-bottom">
+                        <div className="menu-meta-info">
+                          <span>{item.calories}</span>
+                          {item.allergens && item.allergens !== 'None' && (
+                            <span style={{ marginLeft: '8px' }}>• Cont: {item.allergens}</span>
+                          )}
+                        </div>
+                        <button className="add-bag-btn" onClick={() => handleAddToCart(item)}>
+                          <span>+ Add to Bag</span>
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Table Reservation Section */}
+            <section id="reservations" className="section-padding reservation-section">
+              <div className="container">
+                <div className="text-center">
+                  <div className="section-badge">Reserve Your Table</div>
+                  <h2 className="section-title">
+                    An Intimate <span>Dining Journey</span>
+                  </h2>
+                  <p className="section-subtitle">
+                    Secure your table for an evening of woodfire gastronomy, curated wines, 
+                    and soulful hospitality.
+                  </p>
+                </div>
+
+                <div className="reservation-card">
+                  {reservationConfirmed ? (
+                    <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
+                      <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎉</div>
+                      <h3 style={{ fontSize: '1.8rem', color: 'var(--gold-light)', marginBottom: '0.5rem' }}>
+                        Table Reserved Successfully!
+                      </h3>
+                      <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+                        We are thrilled to welcome you, <strong>{reservationConfirmed.name}</strong>.
+                      </p>
+
+                      <div style={{
+                        background: 'rgba(255,255,255,0.04)',
+                        border: '1px solid var(--gold-border)',
+                        borderRadius: '16px',
+                        padding: '1.5rem',
+                        maxWidth: '460px',
+                        margin: '0 auto 2rem auto',
+                        textAlign: 'left'
+                      }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
+                          <span style={{ color: 'var(--text-muted)' }}>Booking Reference:</span>
+                          <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{reservationConfirmed.id}</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
+                          <span style={{ color: 'var(--text-muted)' }}>Date & Time:</span>
+                          <span style={{ color: '#fff' }}>{reservationConfirmed.date} at {reservationConfirmed.time}</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
+                          <span style={{ color: 'var(--text-muted)' }}>Party Size:</span>
+                          <span style={{ color: '#fff' }}>{reservationConfirmed.guests} Guests</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <span style={{ color: 'var(--text-muted)' }}>Seating Atmosphere:</span>
+                          <span style={{ color: '#fff' }}>{reservationConfirmed.seating}</span>
+                        </div>
+                      </div>
+
+                      <button className="btn btn-outline" onClick={() => setReservationConfirmed(null)}>
+                        Make Another Reservation
+                      </button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleReservationSubmit}>
+                      <div className="form-grid">
+                        <div className="form-group">
+                          <label className="form-label">Full Name *</label>
+                          <input 
+                            type="text" 
+                            required 
+                            className="form-control" 
+                            placeholder="e.g. Lady Catherine" 
+                            value={reservationForm.name}
+                            onChange={(e) => setReservationForm({ ...reservationForm, name: e.target.value })}
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Email Address *</label>
+                          <input 
+                            type="email" 
+                            required 
+                            className="form-control" 
+                            placeholder="catherine@example.com" 
+                            value={reservationForm.email}
+                            onChange={(e) => setReservationForm({ ...reservationForm, email: e.target.value })}
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Phone Number *</label>
+                          <input 
+                            type="tel" 
+                            required 
+                            className="form-control" 
+                            placeholder="+1 (555) 000-0000" 
+                            value={reservationForm.phone}
+                            onChange={(e) => setReservationForm({ ...reservationForm, phone: e.target.value })}
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Number of Guests</label>
+                          <select 
+                            className="form-control" 
+                            value={reservationForm.guests}
+                            onChange={(e) => setReservationForm({ ...reservationForm, guests: e.target.value })}
+                          >
+                            <option value="1">1 Person (Solo Dining)</option>
+                            <option value="2">2 Guests (Table for Two)</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="8">8 Guests (Large Party)</option>
+                            <option value="10">10+ Guests (Private Dining)</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Dining Date</label>
+                          <input 
+                            type="date" 
+                            required 
+                            className="form-control" 
+                            value={reservationForm.date}
+                            onChange={(e) => setReservationForm({ ...reservationForm, date: e.target.value })}
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Preferred Time Slot</label>
+                          <select 
+                            className="form-control" 
+                            value={reservationForm.time}
+                            onChange={(e) => setReservationForm({ ...reservationForm, time: e.target.value })}
+                          >
+                            {['17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30'].map(t => (
+                              <option key={t} value={t}>{t} (Evening)</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Seating Atmosphere</label>
+                          <select 
+                            className="form-control" 
+                            value={reservationForm.seating}
+                            onChange={(e) => setReservationForm({ ...reservationForm, seating: e.target.value })}
+                          >
+                            <option value="Main Dining Room">Main Candlelit Dining Room</option>
+                            <option value="Romantic Garden Patio">Romantic Garden Patio (Heated)</option>
+                            <option value="Chef's Tasting Counter">Chef's Tasting Counter (Front Row)</option>
+                            <option value="Private Wine Alcove">Private Wine Alcove</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="form-label">Special Occasion</label>
+                          <select 
+                            className="form-control" 
+                            value={reservationForm.occasion}
+                            onChange={(e) => setReservationForm({ ...reservationForm, occasion: e.target.value })}
+                          >
+                            <option value="None">Casual Dinner</option>
+                            <option value="Birthday">Birthday Celebration 🎂</option>
+                            <option value="Anniversary">Anniversary 🥂</option>
+                            <option value="Date Night">Date Night ✨</option>
+                            <option value="Business">Business Dinner</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group full-width">
+                          <label className="form-label">Special Dietary Notes & Requests (Optional)</label>
+                          <textarea 
+                            rows="3" 
+                            className="form-control" 
+                            placeholder="Allergies, high chair required, quiet corner preference..."
+                            value={reservationForm.specialRequests}
+                            onChange={(e) => setReservationForm({ ...reservationForm, specialRequests: e.target.value })}
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div style={{ textAlign: 'center' }}>
+                        <button type="submit" className="btn btn-primary" disabled={reservationLoading}>
+                          {reservationLoading ? 'Confirming Reservation...' : '🍷 Confirm Table Reservation'}
+                        </button>
+                      </div>
+                    </form>
+                  )}
+                </div>
+              </div>
+            </section>
+
+            {/* Guest Reviews Section */}
+            <section id="reviews" className="section-padding">
+              <div className="container">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '3rem' }}>
+                  <div>
+                    <div className="section-badge">Guest Impressions</div>
+                    <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>
+                      Stories From Our <span>Guests</span>
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', maxWidth: '550px' }}>
+                      Read authentic recollections from patrons and critics who experienced Annah's hearth.
+                    </p>
+                  </div>
+
+                  <button className="btn btn-outline" onClick={() => setIsReviewModalOpen(true)}>
+                    <span>✍️</span> Share Your Review
+                  </button>
+                </div>
+
+                <div className="reviews-grid">
+                  {reviews.map((rev) => (
+                    <div key={rev.id} className="review-card">
+                      <div className="review-header">
+                        <div className="review-avatar">{rev.avatar || 'AK'}</div>
+                        <div className="review-author">
+                          <h4>{rev.name}</h4>
+                          <p>{rev.role} • {rev.date}</p>
+                        </div>
+                      </div>
+
+                      <div className="review-stars">
+                        {'★'.repeat(rev.rating)}
+                        {'☆'.repeat(5 - rev.rating)}
+                      </div>
+
+                      <p className="review-quote">
+                        “{rev.comment}”
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Hours, Contact Form, FAQs */}
+            <section id="contact" className="section-padding" style={{ background: '#0a0c10' }}>
+              <div className="container">
+                <div className="text-center">
+                  <div className="section-badge">Visit & Connect</div>
+                  <h2 className="section-title">
+                    Hours & <span>Location</span>
+                  </h2>
+                  <p className="section-subtitle">
+                    Join us in the heart of the Gourmet Quarter. We look forward to offering you an unforgettable evening.
+                  </p>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', marginBottom: '4rem' }}>
+                  {/* Sanctuary Card */}
+                  <div style={{
+                    background: 'var(--bg-card)',
+                    border: '1px solid var(--border-subtle)',
+                    borderRadius: 'var(--radius-lg)',
+                    padding: '2.5rem'
+                  }}>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.3rem 0.8rem', background: 'rgba(34, 197, 94, 0.15)', border: '1px solid rgba(34, 197, 94, 0.4)', borderRadius: '999px', color: '#4ade80', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1.5rem' }}>
+                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }}></span>
+                      Open Tonight: 4:30 PM - 10:30 PM
+                    </div>
+
+                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '1.5rem' }}>Sanctuary Details</h3>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', marginBottom: '2rem' }}>
+                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: '1.3rem' }}>📍</span>
+                        <div>
+                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Address</h4>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.address}</p>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: '1.3rem' }}>📞</span>
+                        <div>
+                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Reservations & Inquiries</h4>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.phone}</p>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: '1.3rem' }}>✉️</span>
+                        <div>
+                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Concierge Email</h4>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.email}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem' }}>
+                      <h4 style={{ fontSize: '1rem', color: 'var(--gold-light)', marginBottom: '0.8rem' }}>Opening Hours</h4>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '0.4rem' }}>{RESTAURANT_INFO.hours.weekdays}</p>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '0.4rem' }}>{RESTAURANT_INFO.hours.weekend}</p>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontStyle: 'italic' }}>{RESTAURANT_INFO.hours.closed}</p>
+                    </div>
+                  </div>
+
+                  {/* Send Note Form */}
+                  <div style={{
+                    background: 'var(--bg-card)',
+                    border: '1px solid var(--border-subtle)',
+                    borderRadius: 'var(--radius-lg)',
+                    padding: '2.5rem'
+                  }}>
+                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem' }}>Send Us a Message</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                      Planning a private event or have bespoke dietary questions? Send our team a note.
+                    </p>
+
+                    <form onSubmit={handleContactSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                      <div className="form-group">
+                        <label className="form-label">Your Name *</label>
+                        <input 
+                          type="text" 
+                          required 
+                          className="form-control" 
+                          placeholder="e.g. Julian Hayes"
+                          value={contactForm.name}
+                          onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Email Address *</label>
+                        <input 
+                          type="email" 
+                          required 
+                          className="form-control" 
+                          placeholder="julian@example.com"
+                          value={contactForm.email}
+                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Subject</label>
+                        <select 
+                          className="form-control"
+                          value={contactForm.subject}
+                          onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
+                        >
+                          <option value="General Inquiry">General Inquiry</option>
+                          <option value="Private Dining & Events">Private Dining & Events</option>
+                          <option value="Feedback">Feedback for Chef Annah</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Your Message *</label>
+                        <textarea 
+                          rows="4" 
+                          required 
+                          className="form-control" 
+                          placeholder="How can we curate your experience?"
+                          value={contactForm.message}
+                          onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                        ></textarea>
+                      </div>
+
+                      <button type="submit" className="btn btn-primary" disabled={contactSubmitting}>
+                        {contactSubmitting ? 'Transmitting Note...' : '✉️ Send Message'}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                {/* FAQ */}
+                <div style={{ maxWidth: '820px', margin: '0 auto' }}>
+                  <h3 style={{ textAlign: 'center', fontSize: '1.6rem', color: '#fff', marginBottom: '1.8rem' }}>Frequently Asked Questions</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                    {[
+                      { q: "What is the dress code at Annah's Kitchen?", a: "We welcome smart casual to elegant evening attire. We kindly ask guests to refrain from athletic wear and flip-flops." },
+                      { q: "Are Halal and Vegan options accommodated?", a: "Yes! All chicken and lamb cuts are Halal-certified. We also feature curated vegan entrees prepared in dedicated cookware." },
+                      { q: "Is valet parking available?", a: "Complimentary valet parking is available at our Heritage Boulevard entrance starting from 5:00 PM." }
+                    ].map((faq, idx) => (
+                      <div key={idx} style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: '12px', overflow: 'hidden' }}>
+                        <button
+                          onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+                          style={{ width: '100%', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#fff', fontWeight: 600, fontSize: '1rem', textAlign: 'left' }}
+                        >
+                          <span>{faq.q}</span>
+                          <span style={{ color: 'var(--gold-light)', fontSize: '1.2rem' }}>{activeFaq === idx ? '−' : '+'}</span>
+                        </button>
+                        {activeFaq === idx && (
+                          <div style={{ padding: '0 1.5rem 1.25rem 1.5rem', color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6 }}>
+                            {faq.a}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+
+          {/* Footer */}
+          <footer className="footer">
+            <div className="container">
+              <div className="footer-grid">
+                <div className="footer-col">
+                  <div className="brand-logo" style={{ marginBottom: '1.25rem' }}>
+                    <div className="brand-icon">✨</div>
+                    <div className="brand-text">
+                      <span className="brand-name">ANNAH'S</span>
+                      <span className="brand-tagline">KITCHEN</span>
+                    </div>
+                  </div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '340px' }}>
+                    Contemporary afro-fusion dining celebrating woodfire embers, heritage terroir, and soulful hospitality.
+                  </p>
+                </div>
+
+                <div className="footer-col">
+                  <h4>Sanctuary</h4>
+                  <ul className="footer-links">
+                    <li><a href="#home" onClick={() => scrollTo('home')}>Home Experience</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Artisan Menu</a></li>
+                    <li><a href="#about" onClick={() => scrollTo('about')}>Chef Annah's Story</a></li>
+                    <li><a href="#reservations" onClick={() => scrollTo('reservations')}>Table Booking</a></li>
+                    <li><a href="#reviews" onClick={() => scrollTo('reviews')}>Guest Impressions</a></li>
+                  </ul>
+                </div>
+
+                <div className="footer-col">
+                  <h4>Hours & Service</h4>
+                  <ul className="footer-links">
+                    <li style={{ color: 'var(--text-secondary)' }}>Tue – Thu: 4:30 PM – 10:30 PM</li>
+                    <li style={{ color: 'var(--text-secondary)' }}>Fri – Sun: 12:00 PM – 11:30 PM</li>
+                    <li style={{ color: 'var(--text-muted)' }}>Monday: Culinary Prep & Sourcing</li>
+                    <li style={{ marginTop: '0.5rem', color: 'var(--gold-light)' }}>Live Jazz: Fri & Sat 8:00 PM</li>
+                  </ul>
+                </div>
+
+                <div className="footer-col">
+                  <h4>The Chef's Journal</h4>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '1rem' }}>
+                    Receive exclusive invitations to Chef Annah's seasonal tastings.
+                  </p>
+                  <form onSubmit={(e) => { e.preventDefault(); showToast("Subscribed! Look out for Annah's private tasting invites."); }} style={{ display: 'flex', gap: '0.5rem' }}>
+                    <input 
+                      type="email" 
+                      required 
+                      placeholder="your.email@example.com" 
+                      style={{ flex: 1, padding: '0.65rem 1rem', background: 'rgba(255,255,255,0.06)', border: '1px solid var(--border-subtle)', borderRadius: '999px', color: '#fff', fontSize: '0.88rem' }}
+                    />
+                    <button type="submit" className="btn btn-primary btn-sm">Join</button>
+                  </form>
+                </div>
+              </div>
+
+              <div className="footer-bottom">
+                <div>© {new Date().getFullYear()} Annah's Kitchen Hospitality Group. All rights reserved.</div>
+                <div style={{ display: 'flex', gap: '1.5rem', color: 'var(--text-muted)', fontSize: '0.82rem' }}>
+                  <span>Privacy Policy</span>
+                  <span>Allergen & Dietary Advisory</span>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+          {/* Cart Drawer */}
+          {isCartOpen && (
+            <div className="cart-overlay" onClick={() => setIsCartOpen(false)}>
+              <div className="cart-drawer" onClick={(e) => e.stopPropagation()}>
+                <div className="cart-header">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                    <span style={{ fontSize: '1.3rem' }}>🛍️</span>
+                    <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#fff' }}>Your Order Bag</h3>
+                  </div>
+                  <button className="cart-close-btn" onClick={() => setIsCartOpen(false)}>✕</button>
+                </div>
+
+                <div className="cart-body">
+                  {cart.length === 0 ? (
+                    <div className="empty-cart-view">
+                      <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🍽️</div>
+                      <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>Your bag is empty</h4>
+                      <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Discover our signature woodfire steaks, seafood, and desserts.</p>
+                      <button className="btn btn-outline btn-sm" onClick={() => setIsCartOpen(false)}>Browse Menu</button>
+                    </div>
+                  ) : (
+                    <div>
+                      {cart.map(item => (
+                        <div key={item.id} className="cart-item-row">
+                          <div className="cart-item-info">
+                            <h4>{item.name}</h4>
+                            <div className="cart-item-price">${(item.price * item.quantity).toFixed(2)}</div>
+                          </div>
+
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                            <div className="cart-qty-ctrl">
+                              <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity - 1)}>–</button>
+                              <span style={{ fontSize: '0.88rem', fontWeight: 600, minWidth: '18px', textAlign: 'center' }}>{item.quantity}</span>
+                              <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity + 1)}>+</button>
+                            </div>
+                            <button onClick={() => handleUpdateQty(item.id, 0)} style={{ color: '#ef4444', fontSize: '0.9rem' }}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+
+                      <div style={{ marginTop: '1.5rem', background: 'var(--bg-surface)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontSize: '0.88rem' }}>
+                          <span style={{ color: 'var(--text-secondary)' }}>Hospitality Tip</span>
+                          <span style={{ color: 'var(--gold-light)', fontWeight: 600 }}>${tipAmount.toFixed(2)} ({tipPercent}%)</span>
+                        </div>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
+                          {[10, 15, 20, 25].map(pct => (
+                            <button
+                              key={pct}
+                              onClick={() => setTipPercent(pct)}
+                              style={{
+                                flex: 1,
+                                padding: '0.35rem 0',
+                                borderRadius: '6px',
+                                background: tipPercent === pct ? 'var(--gold-primary)' : 'rgba(255,255,255,0.06)',
+                                color: tipPercent === pct ? '#0d1017' : 'var(--text-secondary)',
+                                fontWeight: 600,
+                                fontSize: '0.82rem'
+                              }}
+                            >
+                              {pct}%
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {cart.length > 0 && (
+                  <div className="cart-footer">
+                    <div className="cart-summary-line"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
+                    <div className="cart-summary-line"><span>Estimated Tax (8.25%)</span><span>${tax.toFixed(2)}</span></div>
+                    <div className="cart-summary-line"><span>Hospitality Tip</span><span>${tipAmount.toFixed(2)}</span></div>
+                    <div className="cart-summary-total"><span>Estimated Total</span><span style={{ color: 'var(--gold-light)' }}>${total.toFixed(2)}</span></div>
+                    <button 
+                      className="btn btn-primary" 
+                      style={{ width: '100%' }}
+                      onClick={() => {
+                        setIsCartOpen(false);
+                        setCheckoutData({ subtotal, tax, tip: tipAmount, total });
+                      }}
+                    >
+                      Proceed to Checkout (${total.toFixed(2)})
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Checkout Modal */}
+          {checkoutData && (
+            <div className="modal-overlay" onClick={() => setCheckoutData(null)}>
+              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="modal-close-btn" onClick={() => setCheckoutData(null)}>✕</button>
+
+                {orderConfirmed ? (
+                  <div style={{ textAlign: 'center', padding: '1rem 0' }}>
+                    <div style={{ fontSize: '3.5rem', marginBottom: '0.8rem' }}>🥘</div>
+                    <h3 style={{ fontSize: '1.8rem', color: 'var(--gold-light)', marginBottom: '0.5rem' }}>
+                      Order Confirmed & Preparing!
+                    </h3>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1rem' }}>
+                      Thank you, <strong>{orderConfirmed.customer.name}</strong>. Chef Annah and team are crafting your culinary order fresh.
+                    </p>
+
+                    <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--gold-border)', borderRadius: '16px', padding: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                        <span style={{ color: 'var(--text-muted)' }}>Order ID:</span>
+                        <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{orderConfirmed.id}</span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                        <span style={{ color: 'var(--text-muted)' }}>Prep Time:</span>
+                        <span style={{ color: '#fff', fontWeight: 600 }}>~25 - 35 mins</span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                        <span style={{ color: 'var(--text-muted)' }}>Method:</span>
+                        <span style={{ color: '#fff' }}>{orderConfirmed.deliveryType}</span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ color: 'var(--text-muted)' }}>Total:</span>
+                        <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>${checkoutData.total.toFixed(2)}</span>
+                      </div>
+                    </div>
+
+                    <button className="btn btn-primary" onClick={() => { setCheckoutData(null); setOrderConfirmed(null); }} style={{ width: '100%' }}>
+                      Back to Annah's Kitchen
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <div style={{ marginBottom: '1.5rem' }}>
+                      <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Checkout & Details</div>
+                      <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Complete Your Order</h3>
+                    </div>
+
+                    <form onSubmit={handleCheckoutSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      <div className="form-group">
+                        <label className="form-label">Order Type</label>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                          <button
+                            type="button"
+                            onClick={() => setCheckoutForm({ ...checkoutForm, deliveryType: 'Pickup' })}
+                            style={{
+                              padding: '0.75rem',
+                              borderRadius: '8px',
+                              background: checkoutForm.deliveryType === 'Pickup' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(255,255,255,0.04)',
+                              border: checkoutForm.deliveryType === 'Pickup' ? '1px solid var(--gold-primary)' : '1px solid var(--border-subtle)',
+                              color: checkoutForm.deliveryType === 'Pickup' ? 'var(--gold-light)' : 'var(--text-secondary)',
+                              fontWeight: 600
+                            }}
+                          >
+                            🏬 Pickup
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setCheckoutForm({ ...checkoutForm, deliveryType: 'Delivery' })}
+                            style={{
+                              padding: '0.75rem',
+                              borderRadius: '8px',
+                              background: checkoutForm.deliveryType === 'Delivery' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(255,255,255,0.04)',
+                              border: checkoutForm.deliveryType === 'Delivery' ? '1px solid var(--gold-primary)' : '1px solid var(--border-subtle)',
+                              color: checkoutForm.deliveryType === 'Delivery' ? 'var(--gold-light)' : 'var(--text-secondary)',
+                              fontWeight: 600
+                            }}
+                          >
+                            🚗 Delivery
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Full Name *</label>
+                        <input 
+                          type="text" 
+                          required 
+                          className="form-control" 
+                          placeholder="e.g. Maya Sterling"
+                          value={checkoutForm.name}
+                          onChange={(e) => setCheckoutForm({ ...checkoutForm, name: e.target.value })}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Phone Number *</label>
+                        <input 
+                          type="tel" 
+                          required 
+                          className="form-control" 
+                          placeholder="+1 (555) 234-5678"
+                          value={checkoutForm.phone}
+                          onChange={(e) => setCheckoutForm({ ...checkoutForm, phone: e.target.value })}
+                        />
+                      </div>
+
+                      {checkoutForm.deliveryType === 'Delivery' && (
+                        <div className="form-group">
+                          <label className="form-label">Delivery Street Address *</label>
+                          <input 
+                            type="text" 
+                            required 
+                            className="form-control" 
+                            placeholder="Apt, Street, Suite, City"
+                            value={checkoutForm.address}
+                            onChange={(e) => setCheckoutForm({ ...checkoutForm, address: e.target.value })}
+                          />
+                        </div>
+                      )}
+
+                      <div className="form-group">
+                        <label className="form-label">Special Notes (Optional)</label>
+                        <input 
+                          type="text" 
+                          className="form-control" 
+                          placeholder="Extra cutlery, dressing on the side..."
+                          value={checkoutForm.notes}
+                          onChange={(e) => setCheckoutForm({ ...checkoutForm, notes: e.target.value })}
+                        />
+                      </div>
+
+                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '10px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '1.15rem', fontWeight: 700, color: 'var(--gold-light)' }}>
+                          <span>Total Amount:</span>
+                          <span>${checkoutData.total.toFixed(2)}</span>
+                        </div>
+                      </div>
+
+                      <button type="submit" className="btn btn-primary" disabled={checkoutSubmitting} style={{ width: '100%' }}>
+                        {checkoutSubmitting ? 'Placing Order...' : `🔥 Place Order ($${checkoutData.total.toFixed(2)})`}
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Review Modal */}
+          {isReviewModalOpen && (
+            <div className="modal-overlay" onClick={() => setIsReviewModalOpen(false)}>
+              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="modal-close-btn" onClick={() => setIsReviewModalOpen(false)}>✕</button>
+
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Guest Impressions</div>
+                  <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Review Your Experience</h3>
+                </div>
+
+                <form onSubmit={handleReviewSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                  <div className="form-group">
+                    <label className="form-label">Your Name *</label>
+                    <input 
+                      type="text" 
+                      required 
+                      className="form-control" 
+                      placeholder="e.g. Alistair & Clare"
+                      value={reviewForm.name}
+                      onChange={(e) => setReviewForm({ ...reviewForm, name: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Star Rating</label>
+                    <div style={{ display: 'flex', gap: '0.5rem', fontSize: '1.8rem', color: 'var(--gold-light)', cursor: 'pointer' }}>
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span key={star} onClick={() => setReviewForm({ ...reviewForm, rating: star })}>
+                          {star <= reviewForm.rating ? '★' : '☆'}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Your Feedback *</label>
+                    <textarea 
+                      rows="4" 
+                      required 
+                      className="form-control" 
+                      placeholder="What made your culinary experience memorable?"
+                      value={reviewForm.comment}
+                      onChange={(e) => setReviewForm({ ...reviewForm, comment: e.target.value })}
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn btn-primary" disabled={reviewSubmitting}>
+                    {reviewSubmitting ? 'Publishing...' : '✨ Publish Review'}
+                  </button>
+                </form>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // Mount to DOM
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

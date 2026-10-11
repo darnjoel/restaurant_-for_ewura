@@ -1,0 +1,33 @@
+[
+  {
+    "id": "AK-ORD-86931",
+    "customer": {
+      "name": "Julian Thorne",
+      "phone": "+1 555 889 2200",
+      "address": "88 West End Penthouse, Central"
+    },
+    "deliveryType": "Delivery",
+    "items": [
+      {
+        "price": 42,
+        "quantity": 2,
+        "name": "Annah's Prime Ribeye Steak",
+        "id": "m1"
+      },
+      {
+        "price": 16.5,
+        "quantity": 2,
+        "name": "Annah's Molten Chocolate Gold Dome",
+        "id": "m10"
+      }
+    ],
+    "notes": "Ring doorbell twice, please deliver extra warm",
+    "subtotal": 117,
+    "tax": 9.65,
+    "tip": 15,
+    "total": 141.65,
+    "status": "Confirmed & Preparing",
+    "estimatedMinutes": 25,
+    "createdAt": "2026-10-11T21:20:39.143Z"
+  }
+]

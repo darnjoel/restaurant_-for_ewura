@@ -1,0 +1,23 @@
+{
+  "name": "annahs-kitchen",
+  "version": "1.0.0",
+  "description": "Annah's Kitchen - Responsive Gourmet Restaurant Website with React Frontend & Node.js / PHP Backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": [
+    "react",
+    "restaurant",
+    "afro-fusion",
+    "woodfire",
+    "food",
+    "reservations",
+    "orders",
+    "nodejs",
+    "php"
+  ],
+  "author": "Annah's Kitchen Hospitality Group",
+  "license": "MIT"
+}
