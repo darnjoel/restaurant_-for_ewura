@@ -9,25 +9,31 @@
     "deliveryType": "Delivery",
     "items": [
       {
-        "price": 42,
+        "price": 34,
         "quantity": 2,
-        "name": "Annah's Prime Ribeye Steak",
-        "id": "m1"
+        "name": "Firewood Smoked Ghanaian Jollof & Braised Goat",
+        "id": "m6"
       },
       {
-        "price": 16.5,
+        "price": 38,
+        "quantity": 1,
+        "name": "Charcoal-Grilled Whole Volta Tilapia & Banku",
+        "id": "m12"
+      },
+      {
+        "price": 9.5,
         "quantity": 2,
-        "name": "Annah's Molten Chocolate Gold Dome",
-        "id": "m10"
+        "name": "Chef Annah's Artisanal Sobolo (Spiced Hibiscus)",
+        "id": "m18"
       }
     ],
-    "notes": "Ring doorbell twice, please deliver extra warm",
-    "subtotal": 117,
-    "tax": 9.65,
-    "tip": 15,
-    "total": 141.65,
+    "notes": "Ring doorbell twice, please deliver extra warm with extra black shito",
+    "subtotal": 125,
+    "tax": 10.31,
+    "tip": 18.75,
+    "total": 154.06,
     "status": "Confirmed & Preparing",
     "estimatedMinutes": 25,
-    "createdAt": "2026-10-11T21:20:39.143Z"
+    "createdAt": "2026-10-12T21:20:39.143Z"
   }
 ]

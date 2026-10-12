@@ -35,7 +35,7 @@ export default function CartDrawer({
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🍽️</div>
               <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>Your bag is empty</h4>
               <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                Discover our signature woodfire steaks, seafood, and decadent desserts.
+                Discover our signature firewood Jollof, Banku & Tilapia, and heritage creations.
               </p>
               <button className="btn btn-outline btn-sm" onClick={onClose}>
                 Browse Menu

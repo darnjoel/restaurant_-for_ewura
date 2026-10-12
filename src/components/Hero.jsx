@@ -19,13 +19,13 @@ export default function Hero({ onBookTableClick, onExploreMenuClick }) {
           </div>
 
           <h1 className="hero-title">
-            Where Soul Meets <span className="highlight">Flavor</span>
+            The Soul of <span className="highlight">Ghanaian Gastronomy</span>
           </h1>
 
           <p className="hero-description">
-            Experience contemporary afro-fusion gastronomy by Executive Chef Annah. 
-            Woodfire-charred prime cuts, heritage spices, and vibrant farm-fresh botanicals 
-            in an intimate candlelit sanctuary.
+            Experience contemporary Ghanaian fine dining by Executive Chef Annah Mensah. 
+            Smoky firewood Jollof, whole charcoal-grilled Volta tilapia, heritage spices, 
+            and rich slow-simmered pots in an intimate candlelit sanctuary.
           </p>
 
           <div className="hero-cta-group">

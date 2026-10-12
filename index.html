@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annah's Kitchen | Contemporary Afro-Fusion & Woodfire Dining</title>
-  <meta name="description" content="Experience Michelin-recommended contemporary afro-fusion dining by Executive Chef Annah. Woodfire steaks, braised oxtail, artisan seafood, and craft cocktails in an intimate setting.">
+  <title>Annah's Kitchen | Authentic Contemporary Ghanaian Dining & Woodfire Hearth</title>
+  <meta name="description" content="Experience Michelin-recommended contemporary Ghanaian dining by Executive Chef Annah Mensah. Authentic firewood Jollof, whole grilled Volta tilapia, waakye, kelewele, and artisanal sobolo in an intimate dining sanctuary.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
   
   <!-- Google Fonts -->
@@ -37,199 +37,330 @@
     // --- MENU DATA ---
     const MENU_CATEGORIES = [
       { id: 'all', name: 'All Dishes', icon: '🍽️' },
-      { id: 'starters', name: 'Starters & Bites', icon: '🥗' },
-      { id: 'mains', name: "Chef's Mains", icon: '🥩' },
-      { id: 'grill', name: 'Woodfire Grill', icon: '🔥' },
+      { id: 'starters', name: 'Street Bites & Starters', icon: '🥟' },
+      { id: 'mains', name: 'Heritage Mains & Pots', icon: '🍲' },
+      { id: 'grill', name: 'Woodfire & Coalpot Grill', icon: '🔥' },
       { id: 'desserts', name: 'Artisan Desserts', icon: '🍨' },
-      { id: 'beverages', name: 'Craft Elixirs', icon: '🍸' },
+      { id: 'beverages', name: 'Craft Sobolo & Elixirs', icon: '🍹' },
     ];
 
     const MENU_ITEMS = [
+      // --- STARTERS & STREET BITES ---
       {
         id: 'm1',
-        name: "Annah's Prime Ribeye Steak",
-        category: 'mains',
-        price: 42.00,
-        rating: 4.9,
-        reviewsCount: 128,
-        isChefSpecial: true,
-        tags: ['Gluten-Free', "Chef's Signature"],
-        description: "12oz Prime grass-fed ribeye charred over hickory wood, rosemary bone marrow butter, truffled potato puree, and grilled vine tomatoes.",
-        image: "/images/hero.jpg",
-        calories: "780 kcal",
-        allergens: "Dairy"
-      },
-      {
-        id: 'm2',
-        name: "Slow-Braised Oxtail & Jollof Risotto",
-        category: 'mains',
-        price: 36.50,
-        rating: 4.95,
-        reviewsCount: 142,
-        isChefSpecial: true,
-        spicyLevel: 1,
-        tags: ["Signature Fusion", "Halal"],
-        description: "Tender 8-hour braised oxtail in aromatic spiced herb reduction, served over velvety smoked tomato jollof arborio risotto with plantain crisps.",
-        image: "/images/hero.jpg",
-        calories: "820 kcal",
-        allergens: "Dairy"
-      },
-      {
-        id: 'm3',
-        name: "Garlic Butter Tiger Prawns",
+        name: "Crispy Spiced Kelewele & Roasted Groundnuts",
         category: 'starters',
-        price: 18.00,
-        rating: 4.8,
-        reviewsCount: 89,
-        isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Seafood', 'Pescatarian'],
-        description: "Sizzling skillet of wild jumbo tiger prawns bathed in crushed roasted garlic, bird's eye chili, lemon confit, and sourdough toast.",
-        image: "/images/hero.jpg",
-        calories: "460 kcal",
-        allergens: "Shellfish, Gluten"
-      },
-      {
-        id: 'm4',
-        name: "Crispy Suya Wagyu Skewers",
-        category: 'starters',
-        price: 19.50,
+        price: 14.00,
         rating: 4.9,
-        reviewsCount: 76,
+        reviewsCount: 112,
         isChefSpecial: true,
-        spicyLevel: 2,
-        tags: ['Chef Special', 'Nut Allergy'],
-        description: "Thinly sliced American Wagyu beef ribbons threaded on bamboo skewers, crusted in authentic yaji peanut spice, pickled red onions and lime.",
-        image: "/images/hero.jpg",
-        calories: "520 kcal",
+        tags: ['Vegetarian', 'Gluten-Free', 'Ghanaian Street Classic'],
+        description: "Golden caramelized ripe plantain cubes marinated in freshly grated ginger, cayenne pepper, cloves (pepre), and calabash nutmeg, tossed with crunchy roasted salted peanuts.",
+        image: "/images/ghana-jollof.jpg",
+        calories: "380 kcal",
         allergens: "Peanuts"
       },
       {
-        id: 'm5',
-        name: "Charred Heirloom & Edible Petal Salad",
+        id: 'm2',
+        name: "Chichinga Beef Skewers (Suya Kebab)",
         category: 'starters',
-        price: 15.00,
-        rating: 4.7,
-        reviewsCount: 45,
-        isChefSpecial: false,
-        tags: ['Vegetarian', 'Gluten-Free', 'Organic'],
-        description: "Crisp organic baby greens, roasted heirloom beets, edible pansy flowers, goat cheese snow, candied pecans, and sweet champagne citrus dressing.",
-        image: "/images/hero.jpg",
-        calories: "340 kcal",
-        allergens: "Dairy, Nuts"
-      },
-      {
-        id: 'm6',
-        name: "Pan-Seared Chilean Sea Bass",
-        category: 'mains',
-        price: 39.00,
-        rating: 4.85,
-        reviewsCount: 64,
-        isChefSpecial: true,
-        tags: ['Seafood', 'Gluten-Free'],
-        description: "Crispy skin Chilean sea bass fillet atop silky coconut-lemongrass fumet, grilled baby asparagus, chili threads, and kaffir lime drizzle.",
-        image: "/images/hero.jpg",
-        calories: "580 kcal",
-        allergens: "Fish"
-      },
-      {
-        id: 'm7',
-        name: "Wood-Fired Peri-Peri Spatchcock Chicken",
-        category: 'grill',
-        price: 29.00,
-        rating: 4.8,
+        price: 18.50,
+        rating: 4.92,
         reviewsCount: 94,
-        isChefSpecial: false,
-        spicyLevel: 2,
-        tags: ['Fire Grill', 'Halal'],
-        description: "Half farm chicken marinated 48 hours in Annah's fermented scotch bonnet glaze, charred over open flames, served with cassava fries.",
-        image: "/images/hero.jpg",
-        calories: "740 kcal",
-        allergens: "Egg"
-      },
-      {
-        id: 'm8',
-        name: "Herb-Crusted Australian Lamb Rack",
-        category: 'grill',
-        price: 45.00,
-        rating: 4.95,
-        reviewsCount: 110,
         isChefSpecial: true,
-        tags: ["Chef's Selection", 'Gluten-Free'],
-        description: "Rosemary and za'atar crusted lamb cutlets cooked to medium-rare, served with pomegranate molasses reduction and minted pea puree.",
+        spicyLevel: 2,
+        tags: ['Chef Special', 'Halal', 'Nut Allergy'],
+        description: "Tender prime beef ribbons coated in authentic Northern Ghanaian tankora & kuli-kuli peanut spice, wood-grilled on bamboo skewers, served with sliced red onions and fresh lime.",
         image: "/images/hero.jpg",
-        calories: "710 kcal",
-        allergens: "Dairy"
+        calories: "450 kcal",
+        allergens: "Peanuts"
       },
       {
-        id: 'm9',
-        name: "Wild Forest Mushroom & Truffle Pappardelle",
-        category: 'mains',
-        price: 26.00,
-        rating: 4.75,
+        id: 'm3',
+        name: "Golden Puna Yam Balls with Shito Glaze",
+        category: 'starters',
+        price: 16.00,
+        rating: 4.85,
+        reviewsCount: 78,
+        isChefSpecial: false,
+        spicyLevel: 1,
+        tags: ['Signature Starter', 'Ghanaian Favorite'],
+        description: "Crispy panko-crusted Ghanaian puna yam croquettes filled with seasoned slow-cooked minced beef, herbs, and scallions, paired with Chef Annah's artisanal black pepper shito dip.",
+        image: "/images/hero.jpg",
+        calories: "410 kcal",
+        allergens: "Gluten, Fish (in Shito)"
+      },
+      {
+        id: 'm4',
+        name: "Crispy Kaklo & Spiced Bambara Emulsion",
+        category: 'starters',
+        price: 13.50,
+        rating: 4.78,
         reviewsCount: 52,
         isChefSpecial: false,
-        tags: ['Vegetarian'],
-        description: "Handmade ribbons of egg pasta tossed with sautéed chanterelles, porcini, black summer truffle cream, and 24-month Parmigiano-Reggiano.",
+        spicyLevel: 1,
+        tags: ['Vegan', 'Gluten-Free', 'Heritage Bite'],
+        description: "Traditional spiced ripe plantain and ginger fritters crisped golden, accompanied by a savory bambara groundnut emulsion, pickled shallots, and fresh cilantro.",
         image: "/images/hero.jpg",
-        calories: "620 kcal",
-        allergens: "Gluten, Dairy"
-      },
-      {
-        id: 'm10',
-        name: "Annah's Molten Chocolate Gold Dome",
-        category: 'desserts',
-        price: 16.50,
-        rating: 4.98,
-        reviewsCount: 180,
-        isChefSpecial: true,
-        tags: ["Signature Dessert", 'Vegetarian'],
-        description: "Dark 72% Valrhona chocolate molten lava cake crested with edible 24-karat gold leaf, tart raspberry coulis swirl, and Madagascar vanilla bean gelato.",
-        image: "/images/signature-dessert.jpg",
-        calories: "490 kcal",
-        allergens: "Dairy, Gluten"
-      },
-      {
-        id: 'm11',
-        name: "Caramelized Baobab Crème Brûlée",
-        category: 'desserts',
-        price: 14.00,
-        rating: 4.8,
-        reviewsCount: 68,
-        isChefSpecial: false,
-        tags: ['Gluten-Free', 'Vegetarian'],
-        description: "Silky vanilla bean custard infused with African baobab fruit, topped with brittle caramelized cane sugar and macerated blackberries.",
-        image: "/images/signature-dessert.jpg",
-        calories: "410 kcal",
-        allergens: "Dairy, Egg"
-      },
-      {
-        id: 'm12',
-        name: "Hibiscus & Smoked Mezcal Blossom",
-        category: 'beverages',
-        price: 16.00,
-        rating: 4.9,
-        reviewsCount: 92,
-        isChefSpecial: true,
-        tags: ['Artisan Cocktail', 'Alcoholic'],
-        description: "Artisanal Oaxacan mezcal, steeped organic hibiscus syrup, fresh lime juice, orange liqueur, garnished with flaming smoked rosemary.",
-        image: "/images/hero.jpg",
-        calories: "180 kcal",
+        calories: "320 kcal",
         allergens: "None"
       },
       {
-        id: 'm13',
-        name: "Golden Passion & Ginger Sparkler",
-        category: 'beverages',
-        price: 9.50,
-        rating: 4.85,
-        reviewsCount: 77,
+        id: 'm5',
+        name: "Wild River Prawns with Kpakpo Shito",
+        category: 'starters',
+        price: 19.50,
+        rating: 4.88,
+        reviewsCount: 84,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ['Seafood', 'Gluten-Free', 'Pescatarian'],
+        description: "Wild-caught jumbo prawns seared in cast iron with crushed aromatic green kpakpo shito peppers, roasted garlic confit, lemon oil, and charred green plantain crisps.",
+        image: "/images/hero.jpg",
+        calories: "390 kcal",
+        allergens: "Shellfish"
+      },
+
+      // --- HERITAGE MAINS & POTS ---
+      {
+        id: 'm6',
+        name: "Firewood Smoked Ghanaian Jollof & Braised Goat",
+        category: 'mains',
+        price: 34.00,
+        rating: 4.98,
+        reviewsCount: 195,
+        isChefSpecial: true,
+        spicyLevel: 1,
+        tags: ["Chef's Signature", 'Halal', 'National Pride'],
+        description: "Fragrant jasmine rice infused with smoky woodfire aroma, simmered in rich spiced plum tomato and rosemary reduction. Served with tender slow-braised goat meat, caramelized sweet plantains, and house-made dark shito.",
+        image: "/images/ghana-jollof.jpg",
+        calories: "780 kcal",
+        allergens: "Fish (in Shito)"
+      },
+      {
+        id: 'm7',
+        name: "Waakye Royal Platter (Annah's Heritage Waakye)",
+        category: 'mains',
+        price: 32.00,
+        rating: 4.96,
+        reviewsCount: 168,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ['Traditional Masterpiece', 'Accra Classic'],
+        description: "Indigenous rice and red cowpeas steamed with sorghum leaf stalks, accompanied by rich braised beef stew, slow-cooked wele, farm-boiled egg, talia spaghetti, seasoned gari foto, sweet fried plantains, and fiery black shito.",
+        image: "/images/ghana-jollof.jpg",
+        calories: "820 kcal",
+        allergens: "Egg, Gluten, Fish (in Shito)"
+      },
+      {
+        id: 'm8',
+        name: "Pounded Fufu & Goat Meat Light Soup",
+        category: 'mains',
+        price: 36.00,
+        rating: 4.93,
+        reviewsCount: 124,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ['Heritage Pot', 'Gluten-Free', 'Ashanti Tradition'],
+        description: "Silky hand-pounded cassava and green plantain fufu immersed in a vibrant, slow-simmered tomato-ginger light soup infused with roasted prekese (Aidan fruit), scotch bonnet, and succulent tender goat meat.",
+        image: "/images/banku-tilapia.jpg",
+        calories: "690 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm9',
+        name: "Rich Red Red (Black-Eyed Pea Stew & Fried Plantains)",
+        category: 'mains',
+        price: 24.00,
+        rating: 4.87,
+        reviewsCount: 88,
         isChefSpecial: false,
         spicyLevel: 1,
-        tags: ['Mocktail', 'Non-Alcoholic', 'Vegan'],
-        description: "Crushed passionfruit pulp, slow cold-pressed Jamaican ginger juice, fresh mint, lime, topped with effervescent elderflower soda.",
+        tags: ['Vegetarian', 'Vegan Option', 'Gluten-Free'],
+        description: "Tender black-eyed cowpeas slow-braised in fragrant zomi red palm oil, ripe tomatoes, ginger, and wild herbs, served with golden sweet fried plantains and toasted seasoned gari.",
+        image: "/images/ghana-jollof.jpg",
+        calories: "590 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm10',
+        name: "Omo Tuo (Rice Balls) with Rich Groundnut Soup & Guinea Fowl",
+        category: 'mains',
+        price: 31.00,
+        rating: 4.89,
+        reviewsCount: 79,
+        isChefSpecial: false,
+        spicyLevel: 2,
+        tags: ['Comfort Classic', 'Nut Allergy', 'Halal'],
+        description: "Velvety pounded jasmine rice balls served in a creamy, slow-simmered roasted peanut soup infused with smoked tender guinea fowl, scotch bonnet, and aromatic garden herbs.",
+        image: "/images/ghana-jollof.jpg",
+        calories: "740 kcal",
+        allergens: "Peanuts"
+      },
+      {
+        id: 'm11',
+        name: "Kontomire Palava Sauce & Boiled Puna Yam",
+        category: 'mains',
+        price: 27.00,
+        rating: 4.84,
+        reviewsCount: 65,
+        isChefSpecial: false,
+        spicyLevel: 1,
+        tags: ['Heritage Dish', 'Pescatarian'],
+        description: "Tender cocoyam leaves gently braised with roasted agushie melon seeds, smoked Volta fish, farm-fresh boiled egg, and red palm oil, served with steamed buttered puna yam and sweet plantains.",
+        image: "/images/banku-tilapia.jpg",
+        calories: "620 kcal",
+        allergens: "Fish, Egg"
+      },
+
+      // --- WOODFIRE & COALPOT GRILL ---
+      {
+        id: 'm12',
+        name: "Charcoal-Grilled Whole Volta Tilapia & Banku",
+        category: 'grill',
+        price: 38.00,
+        rating: 4.97,
+        reviewsCount: 182,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ["Chef's Masterpiece", 'Pescatarian', 'Gluten-Free'],
+        description: "Whole fresh Volta tilapia scored and marinated 24 hours in crushed ginger, garlic, kpakpo shito, anise, and rosemary, charred over hickory coals. Served with soft fermented banku dumplings, sliced sweet red onions, and fresh red and green pepper salsa.",
+        image: "/images/banku-tilapia.jpg",
+        calories: "720 kcal",
+        allergens: "Fish"
+      },
+      {
+        id: 'm13',
+        name: "Flame-Roasted Northern Guinea Fowl (Akɔnfɛm)",
+        category: 'grill',
+        price: 33.50,
+        rating: 4.91,
+        reviewsCount: 96,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ['Fire Hearth', 'Halal', 'Northern Specialty'],
+        description: "Half farm guinea fowl seasoned with fermented dawadawa, crushed scotch bonnet, ginger, and garlic, open-flame grilled to succulent perfection, accompanied by crispy spiced yam chips and house chili dip.",
         image: "/images/hero.jpg",
-        calories: "120 kcal",
+        calories: "680 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm14',
+        name: "Suya Chichinga Lamb Cutlets",
+        category: 'grill',
+        price: 42.00,
+        rating: 4.94,
+        reviewsCount: 110,
+        isChefSpecial: true,
+        spicyLevel: 2,
+        tags: ["Chef's Selection", 'Halal', 'Nut Allergy'],
+        description: "Prime lamb cutlets rubbed with authentic Northern Ghanaian tankora spice blend, charred over hickory coals to medium, served with sweet plantain puree and a vibrant kpakpo shito reduction.",
+        image: "/images/hero.jpg",
+        calories: "740 kcal",
+        allergens: "Peanuts"
+      },
+
+      // --- ARTISAN DESSERTS ---
+      {
+        id: 'm15',
+        name: "Warm Spiced Bofrot with Baobab Honey Glaze",
+        category: 'desserts',
+        price: 14.50,
+        rating: 4.93,
+        reviewsCount: 130,
+        isChefSpecial: true,
+        tags: ['Sweet Heritage', 'Vegetarian'],
+        description: "Fluffy, golden Ghanaian street doughnuts delicately scented with nutmeg and Madagascar vanilla, dusted with cinnamon sugar, served with wild African baobab honey and condensed milk dip.",
+        image: "/images/signature-dessert.jpg",
+        calories: "420 kcal",
+        allergens: "Gluten, Dairy"
+      },
+      {
+        id: 'm16',
+        name: "Ashanti Single-Origin Dark Chocolate Fondant",
+        category: 'desserts',
+        price: 16.50,
+        rating: 4.98,
+        reviewsCount: 172,
+        isChefSpecial: true,
+        tags: ['Ghana Cocoa Pride', 'Vegetarian'],
+        description: "Decadent warm molten lava cake crafted with 72% single-origin Ghana cocoa from the Ashanti region, paired with caramelized spiced plantain crisps and coconut vanilla bean quenelle.",
+        image: "/images/signature-dessert.jpg",
+        calories: "510 kcal",
+        allergens: "Dairy, Egg, Gluten"
+      },
+      {
+        id: 'm17',
+        name: "Atadwe (Tiger Nut) & Coconut Pannacotta",
+        category: 'desserts',
+        price: 13.50,
+        rating: 4.85,
+        reviewsCount: 64,
+        isChefSpecial: false,
+        tags: ['Gluten-Free', 'Vegan', 'Dairy-Free'],
+        description: "Silky, naturally sweet pudding prepared from freshly pressed Ghanaian tiger nut milk and rich coconut cream, crowned with ripe mango coulis and passionfruit pearls.",
+        image: "/images/signature-dessert.jpg",
+        calories: "330 kcal",
+        allergens: "None"
+      },
+
+      // --- CRAFT SOBOLO & ELIXIRS ---
+      {
+        id: 'm18',
+        name: "Chef Annah's Artisanal Sobolo (Spiced Hibiscus)",
+        category: 'beverages',
+        price: 9.50,
+        rating: 4.96,
+        reviewsCount: 178,
+        isChefSpecial: true,
+        spicyLevel: 1,
+        tags: ['Signature Elixir', 'Non-Alcoholic', 'Vegan'],
+        description: "Slow-steeped organic dried hibiscus calyxes infused with freshly crushed ginger, grains of selim (hwentia), cloves, and fresh pineapple peel essence, served chilled with sweet garden mint.",
+        image: "/images/hero.jpg",
+        calories: "110 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm19',
+        name: "Royal Asaana Caramelized Malt Fizz",
+        category: 'beverages',
+        price: 10.00,
+        rating: 4.88,
+        reviewsCount: 82,
+        isChefSpecial: false,
+        tags: ['Mocktail', 'Non-Alcoholic', 'Vegan'],
+        description: "A sparkling modern revival of traditional Ghanaian fermented corn beer (Asaana), infused with caramelized brown cane sugar, fresh lime juice, and aromatic nutmeg over crushed ice.",
+        image: "/images/hero.jpg",
+        calories: "130 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm20',
+        name: "Palm Wine & Botanical Akpeteshie Highball",
+        category: 'beverages',
+        price: 16.50,
+        rating: 4.94,
+        reviewsCount: 105,
+        isChefSpecial: true,
+        tags: ['Artisan Cocktail', 'Alcoholic', 'Heritage Spirits'],
+        description: "Sweet fresh palm wine (Nsafufuo) shaken with handcrafted Ghanaian cane spirit (Akpeteshie), spicy ginger cordial, fresh lime juice, and smoked rosemary sprig.",
+        image: "/images/hero.jpg",
+        calories: "190 kcal",
+        allergens: "None"
+      },
+      {
+        id: 'm21',
+        name: "Northern Lamugin & Tamarind Ginger Cooler",
+        category: 'beverages',
+        price: 9.00,
+        rating: 4.86,
+        reviewsCount: 68,
+        isChefSpecial: false,
+        spicyLevel: 1,
+        tags: ['Northern Refreshment', 'Non-Alcoholic', 'Vegan'],
+        description: "Traditional northern Ghanaian chilled cooler crafted with ginger root, soaked rice essence, cloves, and wild tangy tamarind pulp, garnished with cucumber and lime.",
+        image: "/images/hero.jpg",
+        calories: "105 kcal",
         allergens: "None"
       }
     ];
@@ -241,7 +372,7 @@
         role: "Food & Wine Critic",
         rating: 5,
         date: "October 2026",
-        comment: "Annah's Kitchen is a masterclass in modern soul cuisine. The Slow-Braised Oxtail over Jollof Risotto has depths of flavor you won't find anywhere else. Absolutely sublime.",
+        comment: "Annah's Kitchen is a masterclass in modern Ghanaian gastronomy. The firewood-smoked Jollof Rice with slow-braised goat and house-made black shito has depths of flavor that bring tears of joy. Absolutely transcendent.",
         avatar: "MV"
       },
       {
@@ -250,7 +381,7 @@
         role: "Verified Diner",
         rating: 5,
         date: "September 2026",
-        comment: "The ambiance feels like an intimate speakeasy with Michelin-level culinary standards. The Chocolate Gold Dome dessert is pure theater and unforgettable taste!",
+        comment: "The Banku and Charcoal-Grilled Tilapia with fresh green kpakpo shito is extraordinary! Paired with the artisanal Sobolo cocktail, it's easily the most authentic and memorable dining experience.",
         avatar: "ER"
       },
       {
@@ -259,7 +390,7 @@
         role: "Anniversary Guests",
         rating: 5,
         date: "October 2026",
-        comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah personally presented three courses. Exceptional warmth and transcendent food.",
+        comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah presented her Waakye Royal Platter and Ashanti Chocolate Fondant. Exceptional Ghanaian warmth, storytelling, and hospitality.",
         avatar: "DC"
       }
     ];
@@ -601,13 +732,13 @@
                   </div>
 
                   <h1 className="hero-title">
-                    Where Soul Meets <span className="highlight">Flavor</span>
+                    The Soul of <span className="highlight">Ghanaian Gastronomy</span>
                   </h1>
 
                   <p className="hero-description">
-                    Experience contemporary afro-fusion gastronomy by Executive Chef Annah. 
-                    Woodfire-charred prime cuts, heritage spices, and vibrant farm-fresh botanicals 
-                    in an intimate candlelit sanctuary.
+                    Experience contemporary Ghanaian fine dining by Executive Chef Annah Mensah. 
+                    Smoky firewood Jollof, whole charcoal-grilled Volta tilapia, heritage spices, 
+                    and rich slow-simmered pots in an intimate candlelit sanctuary.
                   </p>
 
                   <div className="hero-cta-group">
@@ -688,7 +819,7 @@
                       <div className="badge-icon-box">🏆</div>
                       <div>
                         <h4 style={{ color: '#fff', fontSize: '1.05rem', margin: 0 }}>Executive Chef Annah</h4>
-                        <p style={{ color: 'var(--gold-light)', fontSize: '0.85rem', margin: 0 }}>Master of Afro-Fusion & Woodfire</p>
+                        <p style={{ color: 'var(--gold-light)', fontSize: '0.85rem', margin: 0 }}>Master of Ghanaian Gastronomy</p>
                       </div>
                     </div>
                   </div>
@@ -700,18 +831,16 @@
                     </h2>
 
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem', fontSize: '1.05rem' }}>
-                      Born from a lifelong adoration for African hearth traditions, wild foraging, and classical culinary techniques, 
-                      <strong> Annah's Kitchen</strong> is more than a restaurant—it is a sanctuary where memory, spice, and intimacy converge.
+                      Born from a deep reverence for Ghana's culinary heritage—from the bustling seaside smokehouses of Jamestown and Osu to the ancestral hearths of the Ashanti and Northern regions—<strong>Annah's Kitchen</strong> elevates beloved traditional recipes into a world-class fine dining experience.
                     </p>
 
                     <div className="about-quote-box">
-                      “True hospitality is not merely feeding the body; it is lighting a warm fire inside someone’s soul and inviting them to stay.”
+                      “True Ghanaian hospitality is Akwaaba in every bite: welcoming you to our table as family and honoring the earth through soulful food.”
                     </div>
 
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.8rem', fontSize: '1rem' }}>
-                      We partner directly with sustainable smallholder farms and coastal purveyors. 
-                      Our spices are hand-roasted on cast iron, our stocks simmer for 36 hours, and our sourdough breads 
-                      are proofed with heritage grain ferments.
+                      We partner directly with sustainable smallholder farms and coastal fishermen. 
+                      Our spices are hand-roasted on cast iron, our shito is slow-caramelized over 12 hours with smoked dried fish and scotch bonnets, and our dishes celebrate authentic indigenous ingredients like dawadawa, prekese, and single-origin Ashanti cocoa.
                     </p>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
@@ -720,19 +849,19 @@
                         <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Delighted Guests</p>
                       </div>
                       <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>28+</h3>
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Artisan Spices</p>
+                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>100%</h3>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Ghanaian Roots</p>
                       </div>
                       <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>100%</h3>
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Non-GMO & Organic</p>
+                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>28+</h3>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Ancestral Spices</p>
                       </div>
                     </div>
 
                     <div className="chef-signature">
                       <img src="/images/chef-annah.jpg" alt="Chef Annah portrait" className="chef-avatar" />
                       <div className="chef-meta">
-                        <h4>Annah K. Ndlovu</h4>
+                        <h4>Annah Mensah</h4>
                         <p>Founder & Chef Patron</p>
                       </div>
                     </div>
@@ -1329,7 +1458,7 @@
                     <div className="empty-cart-view">
                       <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🍽️</div>
                       <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>Your bag is empty</h4>
-                      <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Discover our signature woodfire steaks, seafood, and desserts.</p>
+                      <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Discover our signature firewood Jollof, Banku & Tilapia, and heritage creations.</p>
                       <button className="btn btn-outline btn-sm" onClick={() => setIsCartOpen(false)}>Browse Menu</button>
                     </div>
                   ) : (

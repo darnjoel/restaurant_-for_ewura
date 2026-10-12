@@ -49,7 +49,7 @@ readJsonFile('reviews.json', [
     role: "Food & Wine Critic",
     rating: 5,
     date: "October 2026",
-    comment: "Annah's Kitchen is a masterclass in modern soul cuisine. The Slow-Braised Oxtail over Jollof Risotto has depths of flavor you won't find anywhere else in the country. Absolutely sublime.",
+    comment: "Annah's Kitchen is a masterclass in modern Ghanaian gastronomy. The firewood-smoked Jollof Rice with slow-braised goat and house-made black shito has depths of flavor that bring tears of joy. Absolutely transcendent.",
     avatar: "MV"
   },
   {
@@ -58,7 +58,7 @@ readJsonFile('reviews.json', [
     role: "Verified Diner",
     rating: 5,
     date: "September 2026",
-    comment: "The ambiance feels like an intimate speakeasy with Michelin-level culinary standards. The Chocolate Gold Dome dessert is pure theater and unforgettable taste!",
+    comment: "The Banku and Charcoal-Grilled Tilapia with fresh green kpakpo shito is extraordinary! Paired with the artisanal Sobolo cocktail, it's easily the most authentic and memorable dining experience.",
     avatar: "ER"
   },
   {
@@ -67,7 +67,7 @@ readJsonFile('reviews.json', [
     role: "Anniversary Guests",
     rating: 5,
     date: "October 2026",
-    comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah personally presented three courses. Exceptional warmth, attentive service, and transcendent food.",
+    comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah presented her Waakye Royal Platter and Ashanti Chocolate Fondant. Exceptional Ghanaian warmth, storytelling, and hospitality.",
     avatar: "DC"
   }
 ]);
