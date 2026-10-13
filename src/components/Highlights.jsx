@@ -1,8 +1,11 @@
 import React from 'react';
 
 export default function Highlights({ items, onAddToCart }) {
-  // Select top 3 chef signatures
-  const featured = items.filter(it => it.isChefSpecial).slice(0, 3);
+  // Select top Ghanaian chef signatures with dedicated photography
+  let featured = ['m6', 'm12', 'm16'].map(id => items.find(it => it.id === id)).filter(Boolean);
+  if (featured.length === 0) {
+    featured = items.filter(it => it.isChefSpecial).slice(0, 3);
+  }
 
   return (
     <section className="section-padding">
@@ -22,7 +25,12 @@ export default function Highlights({ items, onAddToCart }) {
           {featured.map((item) => (
             <div key={item.id} className="highlight-card">
               <div className="card-media">
-                <img src={item.image} alt={item.name} className="card-img" />
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="card-img" 
+                  onError={(e) => { e.target.onerror = null; e.target.src = './images/hero.jpg'; }}
+                />
                 <span className="card-badge-floating">Chef's Signature</span>
                 <span className="card-price-tag">${item.price.toFixed(2)}</span>
               </div>
