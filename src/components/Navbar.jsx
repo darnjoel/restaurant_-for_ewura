@@ -15,28 +15,30 @@ export default function Navbar({ cartCount, onOpenCart, onOpenReservationModal }
     <nav className="navbar">
       <div className="container navbar-container">
         <a href="#home" className="brand-logo" onClick={closeMenu}>
-          <div className="brand-icon">✨</div>
+          <div className="brand-icon">🍲</div>
           <div className="brand-text">
-            <span className="brand-name">ANNAH'S</span>
-            <span className="brand-tagline">KITCHEN</span>
+            <span className="brand-name">MAA ANNAH'S</span>
+            <span className="brand-tagline">CHOP BAR • ACCRA</span>
           </div>
         </a>
 
         <ul className={`nav-menu ${mobileMenuOpen ? 'open' : ''}`}>
-          <li><a href="#home" className="nav-link active" onClick={closeMenu}>Home</a></li>
-          <li><a href="#menu" className="nav-link" onClick={closeMenu}>Artisan Menu</a></li>
-          <li><a href="#about" className="nav-link" onClick={closeMenu}>Chef's Story</a></li>
-          <li><a href="#reservations" className="nav-link" onClick={closeMenu}>Reservations</a></li>
+          <li><a href="#home" className="nav-link" onClick={closeMenu}>Home</a></li>
+          <li><a href="#status" className="nav-link" onClick={closeMenu}>Today's Pots</a></li>
+          <li><a href="#menu" className="nav-link" onClick={closeMenu}>Chop Menu</a></li>
+          <li><a href="#asanka-builder" className="nav-link" onClick={closeMenu}>Build Asanka</a></li>
+          <li><a href="#about" className="nav-link" onClick={closeMenu}>Meet Maa Annah</a></li>
+          <li><a href="#reservations" className="nav-link" onClick={closeMenu}>Reserve Bench</a></li>
           <li><a href="#reviews" className="nav-link" onClick={closeMenu}>Reviews</a></li>
-          <li><a href="#contact" className="nav-link" onClick={closeMenu}>Hours & Location</a></li>
+          <li><a href="#contact" className="nav-link" onClick={closeMenu}>Location</a></li>
         </ul>
 
         <div className="nav-actions">
           <button 
             className="cart-toggle-btn" 
             onClick={onOpenCart} 
-            aria-label="View Order Bag"
-            title="Your Order Bag"
+            aria-label="View Chop Bag"
+            title="Your Chop Bag"
           >
             <span>🛍️</span>
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
@@ -49,7 +51,7 @@ export default function Navbar({ cartCount, onOpenCart, onOpenReservationModal }
               onOpenReservationModal();
             }}
           >
-            Book Table
+            🍲 Order Chop
           </button>
 
           <button 
