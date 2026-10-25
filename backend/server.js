@@ -45,30 +45,30 @@ readJsonFile('messages.json', []);
 readJsonFile('reviews.json', [
   {
     id: 1,
-    name: "Marcus Vance",
-    role: "Food & Wine Critic",
+    name: "Kwame Owusu",
+    role: "Fufu Enthusiast",
     rating: 5,
     date: "October 2026",
-    comment: "Annah's Kitchen is a masterclass in modern Ghanaian gastronomy. The firewood-smoked Jollof Rice with slow-braised goat and house-made black shito has depths of flavor that bring tears of joy. Absolutely transcendent.",
-    avatar: "MV"
+    comment: "Maa Annah's goat meat light soup cured my cold instantly! Fresh silky fufu in hot Asanka with zero lumps. Generous chunks of tender goat meat and aromatic prekese. Best chop bar in town!",
+    avatar: "KO"
   },
   {
     id: 2,
-    name: "Elena Rostova",
-    role: "Verified Diner",
+    name: "Akosua Mansah",
+    role: "Waakye Lover",
     rating: 5,
-    date: "September 2026",
-    comment: "The Banku and Charcoal-Grilled Tilapia with fresh green kpakpo shito is extraordinary! Paired with the artisanal Sobolo cocktail, it's easily the most authentic and memorable dining experience.",
-    avatar: "ER"
+    date: "October 2026",
+    comment: "Their morning Waakye is unmatched! Fresh banana leaves aroma, soft braised wele, talia spaghetti, gari foto, and dark fiery shito. 10/10 every single time.",
+    avatar: "AM"
   },
   {
     id: 3,
-    name: "Dr. David & Sarah Chen",
-    role: "Anniversary Guests",
+    name: "Uncle Ebo Mensah",
+    role: "Banku & Tilapia Regular",
     rating: 5,
-    date: "October 2026",
-    comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah presented her Waakye Royal Platter and Ashanti Chocolate Fondant. Exceptional Ghanaian warmth, storytelling, and hospitality.",
-    avatar: "DC"
+    date: "September 2026",
+    comment: "Charcoal-Grilled Volta Tilapia with fresh hot banku and raw pepper in the apotoyewa. Wash down with cold sweet Palm Wine or chilled Sobolo. Chop time, no friend!",
+    avatar: "EM"
   }
 ]);
 
@@ -141,7 +141,7 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/api/health' && req.method === 'GET') {
       return sendJson(res, 200, {
         status: 'ok',
-        service: "Annah's Kitchen API Server",
+        service: "Maa Annah's Chop Bar API Server",
         timestamp: new Date().toISOString()
       });
     }
@@ -298,7 +298,7 @@ const server = http.createServer(async (req, res) => {
 
         return sendJson(res, 201, {
           success: true,
-          message: 'Thank you for sharing your experience at Annah’s Kitchen!',
+          message: 'Medaase! Thank you for sharing your experience at Maa Annah’s Chop Bar!',
           review: newRev
         });
       }
@@ -349,7 +349,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(` ✨ Annah's Kitchen Server Running!`);
+  console.log(` 🍲 Maa Annah's Chop Bar Server Running!`);
   console.log(` 🌐 Local Web App URL: http://localhost:${PORT}`);
   console.log(` 📡 REST API Base:     http://localhost:${PORT}/api`);
   console.log(`====================================================`);

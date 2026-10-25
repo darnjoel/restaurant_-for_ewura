@@ -3,1332 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annah's Kitchen | Authentic Contemporary Ghanaian Dining & Woodfire Hearth</title>
-  <meta name="description" content="Experience Michelin-recommended contemporary Ghanaian dining by Executive Chef Annah Mensah. Authentic firewood Jollof, whole grilled Volta tilapia, waakye, kelewele, and artisanal sobolo in an intimate dining sanctuary.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <title>Maa Annah's Chop Bar | Authentic Ghanaian Local Chop & Hot Asanka Hearth</title>
+  <meta name="description" content="Chop time, no friend! Hand-pounded silky Fufu in hot earthenware Asanka bowls, boiling Goat Meat Light Soup, Charcoal-Grilled Volta Tilapia with Banku, morning Waakye on banana leaves, and ice-cold Sobolo at Maa Annah's Chop Bar.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="./src/styles/index.css">
-  <style id="annah-inlined-styles">
-/* =========================================================
-   ANNAH'S KITCHEN - LUXURY ARTISANAL RESTAURANT DESIGN SYSTEM
-   ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap');
-
-:root {
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-brand: 'Cinzel', serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-
-  /* Colors */
-  --bg-deep: #080a0e;
-  --bg-main: #0d1017;
-  --bg-card: rgba(20, 24, 34, 0.78);
-  --bg-card-hover: rgba(28, 34, 48, 0.88);
-  --bg-surface: #131722;
-  --bg-glass: rgba(13, 16, 23, 0.85);
-
-  --gold-primary: #f59e0b;
-  --gold-light: #fbbf24;
-  --gold-dark: #b45309;
-  --gold-glow: rgba(245, 158, 11, 0.28);
-  --gold-border: rgba(245, 158, 11, 0.32);
-
-  --ember-accent: #ea580c;
-  --ember-glow: rgba(234, 88, 12, 0.24);
-
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #8492a6;
-  --text-gold: #fde68a;
-
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(255, 255, 255, 0.12);
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --radius-full: 9999px;
-
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.35);
-  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.08);
-  --shadow-gold: 0 10px 30px rgba(245, 158, 11, 0.25);
-  --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.85);
-
-  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Reset & Base */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  color-scheme: dark;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--bg-main);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  background-image: 
-    radial-gradient(circle at 15% 10%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(234, 88, 12, 0.04) 0%, transparent 45%);
-  background-attachment: fixed;
-}
-
-/* Typography Utilities */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--text-primary);
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Container */
-.container {
-  width: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Section Header */
-.section-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid var(--gold-border);
-  color: var(--gold-light);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0.4rem 1.1rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.section-title span {
-  background: linear-gradient(135deg, var(--gold-light), #f59e0b, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.section-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  max-width: 650px;
-  margin: 0 auto 3rem auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
-  padding: 0.85rem 1.8rem;
-  transition: all var(--transition-fast);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
-  color: #0b0d12;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
-  font-weight: 700;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.55);
-  filter: brightness(1.08);
-}
-
-.btn-outline {
-  border: 1px solid var(--gold-border);
-  color: var(--gold-light);
-  background: rgba(245, 158, 11, 0.05);
-  backdrop-filter: blur(10px);
-}
-
-.btn-outline:hover {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: var(--gold-light);
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  color: var(--text-secondary);
-}
-
-.btn-ghost:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.88rem;
-}
-
-/* Navigation Bar */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(13, 16, 23, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-subtle);
-  transition: background var(--transition-smooth);
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-}
-
-.brand-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
-}
-
-.brand-icon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #fbbf24, #d97706);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  box-shadow: var(--shadow-gold);
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-family: var(--font-brand);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #fff;
-}
-
-.brand-tagline {
-  font-size: 0.7rem;
-  color: var(--gold-light);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-  list-style: none;
-}
-
-.nav-link {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color var(--transition-fast);
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--gold-light);
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--gold-primary);
-  border-radius: 2px;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.cart-toggle-btn {
-  position: relative;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  transition: all var(--transition-fast);
-}
-
-.cart-toggle-btn:hover {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: var(--gold-border);
-  transform: scale(1.05);
-}
-
-.cart-badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  min-width: 20px;
-  height: 20px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4px;
-  border: 2px solid var(--bg-main);
-  animation: pulse-badge 2s infinite;
-}
-
-@keyframes pulse-badge {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-}
-
-.hamburger-btn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-}
-
-.hamburger-btn span {
-  width: 100%;
-  height: 2px;
-  background-color: var(--text-primary);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero-section {
-  position: relative;
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  padding: 4rem 0 6rem 0;
-  overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.28) contrast(1.15);
-  transform: scale(1.02);
-  transition: transform 10s ease-out;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(13, 16, 23, 0.7) 0%,
-    rgba(13, 16, 23, 0.4) 40%,
-    rgba(13, 16, 23, 0.95) 90%,
-    var(--bg-main) 100%
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 820px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-bottom: 1.5rem;
-  line-height: 1.15;
-}
-
-.hero-title .highlight {
-  background: linear-gradient(135deg, #fef08a, #f59e0b, #ea580c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-description {
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-cta-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  margin-bottom: 3.5rem;
-}
-
-.hero-stats-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background: rgba(20, 24, 34, 0.65);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
-}
-
-.hero-stat-card {
-  text-align: center;
-}
-
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--gold-light);
-  line-height: 1;
-  margin-bottom: 0.35rem;
-}
-
-.stat-label {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-weight: 600;
-}
-
-/* Signature Highlights Section */
-.section-padding {
-  padding: 6.5rem 0;
-}
-
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.highlight-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: all var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
-}
-
-.highlight-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-border);
-  box-shadow: var(--shadow-card), var(--shadow-gold);
-}
-
-.card-media {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.highlight-card:hover .card-img {
-  transform: scale(1.08);
-}
-
-.card-badge-floating {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: rgba(13, 16, 23, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--gold-border);
-  color: var(--gold-light);
-  padding: 0.3rem 0.8rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.card-price-tag {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background: linear-gradient(135deg, #fbbf24, #d97706);
-  color: #0d1017;
-  font-weight: 800;
-  font-size: 1.15rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.card-body {
-  padding: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 1.35rem;
-  margin-bottom: 0.6rem;
-  color: #fff;
-}
-
-.card-desc {
-  color: var(--text-secondary);
-  font-size: 0.94rem;
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.card-rating {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--gold-light);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* Chef Story Section */
-.about-section {
-  background: linear-gradient(180deg, var(--bg-main) 0%, #11141c 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.about-media-wrapper {
-  position: relative;
-}
-
-.about-img-frame {
-  position: relative;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--border-subtle);
-}
-
-.about-img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  transition: transform 0.8s ease;
-}
-
-.about-img-frame:hover .about-img {
-  transform: scale(1.04);
-}
-
-.about-badge-card {
-  position: absolute;
-  bottom: -1.5rem;
-  right: -1.5rem;
-  background: rgba(18, 22, 32, 0.94);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--gold-border);
-  padding: 1.4rem 1.8rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-modal);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.badge-icon-box {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #f59e0b, #b45309);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.about-quote-box {
-  border-left: 3px solid var(--gold-primary);
-  padding-left: 1.5rem;
-  margin: 1.8rem 0;
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--text-gold);
-}
-
-.chef-signature {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.chef-avatar {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border: 2px solid var(--gold-primary);
-  object-fit: cover;
-}
-
-.chef-meta h4 {
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-.chef-meta p {
-  font-size: 0.85rem;
-  color: var(--gold-light);
-}
-
-/* Menu Filter Tabs & Controls */
-.menu-controls {
-  margin-bottom: 2.5rem;
-}
-
-.menu-search-bar {
-  max-width: 480px;
-  margin: 0 auto 2rem auto;
-  position: relative;
-}
-
-.menu-search-input {
-  width: 100%;
-  padding: 0.85rem 1.25rem 0.85rem 3rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-full);
-  color: #fff;
-  transition: all var(--transition-fast);
-}
-
-.menu-search-input:focus {
-  outline: none;
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 0 3px var(--gold-glow);
-}
-
-.search-icon {
-  position: absolute;
-  left: 1.1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-}
-
-.category-tabs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.category-tab {
-  padding: 0.65rem 1.4rem;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all var(--transition-fast);
-}
-
-.category-tab:hover {
-  background: rgba(245, 158, 11, 0.1);
-  color: #fff;
-  border-color: var(--gold-border);
-}
-
-.category-tab.active {
-  background: linear-gradient(135deg, #fbbf24, #d97706);
-  color: #0d1017;
-  font-weight: 700;
-  border-color: transparent;
-  box-shadow: var(--shadow-gold);
-}
-
-.dietary-filters {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.dietary-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.dietary-toggle input {
-  accent-color: var(--gold-primary);
-  width: 16px;
-  height: 16px;
-}
-
-/* Menu Grid */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.75rem;
-}
-
-.menu-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: all var(--transition-smooth);
-}
-
-.menu-card:hover {
-  border-color: var(--gold-border);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
-}
-
-.menu-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-}
-
-.menu-item-name {
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: 600;
-}
-
-.menu-item-price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--gold-light);
-  white-space: nowrap;
-}
-
-.menu-item-tags {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.75rem;
-}
-
-.tag-pill {
-  font-size: 0.72rem;
-  padding: 0.15rem 0.55rem;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-muted);
-}
-
-.tag-pill.chef {
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--gold-light);
-  border: 1px solid var(--gold-border);
-}
-
-.menu-item-desc {
-  color: var(--text-secondary);
-  font-size: 0.88rem;
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-.menu-card-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 0.85rem;
-}
-
-.menu-meta-info {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.add-bag-btn {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid var(--gold-border);
-  color: var(--gold-light);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.45rem 1rem;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: all var(--transition-fast);
-}
-
-.add-bag-btn:hover {
-  background: linear-gradient(135deg, #fbbf24, #d97706);
-  color: #0d1017;
-  transform: scale(1.04);
-}
-
-/* Table Reservation Form */
-.reservation-section {
-  background: linear-gradient(180deg, #11141c 0%, var(--bg-main) 100%);
-}
-
-.reservation-card {
-  max-width: 860px;
-  margin: 0 auto;
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--gold-border);
-  border-radius: var(--radius-xl);
-  padding: 3rem;
-  box-shadow: var(--shadow-modal);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group.full-width {
-  grid-column: span 2;
-}
-
-.form-label {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.form-control {
-  padding: 0.85rem 1.15rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  color: #fff;
-  transition: all var(--transition-fast);
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 0 3px var(--gold-glow);
-}
-
-/* Reviews Carousel / Cards */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.review-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.review-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.review-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f59e0b, #ea580c);
-  color: #fff;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-
-.review-author h4 {
-  font-size: 1.05rem;
-  color: #fff;
-}
-
-.review-author p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
-
-.review-stars {
-  color: var(--gold-light);
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.review-quote {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.65;
-  font-style: italic;
-}
-
-/* Cart Slide-Over Drawer */
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(6px);
-  z-index: 200;
-  transition: opacity 0.3s ease;
-}
-
-.cart-drawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 450px;
-  height: 100%;
-  background: #11151f;
-  border-left: 1px solid var(--border-subtle);
-  z-index: 201;
-  display: flex;
-  flex-direction: column;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
-  animation: slide-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slide-in {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-.cart-header {
-  padding: 1.5rem 1.8rem;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cart-close-btn {
-  font-size: 1.5rem;
-  color: var(--text-muted);
-  transition: color var(--transition-fast);
-}
-
-.cart-close-btn:hover {
-  color: #fff;
-}
-
-.cart-body {
-  padding: 1.5rem 1.8rem;
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-.empty-cart-view {
-  text-align: center;
-  padding: 4rem 1rem;
-  color: var(--text-muted);
-}
-
-.cart-item-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.cart-item-info h4 {
-  font-size: 0.98rem;
-  color: #fff;
-  margin-bottom: 0.25rem;
-}
-
-.cart-item-price {
-  font-size: 0.88rem;
-  color: var(--gold-light);
-  font-weight: 600;
-}
-
-.cart-qty-ctrl {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-full);
-  padding: 0.25rem 0.65rem;
-}
-
-.qty-btn {
-  font-weight: 700;
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.qty-btn:hover {
-  color: var(--gold-light);
-}
-
-.cart-footer {
-  padding: 1.5rem 1.8rem;
-  border-top: 1px solid var(--border-subtle);
-  background: rgba(13, 16, 23, 0.95);
-}
-
-.cart-summary-line {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.6rem;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-}
-
-.cart-summary-total {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0 1.5rem 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-/* Modals */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-  z-index: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-.modal-content {
-  background: #131722;
-  border: 1px solid var(--gold-border);
-  border-radius: var(--radius-xl);
-  max-width: 580px;
-  width: 100%;
-  padding: 2.5rem;
-  box-shadow: var(--shadow-modal);
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  color: var(--text-muted);
-  font-size: 1.3rem;
-}
-
-.modal-close-btn:hover {
-  color: #fff;
-}
-
-/* Toast Notifications */
-.toast-container {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 400;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 400px;
-}
-
-.toast {
-  background: rgba(19, 23, 34, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--gold-border);
-  border-left: 4px solid var(--gold-primary);
-  padding: 1rem 1.35rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-modal);
-  color: #fff;
-  font-size: 0.92rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation: toast-slide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes toast-slide {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Footer */
-.footer {
-  background: #07090d;
-  border-top: 1px solid var(--border-subtle);
-  padding: 5rem 0 2rem 0;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
-}
-
-.footer-col h4 {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 1.25rem;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-  color: var(--gold-light);
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .about-img {
-    height: 400px;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-container {
-    height: 70px;
-  }
-  .nav-menu {
-    display: none;
-  }
-  .nav-menu.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(13, 16, 23, 0.98);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-  .hamburger-btn {
-    display: flex;
-  }
-  .hero-stats-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-group.full-width {
-    grid-column: span 1;
-  }
-  .reservation-card {
-    padding: 1.8rem;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .about-badge-card {
-    right: 0.5rem;
-    bottom: -1rem;
-    padding: 1rem;
-  }
-}
-
-  </style>
-
-  <!-- React 18 & ReactDOM & Babel Standalone for Instant Execution -->
+  <!-- React 18 & ReactDOM & Babel Standalone for Instant Native Browser Execution -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -1336,10 +23,10 @@ img {
 <body>
   <div id="root">
     <!-- Initial Loading State -->
-    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0d1017; color: #f59e0b; font-family: 'Playfair Display', serif;">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; animation: pulse-badge 1.5s infinite;">✨</div>
-      <h2 style="font-size: 1.8rem; letter-spacing: 2px;">ANNAH'S KITCHEN</h2>
-      <p style="color: #94a3b8; font-family: sans-serif; font-size: 0.9rem; margin-top: 0.5rem;">Igniting the Hearth...</p>
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #140d08; color: #fbbf24; font-family: 'Outfit', sans-serif;">
+      <div style="font-size: 3rem; margin-bottom: 1rem; animation: pulse-glow 1.2s infinite alternate;">🍲</div>
+      <h2 style="font-size: 2rem; letter-spacing: 1px; font-weight: 900; color: #fff;">MAA ANNAH'S CHOP BAR</h2>
+      <p style="color: #ea580c; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; margin-top: 0.5rem; font-weight: 600;">Stirring the Hearth Pots...</p>
     </div>
   </div>
 
@@ -1347,447 +34,549 @@ img {
   <script type="text/babel">
     const { useState, useEffect, useMemo } = React;
 
-    // --- MENU DATA ---
+    // --- MENU CATEGORIES ---
     const MENU_CATEGORIES = [
-      { id: 'all', name: 'All Dishes', icon: '🍽️' },
-      { id: 'starters', name: 'Street Bites & Starters', icon: '🥟' },
-      { id: 'mains', name: 'Heritage Mains & Pots', icon: '🍲' },
-      { id: 'grill', name: 'Woodfire & Coalpot Grill', icon: '🔥' },
-      { id: 'desserts', name: 'Artisan Desserts', icon: '🍨' },
-      { id: 'beverages', name: 'Craft Sobolo & Elixirs', icon: '🍹' },
+      { id: 'all', name: 'All Chop Bar Specials', icon: '🍲' },
+      { id: 'fufu', name: 'Fufu in Asanka Bowls', icon: '🥣' },
+      { id: 'banku', name: 'Banku, Kenkey & Fish', icon: '🐟' },
+      { id: 'waakye', name: 'Waakye, Jollof & Rice', icon: '🍚' },
+      { id: 'ampesi', name: "Kokonte & Ampesi ('Face The Wall')", icon: '🌿' },
+      { id: 'sides', name: 'Meats, Wele & Sides', icon: '🍢' },
+      { id: 'drinks', name: 'Chilled Local Drinks', icon: '🍹' },
     ];
 
+    // --- MENU ITEMS (PRICES IN GH₵) ---
     const MENU_ITEMS = [
-      // --- STARTERS & STREET BITES ---
+      // Fufu
       {
-        id: 'm1',
-        name: "Crispy Spiced Kelewele & Roasted Groundnuts",
-        category: 'starters',
-        price: 14.00,
-        rating: 4.9,
-        reviewsCount: 112,
+        id: 'f1',
+        name: "Pounded Fufu & Goat Meat Light Soup (Aponkye Nkwan)",
+        category: 'fufu',
+        price: 60.00,
+        rating: 4.99,
+        reviewsCount: 312,
         isChefSpecial: true,
-        tags: ['Vegetarian', 'Gluten-Free', 'Ghanaian Street Classic'],
-        description: "Golden caramelized ripe plantain cubes marinated in freshly grated ginger, cayenne pepper, cloves (pepre), and calabash nutmeg, tossed with crunchy roasted salted peanuts.",
-        image: "./images/ghana-jollof.jpg",
-        calories: "380 kcal",
-        allergens: "Peanuts"
-      },
-      {
-        id: 'm2',
-        name: "Chichinga Beef Skewers (Suya Kebab)",
-        category: 'starters',
-        price: 18.50,
-        rating: 4.92,
-        reviewsCount: 94,
-        isChefSpecial: true,
+        isPopular: true,
         spicyLevel: 2,
-        tags: ['Chef Special', 'Halal', 'Nut Allergy'],
-        description: "Tender prime beef ribbons coated in authentic Northern Ghanaian tankora & kuli-kuli peanut spice, wood-grilled on bamboo skewers, served with sliced red onions and fresh lime.",
-        image: "./images/hero.jpg",
-        calories: "450 kcal",
-        allergens: "Peanuts"
-      },
-      {
-        id: 'm3',
-        name: "Golden Puna Yam Balls with Shito Glaze",
-        category: 'starters',
-        price: 16.00,
-        rating: 4.85,
-        reviewsCount: 78,
-        isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Signature Starter', 'Ghanaian Favorite'],
-        description: "Crispy panko-crusted Ghanaian puna yam croquettes filled with seasoned slow-cooked minced beef, herbs, and scallions, paired with Chef Annah's artisanal black pepper shito dip.",
-        image: "./images/hero.jpg",
-        calories: "410 kcal",
-        allergens: "Gluten, Fish (in Shito)"
-      },
-      {
-        id: 'm4',
-        name: "Crispy Kaklo & Spiced Bambara Emulsion",
-        category: 'starters',
-        price: 13.50,
-        rating: 4.78,
-        reviewsCount: 52,
-        isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Vegan', 'Gluten-Free', 'Heritage Bite'],
-        description: "Traditional spiced ripe plantain and ginger fritters crisped golden, accompanied by a savory bambara groundnut emulsion, pickled shallots, and fresh cilantro.",
-        image: "./images/hero.jpg",
-        calories: "320 kcal",
-        allergens: "None"
-      },
-      {
-        id: 'm5',
-        name: "Wild River Prawns with Kpakpo Shito",
-        category: 'starters',
-        price: 19.50,
-        rating: 4.88,
-        reviewsCount: 84,
-        isChefSpecial: true,
-        spicyLevel: 2,
-        tags: ['Seafood', 'Gluten-Free', 'Pescatarian'],
-        description: "Wild-caught jumbo prawns seared in cast iron with crushed aromatic green kpakpo shito peppers, roasted garlic confit, lemon oil, and charred green plantain crisps.",
-        image: "./images/hero.jpg",
-        calories: "390 kcal",
-        allergens: "Shellfish"
-      },
-
-      // --- HERITAGE MAINS & POTS ---
-      {
-        id: 'm6',
-        name: "Firewood Smoked Ghanaian Jollof & Braised Goat",
-        category: 'mains',
-        price: 34.00,
-        rating: 4.98,
-        reviewsCount: 195,
-        isChefSpecial: true,
-        spicyLevel: 1,
-        tags: ["Chef's Signature", 'Halal', 'National Pride'],
-        description: "Fragrant jasmine rice infused with smoky woodfire aroma, simmered in rich spiced plum tomato and rosemary reduction. Served with tender slow-braised goat meat, caramelized sweet plantains, and house-made dark shito.",
-        image: "./images/ghana-jollof.jpg",
-        calories: "780 kcal",
-        allergens: "Fish (in Shito)"
-      },
-      {
-        id: 'm7',
-        name: "Waakye Royal Platter (Annah's Heritage Waakye)",
-        category: 'mains',
-        price: 32.00,
-        rating: 4.96,
-        reviewsCount: 168,
-        isChefSpecial: true,
-        spicyLevel: 2,
-        tags: ['Traditional Masterpiece', 'Accra Classic'],
-        description: "Indigenous rice and red cowpeas steamed with sorghum leaf stalks, accompanied by rich braised beef stew, slow-cooked wele, farm-boiled egg, talia spaghetti, seasoned gari foto, sweet fried plantains, and fiery black shito.",
-        image: "./images/ghana-jollof.jpg",
-        calories: "820 kcal",
-        allergens: "Egg, Gluten, Fish (in Shito)"
-      },
-      {
-        id: 'm8',
-        name: "Pounded Fufu & Goat Meat Light Soup",
-        category: 'mains',
-        price: 36.00,
-        rating: 4.93,
-        reviewsCount: 124,
-        isChefSpecial: true,
-        spicyLevel: 2,
-        tags: ['Heritage Pot', 'Gluten-Free', 'Ashanti Tradition'],
-        description: "Silky hand-pounded cassava and green plantain fufu immersed in a vibrant, slow-simmered tomato-ginger light soup infused with roasted prekese (Aidan fruit), scotch bonnet, and succulent tender goat meat.",
-        image: "./images/banku-tilapia.jpg",
+        tags: ['Asanka Bowl', 'Chop Bar Favorite', 'No Lumps', 'Pounded Fresh'],
+        description: "Silky hand-pounded cassava and plantain fufu served inside a steaming dark earthenware Asanka clay bowl, drowned in vibrant slow-simmered tomato-ginger goat light soup with tender goat meat chunks and prekese aroma.",
+        image: "./images/fufu-asanka.jpg",
         calories: "690 kcal",
         allergens: "None"
       },
       {
-        id: 'm9',
-        name: "Rich Red Red (Black-Eyed Pea Stew & Fried Plantains)",
-        category: 'mains',
-        price: 24.00,
-        rating: 4.87,
-        reviewsCount: 88,
-        isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Vegetarian', 'Vegan Option', 'Gluten-Free'],
-        description: "Tender black-eyed cowpeas slow-braised in fragrant zomi red palm oil, ripe tomatoes, ginger, and wild herbs, served with golden sweet fried plantains and toasted seasoned gari.",
-        image: "./images/ghana-jollof.jpg",
-        calories: "590 kcal",
-        allergens: "None"
+        id: 'f2',
+        name: "Fufu & Rich Palm Nut Soup (Abenkwan) with Cow Leg",
+        category: 'fufu',
+        price: 65.00,
+        rating: 4.94,
+        reviewsCount: 184,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 2,
+        tags: ['Earthen Pot', 'Abenkwan', 'Rich & Thick'],
+        description: "Fresh pounded fufu immersed in thick, velvety, fragrant palm nut soup extracted from boiled fresh oil palm fruits, simmered with tender gelatinous cow leg (nantwi nan), smoked fish, and wild basil.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "780 kcal",
+        allergens: "Fish"
       },
       {
-        id: 'm10',
-        name: "Omo Tuo (Rice Balls) with Rich Groundnut Soup & Guinea Fowl",
-        category: 'mains',
-        price: 31.00,
-        rating: 4.89,
-        reviewsCount: 79,
+        id: 'f3',
+        name: "Fufu & Creamy Groundnut Soup (Nkatenkwan) with Free-Range Fowl",
+        category: 'fufu',
+        price: 58.00,
+        rating: 4.91,
+        reviewsCount: 146,
         isChefSpecial: false,
-        spicyLevel: 2,
-        tags: ['Comfort Classic', 'Nut Allergy', 'Halal'],
-        description: "Velvety pounded jasmine rice balls served in a creamy, slow-simmered roasted peanut soup infused with smoked tender guinea fowl, scotch bonnet, and aromatic garden herbs.",
-        image: "./images/ghana-jollof.jpg",
-        calories: "740 kcal",
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Peanut Soup', 'Comfort Classic', 'Nut Allergy'],
+        description: "Silky pounded fufu swimming in a rich, velvety roasted peanut soup infused with tender local free-range chicken (akoko), scotch bonnets, fresh ginger, and garden tomatoes.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "760 kcal",
         allergens: "Peanuts"
       },
       {
-        id: 'm11',
-        name: "Kontomire Palava Sauce & Boiled Puna Yam",
-        category: 'mains',
-        price: 27.00,
-        rating: 4.84,
-        reviewsCount: 65,
-        isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Heritage Dish', 'Pescatarian'],
-        description: "Tender cocoyam leaves gently braised with roasted agushie melon seeds, smoked Volta fish, farm-fresh boiled egg, and red palm oil, served with steamed buttered puna yam and sweet plantains.",
-        image: "./images/banku-tilapia.jpg",
+        id: 'f4',
+        name: "Fufu with Green Soup / Ebunu Ebunu (Abunabun) & Snails",
+        category: 'fufu',
+        price: 70.00,
+        rating: 4.96,
+        reviewsCount: 129,
+        isChefSpecial: true,
+        isPopular: false,
+        spicyLevel: 2,
+        tags: ['Ashanti Heritage', 'Big Snails', 'Cocoyam Leaves'],
+        description: "Traditional vibrant green cocoyam leaf soup gently spiced with aromatic peppers, cooked with whole tender snails (nwa/kotoko), smoked catfish, mushrooms, and served over hot pounded fufu.",
+        image: "./images/fufu-asanka.jpg",
         calories: "620 kcal",
-        allergens: "Fish, Egg"
+        allergens: "Molluscs, Fish"
+      },
+      {
+        id: 'f5',
+        name: "Fufu & Fresh Volta Catfish Light Soup (Nsuomnam Nkwan)",
+        category: 'fufu',
+        price: 65.00,
+        rating: 4.93,
+        reviewsCount: 98,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 3,
+        tags: ['Hot Pepper', 'Fresh Fish', 'Prekese Broth'],
+        description: "Hot pepper light soup loaded with whole fresh Volta river catfish, ginger, garlic, garden eggs, and fresh habanero peppers. Fiery, healing, and soul-satisfying.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "580 kcal",
+        allergens: "Fish"
       },
 
-      // --- WOODFIRE & COALPOT GRILL ---
+      // Banku & Kenkey
       {
-        id: 'm12',
-        name: "Charcoal-Grilled Whole Volta Tilapia & Banku",
-        category: 'grill',
-        price: 38.00,
-        rating: 4.97,
-        reviewsCount: 182,
+        id: 'b1',
+        name: "Charcoal-Grilled Whole Volta Tilapia & Hot Banku",
+        category: 'banku',
+        price: 65.00,
+        rating: 4.98,
+        reviewsCount: 420,
         isChefSpecial: true,
+        isPopular: true,
         spicyLevel: 2,
-        tags: ["Chef's Masterpiece", 'Pescatarian', 'Gluten-Free'],
-        description: "Whole fresh Volta tilapia scored and marinated 24 hours in crushed ginger, garlic, kpakpo shito, anise, and rosemary, charred over hickory coals. Served with soft fermented banku dumplings, sliced sweet red onions, and fresh red and green pepper salsa.",
+        tags: ['Chop Bar King', 'Live Coals', 'Ga Special'],
+        description: "Juicy whole fresh Volta tilapia seasoned with crushed ginger, garlic, and anise, charred to smoky perfection over coals. Served with two steaming hot banku dumplings, fresh red & green pepper salsa ground in apotoyewa, and sweet sliced onions.",
         image: "./images/banku-tilapia.jpg",
         calories: "720 kcal",
         allergens: "Fish"
       },
       {
-        id: 'm13',
-        name: "Flame-Roasted Northern Guinea Fowl (Akɔnfɛm)",
-        category: 'grill',
-        price: 33.50,
-        rating: 4.91,
-        reviewsCount: 96,
+        id: 'b2',
+        name: "Soft Banku & Fresh Okro Soup with Crabs & Wele",
+        category: 'banku',
+        price: 55.00,
+        rating: 4.92,
+        reviewsCount: 175,
         isChefSpecial: true,
+        isPopular: true,
         spicyLevel: 2,
-        tags: ['Fire Hearth', 'Halal', 'Northern Specialty'],
-        description: "Half farm guinea fowl seasoned with fermented dawadawa, crushed scotch bonnet, ginger, and garlic, open-flame grilled to succulent perfection, accompanied by crispy spiced yam chips and house chili dip.",
-        image: "./images/hero.jpg",
+        tags: ['Draw Soup', 'Crab & Meat', 'Local Favorite'],
+        description: "Hot stretchy fermented corn and cassava banku paired with thick bubbling okro soup loaded with fresh sea crabs, tender braised wele cow skin, smoked fish, and red palm oil.",
+        image: "./images/banku-tilapia.jpg",
         calories: "680 kcal",
+        allergens: "Crustaceans, Fish"
+      },
+      {
+        id: 'b3',
+        name: "Ga Kenkey with Golden Fried Red Fish, Raw Pepper & Shito",
+        category: 'banku',
+        price: 42.00,
+        rating: 4.89,
+        reviewsCount: 160,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 3,
+        tags: ['Ga Heritage', 'Fiery Shito', 'Crispy Fish'],
+        description: "Steaming hot corn-husk wrapped Ga kenkey with crispy seasoned fried red fish, dark house-made black pepper shito, fresh crushed red pepper, and sliced red onions.",
+        image: "./images/banku-tilapia.jpg",
+        calories: "640 kcal",
+        allergens: "Fish"
+      },
+      {
+        id: 'b4',
+        name: "Banku with Rich Groundnut Soup & Smoked Catfish",
+        category: 'banku',
+        price: 52.00,
+        rating: 4.88,
+        reviewsCount: 92,
+        isChefSpecial: false,
+        isPopular: false,
+        spicyLevel: 1,
+        tags: ['Comfort Pot', 'Peanut Stew'],
+        description: "Two tender fermented banku balls served in a deep bowl of thick aromatic roasted peanut soup with flaky smoked river catfish and tender garden eggs.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "710 kcal",
+        allergens: "Peanuts, Fish"
+      },
+
+      // Waakye & Jollof
+      {
+        id: 'w1',
+        name: "Special Chop Bar Waakye on Banana Leaf (Full Works)",
+        category: 'waakye',
+        price: 48.00,
+        rating: 4.99,
+        reviewsCount: 510,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 2,
+        tags: ['Banana Leaf', 'Full Combo', 'Morning & Afternoon Legend'],
+        description: "Fragrant rice and cowpeas steamed with red sorghum stalks served on a clean fresh green banana leaf. Accompanied by tender braised wele, farm boiled egg, talia spaghetti, seasoned gari foto, sweet fried plantains, slow-braised beef stew, and Maa Annah's dark fiery shito.",
+        image: "./images/waakye-special.jpg",
+        calories: "840 kcal",
+        allergens: "Egg, Gluten, Fish (in Shito)"
+      },
+      {
+        id: 'w2',
+        name: "Firewood Ghanaian Jollof Rice & Spiced Fried Chicken",
+        category: 'waakye',
+        price: 45.00,
+        rating: 4.95,
+        reviewsCount: 380,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Smoky Firewood', 'Party Favorite', 'National Pride'],
+        description: "Smoky firewood-cooked jasmine rice simmered in rich spiced plum tomato and rosemary gravy with bottom-of-the-pot flavor (kanzo). Served with succulent seasoned fried chicken, sweet fried plantains, and black shito.",
+        image: "./images/ghana-jollof.jpg",
+        calories: "760 kcal",
+        allergens: "Fish (in Shito)"
+      },
+      {
+        id: 'w3',
+        name: "Omo Tuo (Rice Balls) with Groundnut or Palm Nut Soup",
+        category: 'waakye',
+        price: 50.00,
+        rating: 4.90,
+        reviewsCount: 165,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 2,
+        tags: ['Sunday Special', 'Everyday Comfort', 'Silky Rice Balls'],
+        description: "Soft, velvety mashed rice balls served in your choice of rich roasted groundnut soup or aromatic palm nut soup with tender beef and smoked fish.",
+        image: "./images/ghana-jollof.jpg",
+        calories: "720 kcal",
+        allergens: "Peanuts (in Groundnut Soup), Fish"
+      },
+      {
+        id: 'w4',
+        name: "Chop Bar Plain Rice with Rich Beef Tomato Stew & Shito",
+        category: 'waakye',
+        price: 40.00,
+        rating: 4.85,
+        reviewsCount: 95,
+        isChefSpecial: false,
+        isPopular: false,
+        spicyLevel: 1,
+        tags: ['Everyday Lunch', 'Rich Gravy'],
+        description: "Steaming white jasmine rice bathed in thick, aromatic home-style beef and tomato stew, sweet plantains, boiled egg, and dark shito.",
+        image: "./images/ghana-jollof.jpg",
+        calories: "690 kcal",
+        allergens: "Egg, Fish (in Shito)"
+      },
+
+      // Kokonte & Ampesi
+      {
+        id: 'k1',
+        name: "Hot Kokonte ('Face The Wall / Chris Brown') with Groundnut Soup",
+        category: 'ampesi',
+        price: 45.00,
+        rating: 4.94,
+        reviewsCount: 215,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 2,
+        tags: ['Face The Wall', 'Cassava Flour', 'Chop Bar Treasure'],
+        description: "Smooth, velvety brown cassava flour dumpling prepared fresh over woodfire. Served hot in a clay bowl with creamy groundnut soup, tender goat meat or cow leg, and smoked catfish.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "640 kcal",
+        allergens: "Peanuts, Fish"
+      },
+      {
+        id: 'k2',
+        name: "Authentic Red Red / Gobɛ (Beans Stew with Fried Plantains)",
+        category: 'ampesi',
+        price: 35.00,
+        rating: 4.96,
+        reviewsCount: 340,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Gobɛ', 'Sweet Plantain', 'Red Palm Oil', 'Protein Rich'],
+        description: "Tender black-eyed cowpeas slow-braised in aromatic zomi red palm oil, ripe tomatoes, ginger, and wild herbs. Served with a mountain of sweet golden fried ripe plantains, crispy gari sprinkles, and a farm boiled egg.",
+        image: "./images/red-red.jpg",
+        calories: "610 kcal",
+        allergens: "Egg"
+      },
+      {
+        id: 'k3',
+        name: "Hot Ampesi (Puna Yam & Ripe Plantain) with Kontomire & Koobi",
+        category: 'ampesi',
+        price: 45.00,
+        rating: 4.91,
+        reviewsCount: 130,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Palava Sauce', 'Salted Koobi', 'Agushie Melon Seeds'],
+        description: "Steamed fluffy white puna yam and sweet ripe plantain served with hot Kontomire palava sauce enriched with roasted agushie melon seeds, salted koobi fish, red palm oil, and boiled egg.",
+        image: "./images/red-red.jpg",
+        calories: "670 kcal",
+        allergens: "Fish, Egg"
+      },
+
+      // Meats & Sides
+      {
+        id: 's1',
+        name: "Tender Braised Wele (Cow Skin) - Extra Portion",
+        category: 'sides',
+        price: 15.00,
+        rating: 4.97,
+        reviewsCount: 280,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Soft & Chewy', 'Chop Bar Staple'],
+        description: "Generous pieces of tender, succulent cow skin slow-cooked in spiced broth until soft and gelatinous.",
+        image: "./images/hero.jpg",
+        calories: "160 kcal",
         allergens: "None"
       },
       {
-        id: 'm14',
-        name: "Suya Chichinga Lamb Cutlets",
-        category: 'grill',
-        price: 42.00,
-        rating: 4.94,
+        id: 's2',
+        name: "Extra Succulent Goat Meat Chunks (Aponkye)",
+        category: 'sides',
+        price: 25.00,
+        rating: 4.98,
+        reviewsCount: 195,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Tender Goat', 'Simmered in Prekese'],
+        description: "Two large chunks of slow-cooked local goat meat infused with garlic, ginger, rosemary, and prekese broth.",
+        image: "./images/hero.jpg",
+        calories: "290 kcal",
+        allergens: "None"
+      },
+      {
+        id: 's3',
+        name: "Giant African Escargot Snail (Kotoko / Nwa)",
+        category: 'sides',
+        price: 25.00,
+        rating: 4.93,
         reviewsCount: 110,
         isChefSpecial: true,
+        isPopular: false,
+        spicyLevel: 1,
+        tags: ['Forest Snail', 'Ashanti Delicacy'],
+        description: "Large forest land snail gently braised in aromatic light soup broth with wild herbs.",
+        image: "./images/fufu-asanka.jpg",
+        calories: "140 kcal",
+        allergens: "Molluscs"
+      },
+      {
+        id: 's4',
+        name: "Crispy Hot Kelewele with Roasted Peanuts",
+        category: 'sides',
+        price: 20.00,
+        rating: 4.94,
+        reviewsCount: 220,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 1,
+        tags: ['Ginger & Cloves', 'Sweet Plantain', 'Nut Allergy'],
+        description: "Golden fried ripe plantain cubes marinated with freshly crushed ginger, cloves, cayenne, and calabash nutmeg. Served with crunchy salted peanuts.",
+        image: "./images/red-red.jpg",
+        calories: "380 kcal",
+        allergens: "Peanuts"
+      },
+      {
+        id: 's5',
+        name: "Chichinga Beef Skewers (Suya Kebab)",
+        category: 'sides',
+        price: 25.00,
+        rating: 4.91,
+        reviewsCount: 150,
+        isChefSpecial: false,
+        isPopular: true,
         spicyLevel: 2,
-        tags: ["Chef's Selection", 'Halal', 'Nut Allergy'],
-        description: "Prime lamb cutlets rubbed with authentic Northern Ghanaian tankora spice blend, charred over hickory coals to medium, served with sweet plantain puree and a vibrant kpakpo shito reduction.",
+        tags: ['Charcoal Grilled', 'Tankora Spice', 'Suya'],
+        description: "Thin tender beef strips seasoned in northern kuli-kuli peanut spice and grilled over charcoal with sliced red onions.",
         image: "./images/hero.jpg",
-        calories: "740 kcal",
+        calories: "380 kcal",
         allergens: "Peanuts"
       },
 
-      // --- ARTISAN DESSERTS ---
+      // Chilled Drinks
       {
-        id: 'm15',
-        name: "Warm Spiced Bofrot with Baobab Honey Glaze",
-        category: 'desserts',
-        price: 14.50,
-        rating: 4.93,
-        reviewsCount: 130,
+        id: 'd1',
+        name: "Ice-Cold Craft Sobolo with Ginger, Cloves & Mint",
+        category: 'drinks',
+        price: 15.00,
+        rating: 4.99,
+        reviewsCount: 450,
         isChefSpecial: true,
-        tags: ['Sweet Heritage', 'Vegetarian'],
-        description: "Fluffy, golden Ghanaian street doughnuts delicately scented with nutmeg and Madagascar vanilla, dusted with cinnamon sugar, served with wild African baobab honey and condensed milk dip.",
-        image: "./images/signature-dessert.jpg",
-        calories: "420 kcal",
-        allergens: "Gluten, Dairy"
-      },
-      {
-        id: 'm16',
-        name: "Ashanti Single-Origin Dark Chocolate Fondant",
-        category: 'desserts',
-        price: 16.50,
-        rating: 4.98,
-        reviewsCount: 172,
-        isChefSpecial: true,
-        tags: ['Ghana Cocoa Pride', 'Vegetarian'],
-        description: "Decadent warm molten lava cake crafted with 72% single-origin Ghana cocoa from the Ashanti region, paired with caramelized spiced plantain crisps and coconut vanilla bean quenelle.",
-        image: "./images/signature-dessert.jpg",
-        calories: "510 kcal",
-        allergens: "Dairy, Egg, Gluten"
-      },
-      {
-        id: 'm17',
-        name: "Atadwe (Tiger Nut) & Coconut Pannacotta",
-        category: 'desserts',
-        price: 13.50,
-        rating: 4.85,
-        reviewsCount: 64,
-        isChefSpecial: false,
-        tags: ['Gluten-Free', 'Vegan', 'Dairy-Free'],
-        description: "Silky, naturally sweet pudding prepared from freshly pressed Ghanaian tiger nut milk and rich coconut cream, crowned with ripe mango coulis and passionfruit pearls.",
-        image: "./images/signature-dessert.jpg",
-        calories: "330 kcal",
-        allergens: "None"
-      },
-
-      // --- CRAFT SOBOLO & ELIXIRS ---
-      {
-        id: 'm18',
-        name: "Chef Annah's Artisanal Sobolo (Spiced Hibiscus)",
-        category: 'beverages',
-        price: 9.50,
-        rating: 4.96,
-        reviewsCount: 178,
-        isChefSpecial: true,
-        spicyLevel: 1,
-        tags: ['Signature Elixir', 'Non-Alcoholic', 'Vegan'],
-        description: "Slow-steeped organic dried hibiscus calyxes infused with freshly crushed ginger, grains of selim (hwentia), cloves, and fresh pineapple peel essence, served chilled with sweet garden mint.",
+        isPopular: true,
+        spicyLevel: 0,
+        tags: ['Icy Cold', 'Zobo / Hibiscus', 'Ginger Kick', 'Natural Refreshment'],
+        description: "Deep ruby red hibiscus calyces brewed with crushed fresh ginger, grains of selim (hwentia), black peppercorns (soro wisa), pineapple peel, and sweetened with raw cane sugar. Served ice cold.",
         image: "./images/hero.jpg",
-        calories: "110 kcal",
+        calories: "120 kcal",
         allergens: "None"
       },
       {
-        id: 'm19',
-        name: "Royal Asaana Caramelized Malt Fizz",
-        category: 'beverages',
-        price: 10.00,
+        id: 'd2',
+        name: "Fresh Sweet Palm Wine (Nsā Fufuo)",
+        category: 'drinks',
+        price: 20.00,
+        rating: 4.95,
+        reviewsCount: 210,
+        isChefSpecial: true,
+        isPopular: true,
+        spicyLevel: 0,
+        tags: ['From The Farm', 'Natural Bubbles', 'Sweet Nectar'],
+        description: "Authentic, tapping-fresh sweet oil palm wine with delicate natural effervescence, served chilled in a traditional calabash cup.",
+        image: "./images/hero.jpg",
+        calories: "140 kcal",
+        allergens: "Contains Natural Fermentation (< 3% ABV)"
+      },
+      {
+        id: 'd3',
+        name: "Chilled Asana (Caramelized Fermented Corn Drink with Milk)",
+        category: 'drinks',
+        price: 18.00,
         rating: 4.88,
-        reviewsCount: 82,
+        reviewsCount: 125,
         isChefSpecial: false,
-        tags: ['Mocktail', 'Non-Alcoholic', 'Vegan'],
-        description: "A sparkling modern revival of traditional Ghanaian fermented corn beer (Asaana), infused with caramelized brown cane sugar, fresh lime juice, and aromatic nutmeg over crushed ice.",
+        isPopular: true,
+        spicyLevel: 0,
+        tags: ['Caramelized Corn', 'Served with Milk'],
+        description: "Traditional refreshing beverage made from fermented crushed corn sweetened with dark burnt sugar syrup and topped with cold creamy evaporated milk.",
         image: "./images/hero.jpg",
-        calories: "130 kcal",
+        calories: "210 kcal",
+        allergens: "Milk"
+      },
+      {
+        id: 'd4',
+        name: "Fresh Young Coconut Water (Kube Nsuo)",
+        category: 'drinks',
+        price: 15.00,
+        rating: 4.92,
+        reviewsCount: 170,
+        isChefSpecial: false,
+        isPopular: true,
+        spicyLevel: 0,
+        tags: ['100% Pure', 'Straight From Husk'],
+        description: "Chilled pure natural sweet coconut water served with soft jelly coconut meat to scoop with a spoon.",
+        image: "./images/hero.jpg",
+        calories: "60 kcal",
         allergens: "None"
       },
       {
-        id: 'm20',
-        name: "Palm Wine & Botanical Akpeteshie Highball",
-        category: 'beverages',
-        price: 16.50,
-        rating: 4.94,
-        reviewsCount: 105,
-        isChefSpecial: true,
-        tags: ['Artisan Cocktail', 'Alcoholic', 'Heritage Spirits'],
-        description: "Sweet fresh palm wine (Nsafufuo) shaken with handcrafted Ghanaian cane spirit (Akpeteshie), spicy ginger cordial, fresh lime juice, and smoked rosemary sprig.",
-        image: "./images/hero.jpg",
-        calories: "190 kcal",
-        allergens: "None"
-      },
-      {
-        id: 'm21',
-        name: "Northern Lamugin & Tamarind Ginger Cooler",
-        category: 'beverages',
-        price: 9.00,
-        rating: 4.86,
-        reviewsCount: 68,
+        id: 'd5',
+        name: "Ice Cold Malta Guinness or Club Beer (Bottle)",
+        category: 'drinks',
+        price: 18.00,
+        rating: 4.90,
+        reviewsCount: 230,
         isChefSpecial: false,
-        spicyLevel: 1,
-        tags: ['Northern Refreshment', 'Non-Alcoholic', 'Vegan'],
-        description: "Traditional northern Ghanaian chilled cooler crafted with ginger root, soaked rice essence, cloves, and wild tangy tamarind pulp, garnished with cucumber and lime.",
+        isPopular: true,
+        spicyLevel: 0,
+        tags: ['Glass Bottle', 'Chop Bar Favorite'],
+        description: "Your choice of frosty cold Malta Guinness malt beverage or classic chilled Club Lager Beer bottle.",
         image: "./images/hero.jpg",
-        calories: "105 kcal",
-        allergens: "None"
+        calories: "180 kcal",
+        allergens: "Gluten (Barley)"
       }
     ];
 
+    // Seed Reviews
     const INITIAL_REVIEWS = [
       {
         id: 1,
-        name: "Marcus Vance",
-        role: "Food & Wine Critic",
+        name: "Kwame Owusu",
+        role: "Fufu Enthusiast & Regular Diner",
         rating: 5,
         date: "October 2026",
-        comment: "Annah's Kitchen is a masterclass in modern Ghanaian gastronomy. The firewood-smoked Jollof Rice with slow-braised goat and house-made black shito has depths of flavor that bring tears of joy. Absolutely transcendent.",
-        avatar: "MV"
+        comment: "Maa Annah's goat meat light soup cured my cold instantly! The fufu is freshly pounded with zero lumps, silky and smooth in the hot Asanka bowl. Generous chunks of soft tender goat meat and aromatic prekese. Best chop bar in Ghana, bar none!",
+        avatar: "KO"
       },
       {
         id: 2,
-        name: "Elena Rostova",
-        role: "Verified Diner",
+        name: "Akosua Mansah",
+        role: "Waakye Lover",
         rating: 5,
-        date: "September 2026",
-        comment: "The Banku and Charcoal-Grilled Tilapia with fresh green kpakpo shito is extraordinary! Paired with the artisanal Sobolo cocktail, it's easily the most authentic and memorable dining experience.",
-        avatar: "ER"
+        date: "October 2026",
+        comment: "Their morning Waakye is simply unmatched! Hot leaves aroma, soft braised wele, talia spaghetti, rich gari foto, and dark fiery shito. When you visit on Friday, make sure to get there early before the pot finishes!",
+        avatar: "AM"
       },
       {
         id: 3,
-        name: "Dr. David & Sarah Chen",
-        role: "Anniversary Guests",
+        name: "Uncle Ebo Mensah",
+        role: "Banku & Tilapia Devotee",
+        rating: 5,
+        date: "September 2026",
+        comment: "The Charcoal-Grilled Volta Tilapia with hot Banku is pure joy. The raw pepper ground inside the apotoyewa with sliced onions is on another level. Wash down with cold sweet Palm Wine or chilled Sobolo. Chop time, no friend!",
+        avatar: "EM"
+      },
+      {
+        id: 4,
+        name: "Abena Serwaa",
+        role: "Kokonte & Groundnut Fan",
         rating: 5,
         date: "October 2026",
-        comment: "We celebrated our 10th anniversary at the Chef's Counter. Chef Annah presented her Waakye Royal Platter and Ashanti Chocolate Fondant. Exceptional Ghanaian warmth, storytelling, and hospitality.",
-        avatar: "DC"
+        comment: "The Kokonte ('Face the Wall') with creamy groundnut soup and smoked catfish brought back childhood memories of Kumasi. Maa Annah always scoops extra soup with a warm motherly smile. Authentic Ghanaian hospitality!",
+        avatar: "AS"
       }
     ];
 
-    const RESTAURANT_INFO = {
-      name: "Annah's Kitchen",
-      address: "742 Heritage Boulevard, Gourmet Quarter, Suite 100",
-      phone: "+1 (555) 738-2662",
-      email: "reservations@annahskitchen.com",
-      hours: {
-        weekdays: "Tue - Thu: 4:30 PM - 10:30 PM",
-        weekend: "Fri - Sun: 12:00 PM - 11:30 PM",
-        closed: "Monday: Closed for culinary preparation & sourcing"
-      }
-    };
-
-    // --- MAIN REACT APP ---
+    // --- MAIN REACT APPLICATION ---
     function App() {
       const [menuItems, setMenuItems] = useState(MENU_ITEMS);
       const [reviews, setReviews] = useState(INITIAL_REVIEWS);
       const [cart, setCart] = useState([]);
       const [isCartOpen, setIsCartOpen] = useState(false);
-      const [checkoutData, setCheckoutData] = useState(null);
+      const [orderType, setOrderType] = useState('dine-in'); // 'dine-in' (Asanka) or 'takeaway' (Rubber)
+      const [orderNotes, setOrderNotes] = useState('');
+      const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
       const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-      const [toasts, setToasts] = useState([]);
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [toasts, setToasts] = useState([]);
 
-      // Filtering state
+      // Filter States
       const [selectedCategory, setSelectedCategory] = useState('all');
       const [searchQuery, setSearchQuery] = useState('');
       const [filterChefSpecial, setFilterChefSpecial] = useState(false);
-      const [filterVegetarian, setFilterVegetarian] = useState(false);
-      const [filterGlutenFree, setFilterGlutenFree] = useState(false);
+      const [filterSpicyOnly, setFilterSpicyOnly] = useState(false);
 
-      // Reservation form state
+      // Interactive "Build Your Asanka Bowl" State
+      const [asankaBase, setAsankaBase] = useState({ name: 'Pounded Fufu (Silky Cassava & Plantain)', price: 25.00 });
+      const [asankaSoup, setAsankaSoup] = useState({ name: 'Goat Meat Light Soup (Aponkye Nkwan)', price: 25.00 });
+      const [asankaToppings, setAsankaToppings] = useState([
+        { name: 'Soft Braised Wele', price: 15.00 }
+      ]);
+
+      // Form States
       const [reservationForm, setReservationForm] = useState({
         name: '',
         email: '',
         phone: '',
-        guests: '2',
-        date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
-        time: '19:00',
-        seating: 'Main Dining Room',
-        occasion: 'None',
+        guests: '4',
+        date: new Date().toISOString().split('T')[0],
+        time: '12:30',
+        tableType: 'Wooden Bench (Under Canopy)',
+        occasion: 'Chop Bar Lunch Feast',
         specialRequests: ''
       });
-      const [reservationConfirmed, setReservationConfirmed] = useState(null);
       const [reservationLoading, setReservationLoading] = useState(false);
+      const [reservationConfirmed, setReservationConfirmed] = useState(null);
 
-      // Tip state
-      const [tipPercent, setTipPercent] = useState(15);
-
-      // Review form state
-      const [reviewForm, setReviewForm] = useState({
-        name: '',
-        role: 'Verified Diner',
-        rating: 5,
-        comment: ''
-      });
-      const [reviewSubmitting, setReviewSubmitting] = useState(false);
-
-      // Contact form state
-      const [contactForm, setContactForm] = useState({
-        name: '',
-        email: '',
-        subject: 'General Inquiry',
-        message: ''
-      });
-      const [contactSubmitting, setContactSubmitting] = useState(false);
-      const [activeFaq, setActiveFaq] = useState(null);
-
-      // Checkout form state
       const [checkoutForm, setCheckoutForm] = useState({
         name: '',
         phone: '',
-        email: '',
-        deliveryType: 'Pickup',
-        address: '',
-        notes: ''
+        paymentMethod: 'momo_mtn', // momo_mtn, momo_telecel, cash
+        momoNumber: '',
+        location: '',
+        instructions: ''
       });
-      const [orderConfirmed, setOrderConfirmed] = useState(null);
       const [checkoutSubmitting, setCheckoutSubmitting] = useState(false);
+      const [orderConfirmed, setOrderConfirmed] = useState(null);
 
-      // Sync reviews from backend on load
+      const [reviewForm, setReviewForm] = useState({
+        name: '',
+        rating: 5,
+        comment: '',
+        role: 'Verified Local Diner'
+      });
+      const [reviewSubmitting, setReviewSubmitting] = useState(false);
+
+      // Load Reviews from Backend
       useEffect(() => {
         fetch('/api/reviews')
           .then(res => res.json())
@@ -1796,7 +585,7 @@ img {
               setReviews(data.reviews);
             }
           })
-          .catch(() => {});
+          .catch(() => console.log('Using seed chop bar reviews'));
       }, []);
 
       const showToast = (message) => {
@@ -1815,13 +604,13 @@ img {
           }
           return [...prev, { ...item, quantity: 1 }];
         });
-        showToast(`Added "${item.name}" to your order bag!`);
+        showToast(`Added "${item.name}" to your Chop Bag!`);
       };
 
       const handleUpdateQty = (itemId, qty) => {
         if (qty <= 0) {
           setCart(prev => prev.filter(i => i.id !== itemId));
-          showToast('Item removed from bag.');
+          showToast('Dish removed from bag.');
           return;
         }
         setCart(prev => prev.map(i => i.id === itemId ? { ...i, quantity: qty } : i));
@@ -1833,7 +622,35 @@ img {
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       };
 
-      // Menu filtering logic
+      // Add Custom Asanka Bowl to Bag
+      const handleAddCustomAsanka = () => {
+        const toppingsPrice = asankaToppings.reduce((sum, t) => sum + t.price, 0);
+        const totalPrice = asankaBase.price + asankaSoup.price + toppingsPrice;
+        const customItem = {
+          id: 'custom-asanka-' + Date.now(),
+          name: `Custom Asanka Bowl: ${asankaBase.name.split(' ')[0]} + ${asankaSoup.name.split(' ')[0]}`,
+          price: totalPrice,
+          description: `Base: ${asankaBase.name} | Soup: ${asankaSoup.name} | Extras: ${asankaToppings.map(t => t.name).join(', ') || 'None'}`,
+          quantity: 1,
+          category: 'fufu'
+        };
+        setCart(prev => [...prev, customItem]);
+        showToast(`Custom Asanka Bowl added to bag! (GH₵ ${totalPrice.toFixed(2)})`);
+        setIsCartOpen(true);
+      };
+
+      const toggleAsankaTopping = (topping) => {
+        setAsankaToppings(prev => {
+          const exists = prev.find(t => t.name === topping.name);
+          if (exists) {
+            return prev.filter(t => t.name !== topping.name);
+          } else {
+            return [...prev, topping];
+          }
+        });
+      };
+
+      // Filtered Menu Items
       const filteredItems = useMemo(() => {
         return menuItems.filter(item => {
           if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
@@ -1843,17 +660,15 @@ img {
             if (!matches) return false;
           }
           if (filterChefSpecial && !item.isChefSpecial) return false;
-          if (filterVegetarian && !(item.tags && item.tags.some(t => t.toLowerCase().includes('veg')))) return false;
-          if (filterGlutenFree && !(item.tags && item.tags.some(t => t.toLowerCase().includes('gluten-free')))) return false;
+          if (filterSpicyOnly && item.spicyLevel < 2) return false;
           return true;
         });
-      }, [menuItems, selectedCategory, searchQuery, filterChefSpecial, filterVegetarian, filterGlutenFree]);
+      }, [menuItems, selectedCategory, searchQuery, filterChefSpecial, filterSpicyOnly]);
 
-      // Cart Calculations
+      // Cart Calculations (in Ghanaian Cedis GH₵)
       const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      const tax = Math.round(subtotal * 0.0825 * 100) / 100;
-      const tipAmount = Math.round(subtotal * (tipPercent / 100) * 100) / 100;
-      const total = Math.round((subtotal + tax + tipAmount) * 100) / 100;
+      const packagingFee = orderType === 'takeaway' ? 5.00 : 0.00;
+      const total = Math.round((subtotal + packagingFee) * 100) / 100;
       const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
       // Reservation Submit
@@ -1869,20 +684,65 @@ img {
           const data = await res.json();
           if (res.ok && data.success) {
             setReservationConfirmed(data.reservation);
-            showToast(`Reservation confirmed: ${data.reservation.id}`);
+            showToast(`Bench/Table Reserved: ${data.reservation.id}`);
           } else {
             throw new Error(data.message);
           }
         } catch (err) {
           const fallbackRes = {
             ...reservationForm,
-            id: 'AK-RES-' + Math.floor(1000 + Math.random() * 9000),
+            id: 'CHOP-RES-' + Math.floor(1000 + Math.random() * 9000),
             status: 'Confirmed'
           };
           setReservationConfirmed(fallbackRes);
-          showToast(`Reservation confirmed: ${fallbackRes.id}`);
+          showToast(`Bench Reserved: ${fallbackRes.id}`);
         } finally {
           setReservationLoading(false);
+        }
+      };
+
+      // Checkout Submit
+      const handleCheckoutSubmit = async (e) => {
+        e.preventDefault();
+        setCheckoutSubmitting(true);
+
+        const orderPayload = {
+          items: cart,
+          customer: checkoutForm,
+          orderType,
+          orderNotes,
+          total,
+          status: 'Confirmed & Pounding in Kitchen'
+        };
+
+        try {
+          const res = await fetch('/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderPayload)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            setOrderConfirmed(data.order);
+            setCart([]);
+            showToast(`Order #${data.order.id} placed! Kitchen is on fire!`);
+          } else {
+            throw new Error(data.message);
+          }
+        } catch (err) {
+          const fallback = {
+            id: 'CHOP-' + Math.floor(10000 + Math.random() * 90000),
+            customer: checkoutForm,
+            orderType,
+            orderNotes,
+            total,
+            status: 'Confirmed & In Kitchen'
+          };
+          setOrderConfirmed(fallback);
+          setCart([]);
+          showToast(`Chop Order #${fallback.id} received!`);
+        } finally {
+          setCheckoutSubmitting(false);
         }
       };
 
@@ -1899,87 +759,27 @@ img {
           const data = await res.json();
           if (res.ok && data.success) {
             setReviews(prev => [data.review, ...prev]);
-            showToast('Thank you for sharing your experience!');
+            showToast('Medaase! Your review has been posted!');
             setIsReviewModalOpen(false);
-          } else {
-            throw new Error(data.message);
+            setReviewForm({ name: '', rating: 5, comment: '', role: 'Verified Local Diner' });
           }
         } catch (err) {
-          const fallbackRev = {
+          const fallbackReview = {
             id: Date.now(),
             ...reviewForm,
-            avatar: reviewForm.name.slice(0, 2).toUpperCase() || 'AK',
+            avatar: reviewForm.name.slice(0, 2).toUpperCase(),
             date: 'Just now'
           };
-          setReviews(prev => [fallbackRev, ...prev]);
-          showToast('Thank you for sharing your experience!');
+          setReviews(prev => [fallbackReview, ...prev]);
+          showToast('Medaase! Review added.');
           setIsReviewModalOpen(false);
         } finally {
           setReviewSubmitting(false);
         }
       };
 
-      // Contact Submit
-      const handleContactSubmit = async (e) => {
-        e.preventDefault();
-        setContactSubmitting(true);
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(contactForm)
-          });
-          showToast('Message sent! Our concierge will be in touch shortly.');
-          setContactForm({ name: '', email: '', subject: 'General Inquiry', message: '' });
-        } catch (err) {
-          showToast('Message received! Thank you for connecting with us.');
-          setContactForm({ name: '', email: '', subject: 'General Inquiry', message: '' });
-        } finally {
-          setContactSubmitting(false);
-        }
-      };
-
-      // Checkout Submit
-      const handleCheckoutSubmit = async (e) => {
-        e.preventDefault();
-        setCheckoutSubmitting(true);
-        const orderPayload = {
-          items: cart,
-          customer: checkoutForm,
-          deliveryType: checkoutForm.deliveryType,
-          notes: checkoutForm.notes,
-          tip: tipAmount
-        };
-
-        try {
-          const res = await fetch('/api/orders', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(orderPayload)
-          });
-          const data = await res.json();
-          if (res.ok && data.success) {
-            setOrderConfirmed(data.order);
-            setCart([]);
-            showToast(`Order #${data.order.id} placed successfully!`);
-          } else {
-            throw new Error(data.message);
-          }
-        } catch (err) {
-          const fallback = {
-            id: 'AK-ORD-' + Math.floor(10000 + Math.random() * 90000),
-            customer: checkoutForm,
-            deliveryType: checkoutForm.deliveryType,
-            total,
-            status: 'Confirmed & In Kitchen'
-          };
-          setOrderConfirmed(fallback);
-          setCart([]);
-          showToast(`Order #${fallback.id} received!`);
-        } finally {
-          setCheckoutSubmitting(false);
-        }
-      };
+      // Current custom bowl price
+      const customBowlTotal = asankaBase.price + asankaSoup.price + asankaToppings.reduce((s, t) => s + t.price, 0);
 
       return (
         <div className="app-root">
@@ -1988,39 +788,47 @@ img {
             {toasts.map(t => (
               <div key={t.id} className="toast">
                 <span>{t.message}</span>
-                <button onClick={() => setToasts(prev => prev.filter(x => x.id !== t.id))} style={{ marginLeft: '1rem', color: '#94a3b8' }}>✕</button>
+                <button onClick={() => setToasts(prev => prev.filter(x => x.id !== t.id))} style={{ marginLeft: '1rem', color: '#ab9584' }}>✕</button>
               </div>
             ))}
+          </div>
+
+          {/* Slogan Banner */}
+          <div className="announcement-bar">
+            <span className="pulse-dot"></span>
+            <span>🔥 MORNING WAAKYE FROM 7:00 AM | HOT POUNDED FUFU & ASANKA SOUPS FROM 10:30 AM | LIVE CHARCOAL TILAPIA!</span>
           </div>
 
           {/* Sticky Navigation */}
           <nav className="navbar">
             <div className="container navbar-container">
               <a href="#home" className="brand-logo" onClick={() => scrollTo('home')}>
-                <div className="brand-icon">✨</div>
+                <div className="brand-icon">🍲</div>
                 <div className="brand-text">
-                  <span className="brand-name">ANNAH'S</span>
-                  <span className="brand-tagline">KITCHEN</span>
+                  <span className="brand-name">MAA ANNAH'S</span>
+                  <span className="brand-tagline">CHOP BAR • ACCRA</span>
                 </div>
               </a>
 
               <ul className={`nav-menu ${mobileMenuOpen ? 'open' : ''}`}>
                 <li><a href="#home" className="nav-link" onClick={() => scrollTo('home')}>Home</a></li>
-                <li><a href="#menu" className="nav-link" onClick={() => scrollTo('menu')}>Artisan Menu</a></li>
-                <li><a href="#about" className="nav-link" onClick={() => scrollTo('about')}>Chef's Story</a></li>
-                <li><a href="#reservations" className="nav-link" onClick={() => scrollTo('reservations')}>Reservations</a></li>
+                <li><a href="#status" className="nav-link" onClick={() => scrollTo('status')}>Today's Pots</a></li>
+                <li><a href="#menu" className="nav-link" onClick={() => scrollTo('menu')}>Chop Menu</a></li>
+                <li><a href="#asanka-builder" className="nav-link" onClick={() => scrollTo('asanka-builder')}>Build Asanka Bowl</a></li>
+                <li><a href="#about" className="nav-link" onClick={() => scrollTo('about')}>Meet Maa Annah</a></li>
+                <li><a href="#reservations" className="nav-link" onClick={() => scrollTo('reservations')}>Reserve Bench</a></li>
                 <li><a href="#reviews" className="nav-link" onClick={() => scrollTo('reviews')}>Reviews</a></li>
-                <li><a href="#contact" className="nav-link" onClick={() => scrollTo('contact')}>Hours & Location</a></li>
+                <li><a href="#contact" className="nav-link" onClick={() => scrollTo('contact')}>Location</a></li>
               </ul>
 
               <div className="nav-actions">
-                <button className="cart-toggle-btn" onClick={() => setIsCartOpen(true)} title="View Order Bag">
+                <button className="cart-toggle-btn" onClick={() => setIsCartOpen(true)} title="View Chop Bag">
                   <span>🛍️</span>
                   {totalCartCount > 0 && <span className="cart-badge">{totalCartCount}</span>}
                 </button>
 
-                <button className="btn btn-primary btn-sm" onClick={() => scrollTo('reservations')}>
-                  Book Table
+                <button className="btn btn-primary btn-sm" onClick={() => scrollTo('menu')}>
+                  🍲 Order Chop
                 </button>
 
                 <button className="hamburger-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -2034,88 +842,295 @@ img {
             {/* Hero Section */}
             <section id="home" className="hero-section">
               <div className="hero-background">
-                <img src="./images/hero.jpg" alt="Annah's Kitchen culinary table spread" className="hero-bg-img" />
+                <img src="./images/hero.jpg" alt="Maa Annah's Ghanaian Chop Bar" className="hero-bg-img" />
                 <div className="hero-overlay"></div>
               </div>
 
               <div className="container">
                 <div className="hero-content">
-                  <div className="section-badge">
-                    <span>✨</span> Michelin Guide Recommended 2026
+                  <div className="hero-chop-badge">
+                    <span>🇬🇭</span> CHOP TIME, NO FRIEND! • AUTHENTIC LOCAL CHOP
                   </div>
 
                   <h1 className="hero-title">
-                    The Soul of <span className="highlight">Ghanaian Gastronomy</span>
+                    The Heart of <span className="highlight">Ghanaian Chop Bar</span>
                   </h1>
 
                   <p className="hero-description">
-                    Experience contemporary Ghanaian fine dining by Executive Chef Annah Mensah. 
-                    Smoky firewood Jollof, whole charcoal-grilled Volta tilapia, heritage spices, 
-                    and rich slow-simmered pots in an intimate candlelit sanctuary.
+                    Welcome to Maa Annah's Chop Bar! Hand-pounded silky Fufu served steaming inside hot 
+                    dark clay Asanka bowls, rich bubbling Goat Meat Light Soup with aromatic prekese, 
+                    charcoal-grilled whole Volta Tilapia with soft Banku, morning Waakye on fresh banana leaves, 
+                    and ice-cold natural Sobolo. 
                   </p>
 
                   <div className="hero-cta-group">
-                    <button className="btn btn-primary" onClick={() => scrollTo('reservations')}>
-                      <span>🍷</span> Reserve a Table
+                    <button className="btn btn-primary" onClick={() => scrollTo('menu')}>
+                      <span>🍲</span> Explore Today's Chop
                     </button>
-                    <button className="btn btn-outline" onClick={() => scrollTo('menu')}>
-                      <span>📜</span> Explore Menu
+                    <button className="btn btn-gold" onClick={() => scrollTo('asanka-builder')}>
+                      <span>🥣</span> Build Your Asanka Bowl
                     </button>
                   </div>
 
                   <div className="hero-stats-row">
                     <div className="hero-stat-card">
-                      <div className="stat-number">4.95★</div>
-                      <div className="stat-label">Guest Rating</div>
-                    </div>
-                    <div className="hero-stat-card">
-                      <div className="stat-number">15+</div>
-                      <div className="stat-label">Years Mastery</div>
-                    </div>
-                    <div className="hero-stat-card">
                       <div className="stat-number">100%</div>
-                      <div className="stat-label">Farm Fresh</div>
+                      <div className="stat-label">Pounded Mortar (Zero Lumps)</div>
+                    </div>
+                    <div className="hero-stat-card">
+                      <div className="stat-number">4.98★</div>
+                      <div className="stat-label">Local Diner Rating</div>
+                    </div>
+                    <div className="hero-stat-card">
+                      <div className="stat-number">18+</div>
+                      <div className="stat-label">Years of Mama's Hand (Nsa Pa)</div>
+                    </div>
+                    <div className="hero-stat-card">
+                      <div className="stat-number">MoMo</div>
+                      <div className="stat-label">& Cash Counter Accepted</div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Signature Curations Showcase */}
+            {/* Live Pot Status Tracker */}
+            <section id="status" className="pot-tracker-section">
+              <div className="container">
+                <div className="pot-tracker-grid">
+                  <div className="pot-card">
+                    <div className="pot-icon">🥣</div>
+                    <div className="pot-info">
+                      <h4>Fufu Mortar (Waduro)</h4>
+                      <div className="pot-status"><span className="live-dot"></span> Pounding Live & Silky!</div>
+                    </div>
+                  </div>
+
+                  <div className="pot-card">
+                    <div className="pot-icon">🍲</div>
+                    <div className="pot-info">
+                      <h4>Aponkye Light Soup</h4>
+                      <div className="pot-status"><span className="live-dot"></span> Simmering with Prekese</div>
+                    </div>
+                  </div>
+
+                  <div className="pot-card">
+                    <div className="pot-icon">🔥</div>
+                    <div className="pot-info">
+                      <h4>Charcoal Grill Hearth</h4>
+                      <div className="pot-status"><span className="live-dot"></span> Volta Tilapia on Coals</div>
+                    </div>
+                  </div>
+
+                  <div className="pot-card">
+                    <div className="pot-icon">🍚</div>
+                    <div className="pot-info">
+                      <h4>Hot Waakye Pot</h4>
+                      <div className="pot-status"><span className="live-dot"></span> Serving on Banana Leaves</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* INTERACTIVE FEATURE: BUILD YOUR ASANKA BOWL */}
+            <section id="asanka-builder" className="section-padding asanka-builder-section">
+              <div className="container">
+                <div className="text-center">
+                  <div className="section-badge">Authentic Chop Bar Customizer</div>
+                  <h2 className="section-title">
+                    Build Your <span>Dream Asanka Bowl</span>
+                  </h2>
+                  <p className="section-subtitle">
+                    In a real Ghanaian chop bar, you decide what enters your grinding pot! Choose your base, 
+                    pick your bubbling soup, and pile on the meats and wele.
+                  </p>
+                </div>
+
+                <div className="asanka-builder-card">
+                  {/* Left: Interactive Controls */}
+                  <div className="asanka-controls">
+                    {/* Step 1: Base */}
+                    <div>
+                      <div className="builder-step-title">
+                        <span>1️⃣</span> Step 1: Choose Your Base Swallower
+                      </div>
+                      <div className="builder-pill-group">
+                        {[
+                          { name: 'Pounded Fufu (Silky Cassava & Plantain)', price: 25.00, icon: '🥣' },
+                          { name: 'Soft Fermented Banku (2 Balls)', price: 20.00, icon: '🌽' },
+                          { name: 'Omo Tuo (Silky Rice Balls)', price: 22.00, icon: '🍚' },
+                          { name: "Kokonte ('Face The Wall / Chris Brown')", price: 20.00, icon: '🪵' },
+                          { name: 'Steamed Ampesi (Boiled Yam & Plantain)', price: 22.00, icon: '🍠' }
+                        ].map(base => (
+                          <button 
+                            key={base.name} 
+                            className={`builder-pill ${asankaBase.name === base.name ? 'active' : ''}`}
+                            onClick={() => setAsankaBase(base)}
+                          >
+                            <span>{base.icon}</span> {base.name} (GH₵ {base.price.toFixed(2)})
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Step 2: Soup */}
+                    <div>
+                      <div className="builder-step-title">
+                        <span>2️⃣</span> Step 2: Choose Your Steaming Hot Soup
+                      </div>
+                      <div className="builder-pill-group">
+                        {[
+                          { name: 'Goat Meat Light Soup (Aponkye Nkwan)', price: 25.00, icon: '🐐' },
+                          { name: 'Rich Palm Nut Soup (Abenkwan)', price: 25.00, icon: '🌴' },
+                          { name: 'Creamy Groundnut Soup (Nkatenkwan)', price: 22.00, icon: '🥜' },
+                          { name: 'Fresh Fish Light Soup (Prekese Broth)', price: 25.00, icon: '🐟' },
+                          { name: 'Fresh Okro Soup with Crabs & Palm Oil', price: 22.00, icon: '🦀' },
+                          { name: 'Green Soup / Abunabun (Cocoyam Leaves)', price: 25.00, icon: '🍃' }
+                        ].map(soup => (
+                          <button 
+                            key={soup.name} 
+                            className={`builder-pill ${asankaSoup.name === soup.name ? 'active' : ''}`}
+                            onClick={() => setAsankaSoup(soup)}
+                          >
+                            <span>{soup.icon}</span> {soup.name} (GH₵ {soup.price.toFixed(2)})
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Step 3: Meats & Extras */}
+                    <div>
+                      <div className="builder-step-title">
+                        <span>3️⃣</span> Step 3: Add Meats & Chop Bar Toppings (Select Any)
+                      </div>
+                      <div className="builder-pill-group">
+                        {[
+                          { name: 'Soft Braised Wele (Cow Skin)', price: 15.00, icon: '🥩' },
+                          { name: 'Extra Tender Goat Meat Chunks', price: 25.00, icon: '🍖' },
+                          { name: 'Giant Forest Snail (Kotoko/Nwa)', price: 25.00, icon: '🐌' },
+                          { name: 'Smoked Volta Catfish', price: 20.00, icon: '🐟' },
+                          { name: 'Farm-Fresh Boiled Egg', price: 6.00, icon: '🥚' },
+                          { name: 'Sweet Fried Kelewele / Plantains', price: 15.00, icon: '🍌' }
+                        ].map(topping => {
+                          const isSelected = asankaToppings.some(t => t.name === topping.name);
+                          return (
+                            <button 
+                              key={topping.name} 
+                              className={`builder-pill ${isSelected ? 'active' : ''}`}
+                              onClick={() => toggleAsankaTopping(topping)}
+                            >
+                              <span>{topping.icon}</span> {topping.name} (+GH₵ {topping.price.toFixed(2)}) {isSelected ? '✓' : '+'}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Live Asanka Bowl Preview */}
+                  <div className="asanka-preview-box">
+                    <div className="asanka-bowl-graphic">
+                      🥣
+                    </div>
+                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.4rem' }}>Your Custom Asanka Bowl</h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Served piping hot in a traditional earthenware grinding bowl</p>
+
+                    <div className="asanka-summary-list">
+                      <div className="asanka-summary-row">
+                        <span style={{ color: 'var(--text-muted)' }}>Base:</span>
+                        <strong style={{ color: '#fff' }}>{asankaBase.name.split(' (')[0]}</strong>
+                      </div>
+                      <div className="asanka-summary-row">
+                        <span style={{ color: 'var(--text-muted)' }}>Soup:</span>
+                        <strong style={{ color: 'var(--terracotta-light)' }}>{asankaSoup.name.split(' (')[0]}</strong>
+                      </div>
+                      <div className="asanka-summary-row">
+                        <span style={{ color: 'var(--text-muted)' }}>Toppings ({asankaToppings.length}):</span>
+                        <strong style={{ color: 'var(--gold-light)' }}>
+                          {asankaToppings.map(t => t.name.split(' (')[0]).join(', ') || 'No extra toppings'}
+                        </strong>
+                      </div>
+                    </div>
+
+                    <div className="asanka-total-price">
+                      GH₵ {customBowlTotal.toFixed(2)}
+                    </div>
+
+                    <button className="btn btn-primary" style={{ width: '100%' }} onClick={handleAddCustomAsanka}>
+                      <span>🥣</span> Add My Asanka Bowl to Bag
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Signature Chop Bar Highlights */}
             <section className="section-padding">
               <div className="container">
                 <div className="text-center">
-                  <div className="section-badge">Chef's Highlights</div>
+                  <div className="section-badge">Maa Annah's Specialties</div>
                   <h2 className="section-title">
-                    Signature <span>Creations</span>
+                    Chop Bar <span>Legends</span>
                   </h2>
                   <p className="section-subtitle">
-                    Every dish is an intimate dialogue between ancestral roots and modern gastronomy, crafted fresh daily.
+                    The dishes that put our chop bar on the map! Prepared fresh with firewood, mortar pestles, and generous motherly love.
                   </p>
                 </div>
 
                 <div className="highlights-grid">
-                  {(['m6', 'm12', 'm16'].map(id => menuItems.find(i => i.id === id)).filter(Boolean)).map(item => (
+                  {[
+                    {
+                      id: 'f1',
+                      title: 'Pounded Fufu & Goat Light Soup',
+                      price: 60.00,
+                      tag: 'Served in Asanka',
+                      desc: 'Silky mortar-pounded cassava and plantain fufu swimming in rich tomato-ginger light soup with tender goat meat chunks and prekese aroma.',
+                      img: './images/fufu-asanka.jpg'
+                    },
+                    {
+                      id: 'b1',
+                      title: 'Charcoal-Grilled Tilapia & Banku',
+                      price: 65.00,
+                      tag: 'Fresh Off Coals',
+                      desc: 'Whole fresh Volta tilapia charred over wood coals, served with hot banku, freshly ground raw red and green pepper, and sliced onions.',
+                      img: './images/banku-tilapia.jpg'
+                    },
+                    {
+                      id: 'w1',
+                      title: 'Special Waakye on Banana Leaf',
+                      price: 48.00,
+                      tag: 'The Full Combo',
+                      desc: 'Steamed rice & beans on fresh banana leaf, soft wele, boiled egg, talia spaghetti, gari foto, sweet fried plantains, stew, and fiery black shito.',
+                      img: './images/waakye-special.jpg'
+                    },
+                    {
+                      id: 'k2',
+                      title: 'Authentic Red Red / Gobɛ',
+                      price: 35.00,
+                      tag: 'Sweet Plantain & Beans',
+                      desc: 'Tender black-eyed cowpeas slow-braised in fragrant zomi red palm oil, golden fried ripe plantains, crispy gari, and farm boiled egg.',
+                      img: './images/red-red.jpg'
+                    }
+                  ].map(item => (
                     <div key={item.id} className="highlight-card">
                       <div className="card-media">
-                        <img 
-                          src={item.image} 
-                          alt={item.name} 
-                          className="card-img" 
-                          onError={(e) => { e.target.onerror = null; e.target.src = './images/hero.jpg'; }}
-                        />
-                        <span className="card-badge-floating">Chef's Signature</span>
-                        <span className="card-price-tag">${item.price.toFixed(2)}</span>
+                        <img src={item.img} alt={item.title} className="card-img" />
+                        <span className="card-badge-chop">{item.tag}</span>
                       </div>
                       <div className="card-body">
-                        <h3 className="card-title">{item.name}</h3>
-                        <p className="card-desc">{item.description}</p>
-                        <div className="card-footer">
-                          <div className="card-rating">
-                            <span>★</span> {item.rating} ({item.reviewsCount} reviews)
-                          </div>
-                          <button className="add-bag-btn" onClick={() => handleAddToCart(item)}>
-                            <span>+ Add to Bag</span>
+                        <div className="card-header-flex">
+                          <h3 className="card-title">{item.title}</h3>
+                          <div className="card-price">GH₵ {item.price.toFixed(2)}</div>
+                        </div>
+                        <p className="card-desc">{item.desc}</p>
+                        <div className="card-footer-action">
+                          <span style={{ color: 'var(--gold-light)', fontSize: '0.9rem', fontWeight: 700 }}>🔥 Hot & Fresh</span>
+                          <button 
+                            className="btn btn-primary btn-sm" 
+                            onClick={() => handleAddToCart(menuItems.find(i => i.id === item.id) || item)}
+                          >
+                            + Add to Bag
                           </button>
                         </div>
                       </div>
@@ -2125,80 +1140,16 @@ img {
               </div>
             </section>
 
-            {/* About Chef Annah */}
-            <section id="about" className="section-padding about-section">
-              <div className="container">
-                <div className="about-grid">
-                  <div className="about-media-wrapper">
-                    <div className="about-img-frame">
-                      <img src="./images/chef-annah.jpg" alt="Executive Head Chef Annah smiling" className="about-img" />
-                    </div>
-                    <div className="about-badge-card">
-                      <div className="badge-icon-box">🏆</div>
-                      <div>
-                        <h4 style={{ color: '#fff', fontSize: '1.05rem', margin: 0 }}>Executive Chef Annah</h4>
-                        <p style={{ color: 'var(--gold-light)', fontSize: '0.85rem', margin: 0 }}>Master of Ghanaian Gastronomy</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="about-text-content">
-                    <div className="section-badge">Our Heritage & Craft</div>
-                    <h2 className="section-title">
-                      Crafted With <span>Soul & Fire</span>
-                    </h2>
-
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem', fontSize: '1.05rem' }}>
-                      Born from a deep reverence for Ghana's culinary heritage—from the bustling seaside smokehouses of Jamestown and Osu to the ancestral hearths of the Ashanti and Northern regions—<strong>Annah's Kitchen</strong> elevates beloved traditional recipes into a world-class fine dining experience.
-                    </p>
-
-                    <div className="about-quote-box">
-                      “True Ghanaian hospitality is Akwaaba in every bite: welcoming you to our table as family and honoring the earth through soulful food.”
-                    </div>
-
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.8rem', fontSize: '1rem' }}>
-                      We partner directly with sustainable smallholder farms and coastal fishermen. 
-                      Our spices are hand-roasted on cast iron, our shito is slow-caramelized over 12 hours with smoked dried fish and scotch bonnets, and our dishes celebrate authentic indigenous ingredients like dawadawa, prekese, and single-origin Ashanti cocoa.
-                    </p>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>14K+</h3>
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Delighted Guests</p>
-                      </div>
-                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>100%</h3>
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Ghanaian Roots</p>
-                      </div>
-                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <h3 style={{ color: 'var(--gold-light)', fontSize: '1.6rem', marginBottom: '0.2rem' }}>28+</h3>
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Ancestral Spices</p>
-                      </div>
-                    </div>
-
-                    <div className="chef-signature">
-                      <img src="./images/chef-annah.jpg" alt="Chef Annah portrait" className="chef-avatar" />
-                      <div className="chef-meta">
-                        <h4>Annah Mensah</h4>
-                        <p>Founder & Chef Patron</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Interactive Menu Section */}
-            <section id="menu" className="section-padding">
+            {/* FULL CHOP BAR MENU SECTION */}
+            <section id="menu" className="section-padding" style={{ background: '#110b07' }}>
               <div className="container">
                 <div className="text-center">
-                  <div className="section-badge">Gastronomic Selection</div>
+                  <div className="section-badge">Full Everyday Menu</div>
                   <h2 className="section-title">
-                    The Artisan <span>Menu</span>
+                    Maa Annah's <span>Chop Bar Pot</span>
                   </h2>
                   <p className="section-subtitle">
-                    Seasonal ingredients thoughtfully curated by Chef Annah. 
-                    All dishes are prepared freshly to order over embers or in our hearth.
+                    Select from our bubbling pots and charcoal grills. Eat in an Asanka bowl or pack in takeaway rubber.
                   </p>
                 </div>
 
@@ -2208,7 +1159,7 @@ img {
                     <input 
                       type="text" 
                       className="menu-search-input" 
-                      placeholder="Search dishes, spices, ingredients..." 
+                      placeholder="Search fufu, light soup, tilapia, waakye, wele, sobolo..." 
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                     />
@@ -2234,31 +1185,22 @@ img {
                         checked={filterChefSpecial}
                         onChange={(e) => setFilterChefSpecial(e.target.checked)}
                       />
-                      <span>⭐ Chef's Specials Only</span>
+                      <span>⭐ Maa Annah's Specials</span>
                     </label>
 
                     <label className="dietary-toggle">
                       <input 
                         type="checkbox" 
-                        checked={filterVegetarian}
-                        onChange={(e) => setFilterVegetarian(e.target.checked)}
+                        checked={filterSpicyOnly}
+                        onChange={(e) => setFilterSpicyOnly(e.target.checked)}
                       />
-                      <span>🌱 Vegetarian / Vegan</span>
-                    </label>
-
-                    <label className="dietary-toggle">
-                      <input 
-                        type="checkbox" 
-                        checked={filterGlutenFree}
-                        onChange={(e) => setFilterGlutenFree(e.target.checked)}
-                      />
-                      <span>🌾 Gluten-Free</span>
+                      <span>🌶️ Heavy Pepper (Spicy)</span>
                     </label>
                   </div>
                 </div>
 
-                <div style={{ marginBottom: '1.5rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                  Showing {filteredItems.length} curated dish{filteredItems.length === 1 ? '' : 'es'}
+                <div style={{ marginBottom: '1.5rem', color: 'var(--text-muted)', fontSize: '0.92rem' }}>
+                  Showing {filteredItems.length} authentic Ghanaian dish{filteredItems.length === 1 ? '' : 'es'}
                 </div>
 
                 <div className="menu-grid">
@@ -2266,16 +1208,16 @@ img {
                     <div key={item.id} className="menu-card">
                       <div className="menu-card-header">
                         <h3 className="menu-item-name">{item.name}</h3>
-                        <div className="menu-item-price">${item.price.toFixed(2)}</div>
+                        <div className="menu-item-price">GH₵ {item.price.toFixed(2)}</div>
                       </div>
 
                       <div className="menu-item-tags">
-                        {item.isChefSpecial && <span className="tag-pill chef">★ Chef's Choice</span>}
+                        {item.isChefSpecial && <span className="tag-pill chef">★ Mama's Special</span>}
                         {item.tags && item.tags.map((tag, idx) => (
                           <span key={idx} className="tag-pill">{tag}</span>
                         ))}
                         {item.spicyLevel > 0 && (
-                          <span className="tag-pill" title={`Spicy Level: ${item.spicyLevel}`}>
+                          <span className="tag-pill" title={`Pepper Level: ${item.spicyLevel}`}>
                             {'🌶️'.repeat(item.spicyLevel)}
                           </span>
                         )}
@@ -2284,10 +1226,10 @@ img {
                       <p className="menu-item-desc">{item.description}</p>
 
                       <div className="menu-card-bottom">
-                        <div className="menu-meta-info">
+                        <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                           <span>{item.calories}</span>
                           {item.allergens && item.allergens !== 'None' && (
-                            <span style={{ marginLeft: '8px' }}>• Cont: {item.allergens}</span>
+                            <span style={{ marginLeft: '6px' }}>• Cont: {item.allergens}</span>
                           )}
                         </div>
                         <button className="add-bag-btn" onClick={() => handleAddToCart(item)}>
@@ -2300,33 +1242,87 @@ img {
               </div>
             </section>
 
-            {/* Table Reservation Section */}
+            {/* MEET MAA ANNAH & THE CHOP BAR STORY */}
+            <section id="about" className="section-padding">
+              <div className="container">
+                <div className="about-grid">
+                  <div className="about-media-stack">
+                    <img src="./images/chef-annah.jpg" alt="Maa Annah stirring the soup cauldron" className="about-main-img" />
+                    <div className="about-float-card">
+                      <div style={{ fontSize: '1.8rem', marginBottom: '0.4rem' }}>🪵</div>
+                      <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Pure Firewood Flavor</h4>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>No gas shortcuts. We cook slowly over open mahogany and firewood embers.</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="section-badge">The Hand of a Mother (Nsa Pa)</div>
+                    <h2 className="section-title">
+                      Meet <span>Maa Annah Mensah</span>
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '1.4rem' }}>
+                      For more than 18 years, Maa Annah has been waking up at 5:00 AM to light the woodfire, 
+                      inspect the fresh tubers of cassava and plantain, and grind fresh scotch bonnets and ginger in her 
+                      grooved apotoyewa bowls.
+                    </p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '1.6rem' }}>
+                      In Ghana, a chop bar is more than a restaurant—it's a home where friends, bankers, drivers, 
+                      and families sit side-by-side on wooden benches to enjoy deep, comforting bowls of light soup, 
+                      crackling fish, and chewy wele. Maa Annah believes in generous scoops, welcoming smiles, 
+                      and authentic flavors with zero shortcuts.
+                    </p>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.2rem', marginBottom: '2rem' }}>
+                      <div style={{ borderLeft: '3px solid var(--terracotta)', paddingLeft: '1rem' }}>
+                        <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '0.2rem' }}>Pounded with Rhythm</h4>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Traditional pestle and mortar pounding creates silky smooth fufu without lumps.</p>
+                      </div>
+                      <div style={{ borderLeft: '3px solid var(--gold-primary)', paddingLeft: '1rem' }}>
+                        <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '0.2rem' }}>Natural Prekese & Spices</h4>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Simmered with calabash nutmeg, grains of selim, ginger, and garlic.</p>
+                      </div>
+                    </div>
+
+                    {/* Veronica Bucket Handwashing Notice */}
+                    <div className="veronica-badge-box">
+                      <div className="veronica-icon">🚰</div>
+                      <div className="veronica-text">
+                        <h5>Clean Hands Before The Asanka!</h5>
+                        <p>Our Veronica Bucket handwashing station is ready at the entrance with warm flowing water, carbolic soap, and clean towels. Wash your hands clean before dipping into the fufu!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* RESERVE A BENCH / GROUP TABLE */}
             <section id="reservations" className="section-padding reservation-section">
               <div className="container">
                 <div className="text-center">
-                  <div className="section-badge">Reserve Your Table</div>
+                  <div className="section-badge">Group Chop & Lunch Booking</div>
                   <h2 className="section-title">
-                    An Intimate <span>Dining Journey</span>
+                    Reserve a <span>Chop Bar Bench</span>
                   </h2>
                   <p className="section-subtitle">
-                    Secure your table for an evening of woodfire gastronomy, curated wines, 
-                    and soulful hospitality.
+                    Planning an office lunch feast, family gathering, or weekend fufu session with friends? 
+                    Book a wooden bench or canopy table in advance!
                   </p>
                 </div>
 
                 <div className="reservation-card">
                   {reservationConfirmed ? (
-                    <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
+                    <div style={{ textAlign: 'center', padding: '1.5rem' }}>
                       <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎉</div>
                       <h3 style={{ fontSize: '1.8rem', color: 'var(--gold-light)', marginBottom: '0.5rem' }}>
-                        Table Reserved Successfully!
+                        Chop Bar Bench Reserved!
                       </h3>
                       <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
-                        We are thrilled to welcome you, <strong>{reservationConfirmed.name}</strong>.
+                        Akwaaba, <strong>{reservationConfirmed.name}</strong>! We are saving the best wooden bench for you.
                       </p>
 
                       <div style={{
-                        background: 'rgba(255,255,255,0.04)',
+                        background: 'rgba(255, 235, 215, 0.05)',
                         border: '1px solid var(--gold-border)',
                         borderRadius: '16px',
                         padding: '1.5rem',
@@ -2335,7 +1331,7 @@ img {
                         textAlign: 'left'
                       }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Booking Reference:</span>
+                          <span style={{ color: 'var(--text-muted)' }}>Booking Ref:</span>
                           <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{reservationConfirmed.id}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
@@ -2343,78 +1339,64 @@ img {
                           <span style={{ color: '#fff' }}>{reservationConfirmed.date} at {reservationConfirmed.time}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Party Size:</span>
-                          <span style={{ color: '#fff' }}>{reservationConfirmed.guests} Guests</span>
+                          <span style={{ color: 'var(--text-muted)' }}>Group Size:</span>
+                          <span style={{ color: '#fff' }}>{reservationConfirmed.guests} People</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Seating Atmosphere:</span>
-                          <span style={{ color: '#fff' }}>{reservationConfirmed.seating}</span>
+                          <span style={{ color: 'var(--text-muted)' }}>Seating:</span>
+                          <span style={{ color: '#fff' }}>{reservationConfirmed.tableType}</span>
                         </div>
                       </div>
 
                       <button className="btn btn-outline" onClick={() => setReservationConfirmed(null)}>
-                        Make Another Reservation
+                        Book Another Bench
                       </button>
                     </div>
                   ) : (
                     <form onSubmit={handleReservationSubmit}>
                       <div className="form-grid">
                         <div className="form-group">
-                          <label className="form-label">Full Name *</label>
+                          <label className="form-label">Your Name *</label>
                           <input 
                             type="text" 
                             required 
                             className="form-control" 
-                            placeholder="e.g. Lady Catherine" 
+                            placeholder="e.g. Kwame Mensah" 
                             value={reservationForm.name}
                             onChange={(e) => setReservationForm({ ...reservationForm, name: e.target.value })}
                           />
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label">Email Address *</label>
-                          <input 
-                            type="email" 
-                            required 
-                            className="form-control" 
-                            placeholder="catherine@example.com" 
-                            value={reservationForm.email}
-                            onChange={(e) => setReservationForm({ ...reservationForm, email: e.target.value })}
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <label className="form-label">Phone Number *</label>
+                          <label className="form-label">Phone Number (MoMo / WhatsApp) *</label>
                           <input 
                             type="tel" 
                             required 
                             className="form-control" 
-                            placeholder="+1 (555) 000-0000" 
+                            placeholder="024 000 0000" 
                             value={reservationForm.phone}
                             onChange={(e) => setReservationForm({ ...reservationForm, phone: e.target.value })}
                           />
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label">Number of Guests</label>
+                          <label className="form-label">Number of People</label>
                           <select 
                             className="form-control" 
                             value={reservationForm.guests}
                             onChange={(e) => setReservationForm({ ...reservationForm, guests: e.target.value })}
                           >
-                            <option value="1">1 Person (Solo Dining)</option>
-                            <option value="2">2 Guests (Table for Two)</option>
-                            <option value="3">3 Guests</option>
-                            <option value="4">4 Guests</option>
-                            <option value="5">5 Guests</option>
-                            <option value="6">6 Guests</option>
-                            <option value="8">8 Guests (Large Party)</option>
-                            <option value="10">10+ Guests (Private Dining)</option>
+                            <option value="1">1 Person (Solo Chop)</option>
+                            <option value="2">2 People (Chop Duo)</option>
+                            <option value="4">4 People (Family Bench)</option>
+                            <option value="6">6 People (Office Squad)</option>
+                            <option value="8">8 People (Big Group Bench)</option>
+                            <option value="12">12+ People (Full Canopy Section)</option>
                           </select>
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label">Dining Date</label>
+                          <label className="form-label">Day of Visit</label>
                           <input 
                             type="date" 
                             required 
@@ -2425,53 +1407,42 @@ img {
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label">Preferred Time Slot</label>
+                          <label className="form-label">Chop Time Slot</label>
                           <select 
                             className="form-control" 
                             value={reservationForm.time}
                             onChange={(e) => setReservationForm({ ...reservationForm, time: e.target.value })}
                           >
-                            {['17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30'].map(t => (
-                              <option key={t} value={t}>{t} (Evening)</option>
-                            ))}
+                            <option value="08:00">08:00 AM (Morning Waakye)</option>
+                            <option value="10:30">10:30 AM (Early Hot Fufu & Soup)</option>
+                            <option value="12:00">12:00 PM (Lunch Rush Hour)</option>
+                            <option value="13:30">01:30 PM (Afternoon Banku & Tilapia)</option>
+                            <option value="15:30">03:30 PM (Mid-Afternoon Chop)</option>
+                            <option value="17:30">05:30 PM (Evening Fufu & Kokonte)</option>
+                            <option value="19:00">07:00 PM (Night Chop)</option>
                           </select>
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label">Seating Atmosphere</label>
+                          <label className="form-label">Bench Location Preference</label>
                           <select 
                             className="form-control" 
-                            value={reservationForm.seating}
-                            onChange={(e) => setReservationForm({ ...reservationForm, seating: e.target.value })}
+                            value={reservationForm.tableType}
+                            onChange={(e) => setReservationForm({ ...reservationForm, tableType: e.target.value })}
                           >
-                            <option value="Main Dining Room">Main Candlelit Dining Room</option>
-                            <option value="Romantic Garden Patio">Romantic Garden Patio (Heated)</option>
-                            <option value="Chef's Tasting Counter">Chef's Tasting Counter (Front Row)</option>
-                            <option value="Private Wine Alcove">Private Wine Alcove</option>
-                          </select>
-                        </div>
-
-                        <div className="form-group">
-                          <label className="form-label">Special Occasion</label>
-                          <select 
-                            className="form-control" 
-                            value={reservationForm.occasion}
-                            onChange={(e) => setReservationForm({ ...reservationForm, occasion: e.target.value })}
-                          >
-                            <option value="None">Casual Dinner</option>
-                            <option value="Birthday">Birthday Celebration 🎂</option>
-                            <option value="Anniversary">Anniversary 🥂</option>
-                            <option value="Date Night">Date Night ✨</option>
-                            <option value="Business">Business Dinner</option>
+                            <option value="Wooden Bench Under Bamboo Canopy">Wooden Bench Under Bamboo Canopy</option>
+                            <option value="Open Air Courtyard Table">Open Air Courtyard Table</option>
+                            <option value="Front Row Near Fufu Mortar">Front Row (Watch the Fufu Pounding!)</option>
+                            <option value="Quiet Shaded Corner">Quiet Shaded Corner</option>
                           </select>
                         </div>
 
                         <div className="form-group full-width">
-                          <label className="form-label">Special Dietary Notes & Requests (Optional)</label>
+                          <label className="form-label">Special Requests (e.g. Keep extra wele ready, plenty shito)</label>
                           <textarea 
                             rows="3" 
                             className="form-control" 
-                            placeholder="Allergies, high chair required, quiet corner preference..."
+                            placeholder="e.g. Please reserve 4 portions of goat light soup and chilled sobolo..."
                             value={reservationForm.specialRequests}
                             onChange={(e) => setReservationForm({ ...reservationForm, specialRequests: e.target.value })}
                           ></textarea>
@@ -2480,7 +1451,7 @@ img {
 
                       <div style={{ textAlign: 'center' }}>
                         <button type="submit" className="btn btn-primary" disabled={reservationLoading}>
-                          {reservationLoading ? 'Confirming Reservation...' : '🍷 Confirm Table Reservation'}
+                          {reservationLoading ? 'Booking Bench...' : '🪵 Confirm Bench Reservation'}
                         </button>
                       </div>
                     </form>
@@ -2489,22 +1460,22 @@ img {
               </div>
             </section>
 
-            {/* Guest Reviews Section */}
+            {/* CUSTOMER REVIEWS */}
             <section id="reviews" className="section-padding">
               <div className="container">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '3rem' }}>
                   <div>
-                    <div className="section-badge">Guest Impressions</div>
+                    <div className="section-badge">Chop Bar Testimonials</div>
                     <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>
-                      Stories From Our <span>Guests</span>
+                      Words From Our <span>Patrons</span>
                     </h2>
-                    <p style={{ color: 'var(--text-secondary)', maxWidth: '550px' }}>
-                      Read authentic recollections from patrons and critics who experienced Annah's hearth.
+                    <p style={{ color: 'var(--text-secondary)', maxWidth: '580px' }}>
+                      Hear what real Ghanaians and visitors have to say after tasting Maa Annah's hot Asanka bowls.
                     </p>
                   </div>
 
                   <button className="btn btn-outline" onClick={() => setIsReviewModalOpen(true)}>
-                    <span>✍️</span> Share Your Review
+                    <span>✍️</span> Leave Chop Bar Review
                   </button>
                 </div>
 
@@ -2512,7 +1483,7 @@ img {
                   {reviews.map((rev) => (
                     <div key={rev.id} className="review-card">
                       <div className="review-header">
-                        <div className="review-avatar">{rev.avatar || 'AK'}</div>
+                        <div className="review-avatar">{rev.avatar || 'MA'}</div>
                         <div className="review-author">
                           <h4>{rev.name}</h4>
                           <p>{rev.role} • {rev.date}</p>
@@ -2533,316 +1504,221 @@ img {
               </div>
             </section>
 
-            {/* Hours, Contact Form, FAQs */}
-            <section id="contact" className="section-padding" style={{ background: '#0a0c10' }}>
+            {/* LOCATION & HOURS */}
+            <section id="contact" className="section-padding" style={{ background: '#0e0906' }}>
               <div className="container">
                 <div className="text-center">
-                  <div className="section-badge">Visit & Connect</div>
+                  <div className="section-badge">Visit Maa Annah</div>
                   <h2 className="section-title">
-                    Hours & <span>Location</span>
+                    Chop Bar <span>Location & Hours</span>
                   </h2>
                   <p className="section-subtitle">
-                    Join us in the heart of the Gourmet Quarter. We look forward to offering you an unforgettable evening.
+                    Onyame Nti! Good food has no distance. Walk in or place your order for pickup & delivery across Accra.
                   </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', marginBottom: '4rem' }}>
-                  {/* Sanctuary Card */}
-                  <div style={{
-                    background: 'var(--bg-card)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-lg)',
-                    padding: '2.5rem'
-                  }}>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.3rem 0.8rem', background: 'rgba(34, 197, 94, 0.15)', border: '1px solid rgba(34, 197, 94, 0.4)', borderRadius: '999px', color: '#4ade80', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1.5rem' }}>
-                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }}></span>
-                      Open Tonight: 4:30 PM - 10:30 PM
-                    </div>
-
-                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '1.5rem' }}>Sanctuary Details</h3>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', marginBottom: '2rem' }}>
-                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                        <span style={{ fontSize: '1.3rem' }}>📍</span>
-                        <div>
-                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Address</h4>
-                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.address}</p>
-                        </div>
-                      </div>
-
-                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                        <span style={{ fontSize: '1.3rem' }}>📞</span>
-                        <div>
-                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Reservations & Inquiries</h4>
-                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.phone}</p>
-                        </div>
-                      </div>
-
-                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                        <span style={{ fontSize: '1.3rem' }}>✉️</span>
-                        <div>
-                          <h4 style={{ fontSize: '0.95rem', color: '#fff', margin: 0 }}>Concierge Email</h4>
-                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>{RESTAURANT_INFO.email}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem' }}>
-                      <h4 style={{ fontSize: '1rem', color: 'var(--gold-light)', marginBottom: '0.8rem' }}>Opening Hours</h4>
-                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '0.4rem' }}>{RESTAURANT_INFO.hours.weekdays}</p>
-                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '0.4rem' }}>{RESTAURANT_INFO.hours.weekend}</p>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontStyle: 'italic' }}>{RESTAURANT_INFO.hours.closed}</p>
-                    </div>
-                  </div>
-
-                  {/* Send Note Form */}
-                  <div style={{
-                    background: 'var(--bg-card)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-lg)',
-                    padding: '2.5rem'
-                  }}>
-                    <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem' }}>Send Us a Message</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                      Planning a private event or have bespoke dietary questions? Send our team a note.
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+                  <div className="pot-card" style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '2rem' }}>
+                    <div style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>📍</div>
+                    <h4 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>Chop Bar Address</h4>
+                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                      Plot 14, High Street Extension, near Old Market Junction,<br />
+                      Osu / Labadi Road, Accra, Ghana.
                     </p>
-
-                    <form onSubmit={handleContactSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                      <div className="form-group">
-                        <label className="form-label">Your Name *</label>
-                        <input 
-                          type="text" 
-                          required 
-                          className="form-control" 
-                          placeholder="e.g. Julian Hayes"
-                          value={contactForm.name}
-                          onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <label className="form-label">Email Address *</label>
-                        <input 
-                          type="email" 
-                          required 
-                          className="form-control" 
-                          placeholder="julian@example.com"
-                          value={contactForm.email}
-                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <label className="form-label">Subject</label>
-                        <select 
-                          className="form-control"
-                          value={contactForm.subject}
-                          onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
-                        >
-                          <option value="General Inquiry">General Inquiry</option>
-                          <option value="Private Dining & Events">Private Dining & Events</option>
-                          <option value="Feedback">Feedback for Chef Annah</option>
-                        </select>
-                      </div>
-
-                      <div className="form-group">
-                        <label className="form-label">Your Message *</label>
-                        <textarea 
-                          rows="4" 
-                          required 
-                          className="form-control" 
-                          placeholder="How can we curate your experience?"
-                          value={contactForm.message}
-                          onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                        ></textarea>
-                      </div>
-
-                      <button type="submit" className="btn btn-primary" disabled={contactSubmitting}>
-                        {contactSubmitting ? 'Transmitting Note...' : '✉️ Send Message'}
-                      </button>
-                    </form>
+                    <p style={{ color: 'var(--gold-light)', marginTop: '0.8rem', fontWeight: 700 }}>
+                      Landmark: Behind the Big Neem Tree • Follow the aroma of boiling light soup!
+                    </p>
                   </div>
-                </div>
 
-                {/* FAQ */}
-                <div style={{ maxWidth: '820px', margin: '0 auto' }}>
-                  <h3 style={{ textAlign: 'center', fontSize: '1.6rem', color: '#fff', marginBottom: '1.8rem' }}>Frequently Asked Questions</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                    {[
-                      { q: "What is the dress code at Annah's Kitchen?", a: "We welcome smart casual to elegant evening attire. We kindly ask guests to refrain from athletic wear and flip-flops." },
-                      { q: "Are Halal and Vegan options accommodated?", a: "Yes! All chicken and lamb cuts are Halal-certified. We also feature curated vegan entrees prepared in dedicated cookware." },
-                      { q: "Is valet parking available?", a: "Complimentary valet parking is available at our Heritage Boulevard entrance starting from 5:00 PM." }
-                    ].map((faq, idx) => (
-                      <div key={idx} style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: '12px', overflow: 'hidden' }}>
-                        <button
-                          onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                          style={{ width: '100%', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#fff', fontWeight: 600, fontSize: '1rem', textAlign: 'left' }}
-                        >
-                          <span>{faq.q}</span>
-                          <span style={{ color: 'var(--gold-light)', fontSize: '1.2rem' }}>{activeFaq === idx ? '−' : '+'}</span>
-                        </button>
-                        {activeFaq === idx && (
-                          <div style={{ padding: '0 1.5rem 1.25rem 1.5rem', color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                            {faq.a}
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                  <div className="pot-card" style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '2rem' }}>
+                    <div style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>⏰</div>
+                    <h4 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>Opening Hours</h4>
+                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                      <strong>Monday – Saturday:</strong> 7:00 AM – 9:00 PM<br />
+                      <em>(Waakye from 7am • Pounded Fufu & Soups from 10:30am till pot finishes)</em><br />
+                      <strong>Sunday Special:</strong> 11:00 AM – 8:00 PM<br />
+                      <em>(Special Omo Tuo, Fufu & Palm Nut Soup Day!)</em>
+                    </p>
+                  </div>
+
+                  <div className="pot-card" style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '2rem' }}>
+                    <div style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>📞</div>
+                    <h4 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>Call / WhatsApp / MoMo</h4>
+                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                      Direct Chop Hotline: <strong>+233 24 123 4567</strong><br />
+                      WhatsApp Quick Order: <strong>+233 50 987 6543</strong><br />
+                      MTN MoMo Merchant ID: <strong>682914</strong>
+                    </p>
+                    <button className="btn btn-primary btn-sm" style={{ marginTop: '1rem' }} onClick={() => scrollTo('menu')}>
+                      Order Online Now
+                    </button>
                   </div>
                 </div>
               </div>
             </section>
           </main>
 
-          {/* Footer */}
+          {/* FOOTER */}
           <footer className="footer">
             <div className="container">
               <div className="footer-grid">
-                <div className="footer-col">
-                  <div className="brand-logo" style={{ marginBottom: '1.25rem' }}>
-                    <div className="brand-icon">✨</div>
+                <div>
+                  <div className="brand-logo" style={{ marginBottom: '1rem' }}>
+                    <div className="brand-icon">🍲</div>
                     <div className="brand-text">
-                      <span className="brand-name">ANNAH'S</span>
-                      <span className="brand-tagline">KITCHEN</span>
+                      <span className="brand-name">MAA ANNAH'S</span>
+                      <span className="brand-tagline">CHOP BAR • ACCRA</span>
                     </div>
                   </div>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '340px' }}>
-                    Contemporary afro-fusion dining celebrating woodfire embers, heritage terroir, and soulful hospitality.
+                  <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, maxWidth: '340px' }}>
+                    Authentic Ghanaian roadside chop bar rooted in woodfire tradition, mortar-pounded fufu, 
+                    rich clay Asanka bowls, and the true spirit of Ghanaian hospitality.
+                  </p>
+                  <p style={{ color: 'var(--gold-light)', marginTop: '1rem', fontWeight: 700, fontSize: '0.85rem' }}>
+                    🇬🇭 Proudly Ghanaian • Onyame Nti
                   </p>
                 </div>
 
-                <div className="footer-col">
-                  <h4>Sanctuary</h4>
+                <div>
+                  <h4 className="footer-title">Chop Staples</h4>
                   <ul className="footer-links">
-                    <li><a href="#home" onClick={() => scrollTo('home')}>Home Experience</a></li>
-                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Artisan Menu</a></li>
-                    <li><a href="#about" onClick={() => scrollTo('about')}>Chef Annah's Story</a></li>
-                    <li><a href="#reservations" onClick={() => scrollTo('reservations')}>Table Booking</a></li>
-                    <li><a href="#reviews" onClick={() => scrollTo('reviews')}>Guest Impressions</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Pounded Fufu & Light Soup</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Banku & Charcoal Tilapia</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Special Morning Waakye</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Red Red (Gobɛ) & Kelewele</a></li>
+                    <li><a href="#menu" onClick={() => scrollTo('menu')}>Kokonte ('Face The Wall')</a></li>
                   </ul>
                 </div>
 
-                <div className="footer-col">
-                  <h4>Hours & Service</h4>
+                <div>
+                  <h4 className="footer-title">Quick Links</h4>
                   <ul className="footer-links">
-                    <li style={{ color: 'var(--text-secondary)' }}>Tue – Thu: 4:30 PM – 10:30 PM</li>
-                    <li style={{ color: 'var(--text-secondary)' }}>Fri – Sun: 12:00 PM – 11:30 PM</li>
-                    <li style={{ color: 'var(--text-muted)' }}>Monday: Culinary Prep & Sourcing</li>
-                    <li style={{ marginTop: '0.5rem', color: 'var(--gold-light)' }}>Live Jazz: Fri & Sat 8:00 PM</li>
+                    <li><a href="#asanka-builder" onClick={() => scrollTo('asanka-builder')}>Build Asanka Bowl</a></li>
+                    <li><a href="#reservations" onClick={() => scrollTo('reservations')}>Reserve a Bench</a></li>
+                    <li><a href="#about" onClick={() => scrollTo('about')}>Meet Maa Annah</a></li>
+                    <li><a href="#reviews" onClick={() => scrollTo('reviews')}>Customer Reviews</a></li>
+                    <li><a href="#contact" onClick={() => scrollTo('contact')}>Location & Directions</a></li>
                   </ul>
                 </div>
 
-                <div className="footer-col">
-                  <h4>The Chef's Journal</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: '1rem' }}>
-                    Receive exclusive invitations to Chef Annah's seasonal tastings.
-                  </p>
-                  <form onSubmit={(e) => { e.preventDefault(); showToast("Subscribed! Look out for Annah's private tasting invites."); }} style={{ display: 'flex', gap: '0.5rem' }}>
-                    <input 
-                      type="email" 
-                      required 
-                      placeholder="your.email@example.com" 
-                      style={{ flex: 1, padding: '0.65rem 1rem', background: 'rgba(255,255,255,0.06)', border: '1px solid var(--border-subtle)', borderRadius: '999px', color: '#fff', fontSize: '0.88rem' }}
-                    />
+                <div>
+                  <h4 className="footer-title">Chop Bar Newsletter</h4>
+                  <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>Get notified when our special weekend Omo Tuo and Abenkwan pots are boiling!</p>
+                  <form onSubmit={(e) => { e.preventDefault(); showToast('Medaase! You are subscribed to Chop updates!'); }} style={{ display: 'flex', gap: '0.5rem' }}>
+                    <input type="text" placeholder="Phone or Email" required className="form-control" style={{ padding: '0.65rem 0.9rem' }} />
                     <button type="submit" className="btn btn-primary btn-sm">Join</button>
                   </form>
                 </div>
               </div>
 
-              <div className="footer-bottom">
-                <div>© {new Date().getFullYear()} Annah's Kitchen Hospitality Group. All rights reserved.</div>
-                <div style={{ display: 'flex', gap: '1.5rem', color: 'var(--text-muted)', fontSize: '0.82rem' }}>
-                  <span>Privacy Policy</span>
-                  <span>Allergen & Dietary Advisory</span>
-                </div>
+              <div style={{ textAlign: 'center', borderTop: '1px solid var(--border-subtle)', paddingTop: '2rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                © 2026 Maa Annah's Chop Bar. All Rights Reserved. Hand-cooked with love in Accra, Ghana.
               </div>
             </div>
           </footer>
 
-          {/* Cart Drawer */}
+          {/* CART DRAWER */}
           {isCartOpen && (
-            <div className="cart-overlay" onClick={() => setIsCartOpen(false)}>
+            <div className="cart-drawer-overlay" onClick={() => setIsCartOpen(false)}>
               <div className="cart-drawer" onClick={(e) => e.stopPropagation()}>
                 <div className="cart-header">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                    <span style={{ fontSize: '1.3rem' }}>🛍️</span>
-                    <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#fff' }}>Your Order Bag</h3>
-                  </div>
+                  <h3><span>🍲</span> Your Chop Bag ({totalCartCount})</h3>
                   <button className="cart-close-btn" onClick={() => setIsCartOpen(false)}>✕</button>
                 </div>
 
                 <div className="cart-body">
+                  {/* Dine-In (Asanka Bowl) vs Takeaway Switch */}
+                  <div>
+                    <label style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--gold-light)', display: 'block', marginBottom: '0.4rem' }}>
+                      HOW WOULD YOU LIKE TO CHOP?
+                    </label>
+                    <div className="cart-order-type-switch">
+                      <button 
+                        className={`type-switch-btn ${orderType === 'dine-in' ? 'active' : ''}`}
+                        onClick={() => setOrderType('dine-in')}
+                      >
+                        🥣 Dine In (Hot Asanka Bowl)
+                      </button>
+                      <button 
+                        className={`type-switch-btn ${orderType === 'takeaway' ? 'active' : ''}`}
+                        onClick={() => setOrderType('takeaway')}
+                      >
+                        🥡 Takeaway (Rubber Pack)
+                      </button>
+                    </div>
+                  </div>
+
                   {cart.length === 0 ? (
-                    <div className="empty-cart-view">
-                      <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🍽️</div>
-                      <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>Your bag is empty</h4>
-                      <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Discover our signature firewood Jollof, Banku & Tilapia, and heritage creations.</p>
-                      <button className="btn btn-outline btn-sm" onClick={() => setIsCartOpen(false)}>Browse Menu</button>
+                    <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--text-muted)' }}>
+                      <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🥣</div>
+                      <p style={{ fontSize: '1.1rem', color: '#fff', marginBottom: '0.5rem' }}>Your Chop Bag is Empty!</p>
+                      <p style={{ fontSize: '0.88rem' }}>Maa Annah's pots are boiling. Add some hot fufu, banku, or waakye.</p>
+                      <button className="btn btn-primary btn-sm" style={{ marginTop: '1.5rem' }} onClick={() => { setIsCartOpen(false); scrollTo('menu'); }}>
+                        Explore Menu
+                      </button>
                     </div>
                   ) : (
-                    <div>
-                      {cart.map(item => (
-                        <div key={item.id} className="cart-item-row">
-                          <div className="cart-item-info">
-                            <h4>{item.name}</h4>
-                            <div className="cart-item-price">${(item.price * item.quantity).toFixed(2)}</div>
+                    <>
+                      {cart.map((item) => (
+                        <div key={item.id} className="cart-item-card">
+                          <div style={{ flex: 1 }}>
+                            <div className="cart-item-title">{item.name}</div>
+                            <div className="cart-item-price">GH₵ {item.price.toFixed(2)} each</div>
+                            {item.description && (
+                              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
+                                {item.description.slice(0, 70)}...
+                              </div>
+                            )}
                           </div>
 
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                            <div className="cart-qty-ctrl">
-                              <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity - 1)}>–</button>
-                              <span style={{ fontSize: '0.88rem', fontWeight: 600, minWidth: '18px', textAlign: 'center' }}>{item.quantity}</span>
-                              <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity + 1)}>+</button>
-                            </div>
-                            <button onClick={() => handleUpdateQty(item.id, 0)} style={{ color: '#ef4444', fontSize: '0.9rem' }}>🗑️</button>
+                          <div className="qty-control">
+                            <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity - 1)}>-</button>
+                            <span style={{ fontWeight: 800, minWidth: '18px', textAlign: 'center' }}>{item.quantity}</span>
+                            <button className="qty-btn" onClick={() => handleUpdateQty(item.id, item.quantity + 1)}>+</button>
                           </div>
                         </div>
                       ))}
 
-                      <div style={{ marginTop: '1.5rem', background: 'var(--bg-surface)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontSize: '0.88rem' }}>
-                          <span style={{ color: 'var(--text-secondary)' }}>Hospitality Tip</span>
-                          <span style={{ color: 'var(--gold-light)', fontWeight: 600 }}>${tipAmount.toFixed(2)} ({tipPercent}%)</span>
-                        </div>
-                        <div style={{ display: 'flex', gap: '0.5rem' }}>
-                          {[10, 15, 20, 25].map(pct => (
-                            <button
-                              key={pct}
-                              onClick={() => setTipPercent(pct)}
-                              style={{
-                                flex: 1,
-                                padding: '0.35rem 0',
-                                borderRadius: '6px',
-                                background: tipPercent === pct ? 'var(--gold-primary)' : 'rgba(255,255,255,0.06)',
-                                color: tipPercent === pct ? '#0d1017' : 'var(--text-secondary)',
-                                fontWeight: 600,
-                                fontSize: '0.82rem'
-                              }}
-                            >
-                              {pct}%
-                            </button>
-                          ))}
-                        </div>
+                      {/* Order notes for kitchen */}
+                      <div style={{ marginTop: '0.5rem' }}>
+                        <label style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '0.4rem' }}>
+                          CHOP BAR INSTRUCTIONS
+                        </label>
+                        <input 
+                          type="text" 
+                          className="form-control" 
+                          placeholder="e.g. Plenty shito, put soup in separate rubber, extra pepper"
+                          value={orderNotes}
+                          onChange={(e) => setOrderNotes(e.target.value)}
+                        />
                       </div>
-                    </div>
+                    </>
                   )}
                 </div>
 
                 {cart.length > 0 && (
                   <div className="cart-footer">
-                    <div className="cart-summary-line"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                    <div className="cart-summary-line"><span>Estimated Tax (8.25%)</span><span>${tax.toFixed(2)}</span></div>
-                    <div className="cart-summary-line"><span>Hospitality Tip</span><span>${tipAmount.toFixed(2)}</span></div>
-                    <div className="cart-summary-total"><span>Estimated Total</span><span style={{ color: 'var(--gold-light)' }}>${total.toFixed(2)}</span></div>
+                    <div className="cart-totals">
+                      <div className="cart-total-row">
+                        <span>Chop Subtotal:</span>
+                        <span>GH₵ {subtotal.toFixed(2)}</span>
+                      </div>
+                      <div className="cart-total-row">
+                        <span>Packaging Fee:</span>
+                        <span>{orderType === 'takeaway' ? 'GH₵ 5.00' : 'GH₵ 0.00 (In Asanka)'}</span>
+                      </div>
+                      <div className="cart-total-row grand">
+                        <span>Total:</span>
+                        <span>GH₵ {total.toFixed(2)}</span>
+                      </div>
+                    </div>
+
                     <button 
                       className="btn btn-primary" 
                       style={{ width: '100%' }}
-                      onClick={() => {
-                        setIsCartOpen(false);
-                        setCheckoutData({ subtotal, tax, tip: tipAmount, total });
-                      }}
+                      onClick={() => { setIsCartOpen(false); setIsCheckoutOpen(true); }}
                     >
-                      Proceed to Checkout (${total.toFixed(2)})
+                      <span>🍲</span> Proceed to Checkout (GH₵ {total.toFixed(2)})
                     </button>
                   </div>
                 )}
@@ -2850,146 +1726,163 @@ img {
             </div>
           )}
 
-          {/* Checkout Modal */}
-          {checkoutData && (
-            <div className="modal-overlay" onClick={() => setCheckoutData(null)}>
+          {/* CHECKOUT MODAL WITH GHANAIAN MOMO */}
+          {isCheckoutOpen && (
+            <div className="modal-overlay" onClick={() => setIsCheckoutOpen(false)}>
               <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="modal-close-btn" onClick={() => setCheckoutData(null)}>✕</button>
+                <button className="modal-close-btn" onClick={() => setIsCheckoutOpen(false)}>✕</button>
 
                 {orderConfirmed ? (
-                  <div style={{ textAlign: 'center', padding: '1rem 0' }}>
-                    <div style={{ fontSize: '3.5rem', marginBottom: '0.8rem' }}>🥘</div>
-                    <h3 style={{ fontSize: '1.8rem', color: 'var(--gold-light)', marginBottom: '0.5rem' }}>
-                      Order Confirmed & Preparing!
+                  <div style={{ textAlign: 'center', padding: '1rem' }}>
+                    <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎉</div>
+                    <h3 style={{ fontSize: '1.8rem', color: 'var(--gold-light)', marginBottom: '0.4rem' }}>
+                      Medaase! Order Received!
                     </h3>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1rem' }}>
-                      Thank you, <strong>{orderConfirmed.customer.name}</strong>. Chef Annah and team are crafting your culinary order fresh.
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                      Order <strong>#{orderConfirmed.id}</strong> is now steaming in Maa Annah's kitchen!
                     </p>
 
-                    <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--gold-border)', borderRadius: '16px', padding: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
+                    <div style={{
+                      background: 'rgba(255, 235, 215, 0.05)',
+                      border: '1px solid var(--gold-border)',
+                      borderRadius: '16px',
+                      padding: '1.5rem',
+                      marginBottom: '1.5rem',
+                      textAlign: 'left'
+                    }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                        <span style={{ color: 'var(--text-muted)' }}>Order ID:</span>
-                        <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>{orderConfirmed.id}</span>
+                        <span style={{ color: 'var(--text-muted)' }}>Customer:</span>
+                        <strong style={{ color: '#fff' }}>{orderConfirmed.customer.name} ({orderConfirmed.customer.phone})</strong>
                       </div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                        <span style={{ color: 'var(--text-muted)' }}>Prep Time:</span>
-                        <span style={{ color: '#fff', fontWeight: 600 }}>~25 - 35 mins</span>
+                        <span style={{ color: 'var(--text-muted)' }}>Order Type:</span>
+                        <strong style={{ color: 'var(--terracotta-light)' }}>
+                          {orderConfirmed.orderType === 'dine-in' ? '🥣 Dine In (Hot Asanka)' : '🥡 Takeaway (Rubber Pack)'}
+                        </strong>
                       </div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                        <span style={{ color: 'var(--text-muted)' }}>Method:</span>
-                        <span style={{ color: '#fff' }}>{orderConfirmed.deliveryType}</span>
+                        <span style={{ color: 'var(--text-muted)' }}>Payment:</span>
+                        <strong style={{ color: '#fff' }}>
+                          {orderConfirmed.customer.paymentMethod === 'momo_mtn' ? 'MTN Mobile Money' :
+                           orderConfirmed.customer.paymentMethod === 'momo_telecel' ? 'Telecel / AT Cash' : 'Cash at Counter'}
+                        </strong>
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span style={{ color: 'var(--text-muted)' }}>Total:</span>
-                        <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>${checkoutData.total.toFixed(2)}</span>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '0.5rem', borderTop: '1px solid var(--border-subtle)' }}>
+                        <span style={{ color: 'var(--text-muted)' }}>Total Amount:</span>
+                        <strong style={{ color: 'var(--gold-light)', fontSize: '1.2rem' }}>GH₵ {orderConfirmed.total.toFixed(2)}</strong>
                       </div>
                     </div>
 
-                    <button className="btn btn-primary" onClick={() => { setCheckoutData(null); setOrderConfirmed(null); }} style={{ width: '100%' }}>
-                      Back to Annah's Kitchen
+                    <p style={{ color: 'var(--gold-light)', fontSize: '0.92rem', marginBottom: '1.5rem' }}>
+                      ⏱️ Estimated preparation time: 15 - 25 minutes. We will send an SMS to your phone!
+                    </p>
+
+                    <button className="btn btn-primary" onClick={() => { setOrderConfirmed(null); setIsCheckoutOpen(false); }}>
+                      Back to Chop Bar
                     </button>
                   </div>
                 ) : (
                   <div>
                     <div style={{ marginBottom: '1.5rem' }}>
-                      <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Checkout & Details</div>
-                      <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Complete Your Order</h3>
+                      <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Ghanaian Chop Bar Checkout</div>
+                      <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Complete Your Chop Order</h3>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '0.3rem' }}>
+                        Total to pay: <strong style={{ color: 'var(--gold-light)' }}>GH₵ {total.toFixed(2)}</strong> ({orderType === 'dine-in' ? 'Dine In' : 'Takeaway'})
+                      </p>
                     </div>
 
-                    <form onSubmit={handleCheckoutSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                      <div className="form-group">
-                        <label className="form-label">Order Type</label>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                          <button
-                            type="button"
-                            onClick={() => setCheckoutForm({ ...checkoutForm, deliveryType: 'Pickup' })}
-                            style={{
-                              padding: '0.75rem',
-                              borderRadius: '8px',
-                              background: checkoutForm.deliveryType === 'Pickup' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(255,255,255,0.04)',
-                              border: checkoutForm.deliveryType === 'Pickup' ? '1px solid var(--gold-primary)' : '1px solid var(--border-subtle)',
-                              color: checkoutForm.deliveryType === 'Pickup' ? 'var(--gold-light)' : 'var(--text-secondary)',
-                              fontWeight: 600
-                            }}
-                          >
-                            🏬 Pickup
-                          </button>
-                          <button
-                            type="button"
-                            onClick={() => setCheckoutForm({ ...checkoutForm, deliveryType: 'Delivery' })}
-                            style={{
-                              padding: '0.75rem',
-                              borderRadius: '8px',
-                              background: checkoutForm.deliveryType === 'Delivery' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(255,255,255,0.04)',
-                              border: checkoutForm.deliveryType === 'Delivery' ? '1px solid var(--gold-primary)' : '1px solid var(--border-subtle)',
-                              color: checkoutForm.deliveryType === 'Delivery' ? 'var(--gold-light)' : 'var(--text-secondary)',
-                              fontWeight: 600
-                            }}
-                          >
-                            🚗 Delivery
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="form-group">
-                        <label className="form-label">Full Name *</label>
-                        <input 
-                          type="text" 
-                          required 
-                          className="form-control" 
-                          placeholder="e.g. Maya Sterling"
-                          value={checkoutForm.name}
-                          onChange={(e) => setCheckoutForm({ ...checkoutForm, name: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <label className="form-label">Phone Number *</label>
-                        <input 
-                          type="tel" 
-                          required 
-                          className="form-control" 
-                          placeholder="+1 (555) 234-5678"
-                          value={checkoutForm.phone}
-                          onChange={(e) => setCheckoutForm({ ...checkoutForm, phone: e.target.value })}
-                        />
-                      </div>
-
-                      {checkoutForm.deliveryType === 'Delivery' && (
+                    <form onSubmit={handleCheckoutSubmit}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                         <div className="form-group">
-                          <label className="form-label">Delivery Street Address *</label>
+                          <label className="form-label">Your Full Name *</label>
                           <input 
                             type="text" 
                             required 
                             className="form-control" 
-                            placeholder="Apt, Street, Suite, City"
-                            value={checkoutForm.address}
-                            onChange={(e) => setCheckoutForm({ ...checkoutForm, address: e.target.value })}
+                            placeholder="e.g. Kojo Antwi" 
+                            value={checkoutForm.name}
+                            onChange={(e) => setCheckoutForm({ ...checkoutForm, name: e.target.value })}
                           />
                         </div>
-                      )}
 
-                      <div className="form-group">
-                        <label className="form-label">Special Notes (Optional)</label>
-                        <input 
-                          type="text" 
-                          className="form-control" 
-                          placeholder="Extra cutlery, dressing on the side..."
-                          value={checkoutForm.notes}
-                          onChange={(e) => setCheckoutForm({ ...checkoutForm, notes: e.target.value })}
-                        />
-                      </div>
-
-                      <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '10px' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '1.15rem', fontWeight: 700, color: 'var(--gold-light)' }}>
-                          <span>Total Amount:</span>
-                          <span>${checkoutData.total.toFixed(2)}</span>
+                        <div className="form-group">
+                          <label className="form-label">Phone Number *</label>
+                          <input 
+                            type="tel" 
+                            required 
+                            className="form-control" 
+                            placeholder="024 123 4567" 
+                            value={checkoutForm.phone}
+                            onChange={(e) => setCheckoutForm({ ...checkoutForm, phone: e.target.value })}
+                          />
                         </div>
-                      </div>
 
-                      <button type="submit" className="btn btn-primary" disabled={checkoutSubmitting} style={{ width: '100%' }}>
-                        {checkoutSubmitting ? 'Placing Order...' : `🔥 Place Order ($${checkoutData.total.toFixed(2)})`}
-                      </button>
+                        {orderType === 'takeaway' && (
+                          <div className="form-group">
+                            <label className="form-label">Delivery Address or Pickup Notice *</label>
+                            <input 
+                              type="text" 
+                              required 
+                              className="form-control" 
+                              placeholder="e.g. House 12, Osu Danquah Circle or 'I am picking up at 1pm'" 
+                              value={checkoutForm.location}
+                              onChange={(e) => setCheckoutForm({ ...checkoutForm, location: e.target.value })}
+                            />
+                          </div>
+                        )}
+
+                        <div>
+                          <label className="form-label" style={{ display: 'block', marginBottom: '0.6rem' }}>
+                            Choose Payment Method *
+                          </label>
+                          <div className="momo-option-grid">
+                            <button 
+                              type="button" 
+                              className={`momo-btn ${checkoutForm.paymentMethod === 'momo_mtn' ? 'active' : ''}`}
+                              onClick={() => setCheckoutForm({ ...checkoutForm, paymentMethod: 'momo_mtn' })}
+                            >
+                              <span style={{ fontSize: '1.3rem' }}>📱</span>
+                              <span>MTN MoMo</span>
+                            </button>
+
+                            <button 
+                              type="button" 
+                              className={`momo-btn ${checkoutForm.paymentMethod === 'momo_telecel' ? 'active' : ''}`}
+                              onClick={() => setCheckoutForm({ ...checkoutForm, paymentMethod: 'momo_telecel' })}
+                            >
+                              <span style={{ fontSize: '1.3rem' }}>📲</span>
+                              <span>Telecel Cash</span>
+                            </button>
+
+                            <button 
+                              type="button" 
+                              className={`momo-btn ${checkoutForm.paymentMethod === 'cash' ? 'active' : ''}`}
+                              onClick={() => setCheckoutForm({ ...checkoutForm, paymentMethod: 'cash' })}
+                            >
+                              <span style={{ fontSize: '1.3rem' }}>💵</span>
+                              <span>Cash on Pickup</span>
+                            </button>
+                          </div>
+
+                          {checkoutForm.paymentMethod.startsWith('momo') && (
+                            <div className="form-group" style={{ marginTop: '0.8rem' }}>
+                              <label className="form-label">Enter MoMo Wallet Number</label>
+                              <input 
+                                type="tel" 
+                                required 
+                                className="form-control" 
+                                placeholder="024 000 0000 (A prompt will be sent to your phone)"
+                                value={checkoutForm.momoNumber || checkoutForm.phone}
+                                onChange={(e) => setCheckoutForm({ ...checkoutForm, momoNumber: e.target.value })}
+                              />
+                            </div>
+                          )}
+                        </div>
+
+                        <button type="submit" className="btn btn-primary" disabled={checkoutSubmitting} style={{ marginTop: '0.5rem' }}>
+                          {checkoutSubmitting ? 'Placing Order...' : `🍲 Confirm & Place Order (GH₵ ${total.toFixed(2)})`}
+                        </button>
+                      </div>
                     </form>
                   </div>
                 )}
@@ -2997,15 +1890,18 @@ img {
             </div>
           )}
 
-          {/* Review Modal */}
+          {/* REVIEW MODAL */}
           {isReviewModalOpen && (
             <div className="modal-overlay" onClick={() => setIsReviewModalOpen(false)}>
               <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="modal-close-btn" onClick={() => setIsReviewModalOpen(false)}>✕</button>
 
                 <div style={{ marginBottom: '1.5rem' }}>
-                  <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Guest Impressions</div>
-                  <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Review Your Experience</h3>
+                  <div className="section-badge" style={{ marginBottom: '0.5rem' }}>Chop Bar Impressions</div>
+                  <h3 style={{ fontSize: '1.6rem', color: '#fff', margin: 0 }}>Share Your Chop Experience</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '0.3rem' }}>
+                    How was the fufu, light soup, banku, and Maa Annah's hospitality?
+                  </p>
                 </div>
 
                 <form onSubmit={handleReviewSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -3015,7 +1911,7 @@ img {
                       type="text" 
                       required 
                       className="form-control" 
-                      placeholder="e.g. Alistair & Clare"
+                      placeholder="e.g. Yaw Ofori"
                       value={reviewForm.name}
                       onChange={(e) => setReviewForm({ ...reviewForm, name: e.target.value })}
                     />
@@ -3033,19 +1929,19 @@ img {
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label">Your Feedback *</label>
+                    <label className="form-label">Your Review *</label>
                     <textarea 
                       rows="4" 
                       required 
                       className="form-control" 
-                      placeholder="What made your culinary experience memorable?"
+                      placeholder="Tell us about the soup, the meat, the hot pepper, or the fufu smoothness..."
                       value={reviewForm.comment}
                       onChange={(e) => setReviewForm({ ...reviewForm, comment: e.target.value })}
                     ></textarea>
                   </div>
 
                   <button type="submit" className="btn btn-primary" disabled={reviewSubmitting}>
-                    {reviewSubmitting ? 'Publishing...' : '✨ Publish Review'}
+                    {reviewSubmitting ? 'Posting Review...' : '✨ Publish Chop Bar Review'}
                   </button>
                 </form>
               </div>
